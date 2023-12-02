@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3vvbaes1jchw"]
+
+[ext_resource type="Texture2D" uid="uid://jle6he0iqqm5" path="res://assets/spritesheets/FEMM-NMM.png" id="1_nc3co"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffr5d"]
+size = Vector2(21, 44)
+
+[node name="NPC" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nc3co")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 9)
+shape = SubResource("RectangleShape2D_ffr5d")

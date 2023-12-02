@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dunwhvl8nri27"]
+
+[ext_resource type="PackedScene" uid="uid://13s5spsk34qu" path="res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn" id="1_feqpx"]
+[ext_resource type="Texture2D" uid="uid://bcokq1agykhmp" path="res://assets/dummy/Carmilla Environment MockUp.png" id="1_n1gyw"]
+[ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_t28of"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CarmillaEnvironmentMockUp" type="Sprite2D" parent="."]
+position = Vector2(176, 161)
+texture = ExtResource("1_n1gyw")
+
+[node name="ExampleBalloon" parent="." instance=ExtResource("1_feqpx")]
+
+[node name="Player" parent="." instance=ExtResource("2_t28of")]
+position = Vector2(217, 167)
