@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+State="*res://Globals/state.gd"
+
+[dialogue_manager]
+
+general/states=["State"]
 
 [display]
 

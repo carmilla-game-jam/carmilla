@@ -11,3 +11,18 @@ Nathan: Here are some choices.
 Nathan: For more information see the online documentation.
 
 => END
+
+
+~ state_check
+
+if state["gossip"]["sidone"]["2"]:
+	Nathan: set 2!
+elif state["gossip"]["sidone"]["1"]:
+	Nathan: yay
+	- Set 2?
+		set state["gossip"]["sidone"]["2"] = true
+	- Do not set 2
+else:
+	Nathan: bruh
+
+=> END

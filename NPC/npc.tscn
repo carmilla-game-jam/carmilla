@@ -26,6 +26,7 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("2_05xn2")
 dialog_resource = ExtResource("3_y5mmn")
+dialog_start = "state_check"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogCollision"]
 position = Vector2(0.5, 9)
