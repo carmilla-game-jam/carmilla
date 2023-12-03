@@ -10,7 +10,7 @@ extends CharacterBody2D
 func erase_all(input_buffer: Array, vector: Vector2) -> Array:
 	return []
 
-func handle_input():
+func handle_input() -> void:
 	if Input.is_action_just_pressed("ui_right"):
 		input_buffer.append(Vector2.RIGHT)
 	elif Input.is_action_just_pressed("ui_left"):
@@ -34,12 +34,20 @@ func handle_input():
 
 	animation_tree.set("parameters/conditions/idle", velocity == Vector2.ZERO)
 	animation_tree.set("parameters/conditions/is_moving", velocity != Vector2.ZERO)
-	print(input_buffer)
+	# print(input_buffer)
 	
 	if(velocity != Vector2.ZERO):
 		animation_tree["parameters/Idle/blend_position"] = velocity.normalized()
 		animation_tree["parameters/Walk/blend_position"] = velocity.normalized()
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	handle_input()
 	move_and_slide()
+
+
+func _on_hearing_area_2d_area_entered(area) -> void:
+	area.open_dialog_box()
+
+
+func _on_hearing_area_2d_area_exited(area):
+	area.close_dialog_box()
