@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c3adctvmc5qyc"]
+[gd_scene load_steps=29 format=3 uid="uid://c3adctvmc5qyc"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_psycw"]
 [ext_resource type="Texture2D" uid="uid://celj2aofyl208" path="res://assets/spritesheets/FEMM-NP.png" id="2_xl2wn"]
@@ -410,7 +410,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 size = Vector2(24, 22)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tp4wy"]
-radius = 63.0
+radius = 95.021
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vx5ud"]
+radius = 39.0512
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_psycw")
@@ -452,5 +455,12 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HearingArea2D"]
 shape = SubResource("CircleShape2D_tp4wy")
 
+[node name="SusArea2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SusArea2D"]
+shape = SubResource("CircleShape2D_vx5ud")
+
 [connection signal="area_entered" from="HearingArea2D" to="." method="_on_hearing_area_2d_area_entered"]
 [connection signal="area_exited" from="HearingArea2D" to="." method="_on_hearing_area_2d_area_exited"]
+[connection signal="area_entered" from="SusArea2D" to="." method="_on_sus_area_2d_area_entered"]

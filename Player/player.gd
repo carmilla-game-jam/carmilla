@@ -39,15 +39,23 @@ func handle_input() -> void:
 	if(velocity != Vector2.ZERO):
 		animation_tree["parameters/Idle/blend_position"] = velocity.normalized()
 		animation_tree["parameters/Walk/blend_position"] = velocity.normalized()
+	
+	if Input.is_action_just_pressed("talk"):
+		pass
+func handle_sus_area() -> void:
+	# TODO: if overlapping with sus zone then decrease bar
+	pass
 
 func _physics_process(delta) -> void:
 	handle_input()
+	handle_sus_area()
 	move_and_slide()
-
 
 func _on_hearing_area_2d_area_entered(area) -> void:
 	area.open_dialog_box()
 
+func _on_hearing_area_2d_area_exited(area) -> void:
+	area.close_dialog_box()
 
-func _on_hearing_area_2d_area_exited(area):
+func _on_sus_area_2d_area_entered(area) -> void:
 	area.close_dialog_box()

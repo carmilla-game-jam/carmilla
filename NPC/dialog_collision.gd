@@ -9,5 +9,5 @@ func open_dialog_box() -> void:
 	balloon_node = DialogueManager.show_example_dialogue_balloon(dialog_resource, dialog_start)
 
 func close_dialog_box() -> void:
-	if balloon_node:
+	if is_instance_valid(balloon_node):
 		balloon_node.queue_free()
