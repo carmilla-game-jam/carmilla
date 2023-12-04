@@ -52,10 +52,10 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 
 func _on_hearing_area_2d_area_entered(area) -> void:
-	area.open_dialog_box()
+	area.get_parent().open_dialog_box()
 
 func _on_hearing_area_2d_area_exited(area) -> void:
-	area.close_dialog_box()
+	area.get_parent().close_dialog_box()
 
 func _on_sus_area_2d_area_entered(area) -> void:
-	area.close_dialog_box()
+	area.get_parent().close_dialog_box()

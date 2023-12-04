@@ -19,10 +19,12 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://Globals/state.gd"
+Balloons="*res://Globals/balloons.gd"
 
 [dialogue_manager]
 
 general/states=["State"]
+general/balloon_path="res://NPC/gossip_bubble.tscn"
 
 [display]
 

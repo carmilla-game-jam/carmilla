@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3vvbaes1jchw"]
 
 [ext_resource type="Texture2D" uid="uid://jle6he0iqqm5" path="res://assets/spritesheets/FEMM-NMM.png" id="1_nc3co"]
-[ext_resource type="Script" path="res://NPC/dialog_collision.gd" id="2_05xn2"]
-[ext_resource type="Resource" uid="uid://bj2angfadjr45" path="res://NPC/gossip/gossip1.dialogue" id="3_y5mmn"]
+[ext_resource type="Script" path="res://NPC/gossip.gd" id="2_h3ei8"]
+[ext_resource type="Resource" uid="uid://bj2angfadjr45" path="res://NPC/gossip/gossip1.dialogue" id="3_4xpvb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffr5d"]
 size = Vector2(21, 20)
@@ -21,13 +21,20 @@ region_rect = Rect2(0, 64, 64, 64)
 position = Vector2(0.5, 21)
 shape = SubResource("RectangleShape2D_ffr5d")
 
-[node name="DialogCollision" type="Area2D" parent="."]
+[node name="Gossip" type="Node2D" parent="."]
+script = ExtResource("2_h3ei8")
+dialog_resource = ExtResource("3_4xpvb")
+
+[node name="GossipCollision" type="Area2D" parent="Gossip"]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("2_05xn2")
-dialog_resource = ExtResource("3_y5mmn")
-dialog_start = "state_check"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogCollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gossip/GossipCollision"]
 position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_7c5pr")
+
+[node name="GossipBubbleUpMarker2D" type="Marker2D" parent="Gossip"]
+position = Vector2(0, -17)
+
+[node name="GossipBubbleDownMarker2D" type="Marker2D" parent="Gossip"]
+position = Vector2(0, 8)

@@ -422,9 +422,8 @@ script = ExtResource("1_psycw")
 position = Vector2(1, -1)
 texture = ExtResource("2_xl2wn")
 offset = Vector2(2.08165e-12, 2.08165e-12)
-hframes = 8
 region_enabled = true
-region_rect = Rect2(0, 264, 512, 64)
+region_rect = Rect2(64, 72, 64, 64)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
