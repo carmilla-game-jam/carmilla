@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var SPEED = 75
 @onready var input_buffer = [Vector2.ZERO]
 @onready var input_buffer_readout = Vector2()
+@onready var camera: Camera2D = get_node("/root/Camera")
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 
@@ -47,6 +48,7 @@ func handle_sus_area() -> void:
 
 
 func _physics_process(delta) -> void:
+	camera.position = position
 	handle_input()
 	handle_sus_area()
 	move_and_slide()

@@ -419,7 +419,6 @@ radius = 39.0512
 script = ExtResource("1_psycw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -1)
 texture = ExtResource("2_xl2wn")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 region_enabled = true
@@ -442,10 +441,6 @@ parameters/Walk/blend_position = Vector2(-0.00261778, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 11)
 shape = SubResource("RectangleShape2D_egtfs")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
 
 [node name="HearingArea2D" type="Area2D" parent="."]
 position = Vector2(1, 0)

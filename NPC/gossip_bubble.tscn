@@ -16,14 +16,20 @@ anchors_preset = 0
 offset_left = -101.0
 offset_top = -78.0
 offset_right = 3.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = SubResource("Theme_ph7eb")
 script = ExtResource("1_632ns")
 
-[node name="Balloon" type="NinePatchRect" parent="."]
+[node name="Balloon" type="MarginContainer" parent="."]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_right = 107.0
+offset_bottom = 84.0
+
+[node name="BalloonBackground" type="NinePatchRect" parent="Balloon"]
 layout_mode = 2
-offset_right = 104.0
-offset_bottom = 78.0
 texture = ExtResource("2_1swno")
 patch_margin_left = 8
 patch_margin_top = 8
@@ -34,8 +40,8 @@ patch_margin_bottom = 8
 layout_mode = 2
 offset_left = 7.0
 offset_top = 4.0
-offset_right = 111.0
-offset_bottom = 82.0
+offset_right = 99.0
+offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
 

@@ -1,7 +1,8 @@
 extends Control
 
 
-@onready var balloon: NinePatchRect = %Balloon
+@onready var camera: Camera2D = get_node("/root/Camera")
+@onready var balloon: MarginContainer = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
@@ -38,6 +39,8 @@ var dialogue_line: DialogueLine:
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
+		
+		# TODO: Set balloon size to be equal to the total dialog size
 
 		responses_menu.hide()
 		responses_menu.set_responses(dialogue_line.responses)
@@ -83,7 +86,7 @@ func start(dialogue_resource: DialogueResource, title: String, potential_positio
 	is_waiting_for_input = false
 	resource = dialogue_resource
 	balloon_positions = potential_positions
-	set_balloon_position(find_valid_balloon_positions(balloon_positions).pick_random())
+	set_balloon_position(find_valid_balloon_positions(balloon_positions)[0])
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 
@@ -150,20 +153,21 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 	if is_position_valid(bottom_right_corner):
 		valid_positions.append(bottom_right_metadata)
 
-	# print(valid_positions)
+	print(valid_positions)
 	return valid_positions
 
 
 ## Check if position falls within the viewport
 func is_position_valid(global_position: Vector2) -> bool:
-	return get_viewport().get_visible_rect().has_point(global_position)
+	var camera_rect = Rect2(Vector2(camera.get_screen_center_position() - Vector2(get_viewport().size/2)), get_viewport().size)
+	return camera_rect.has_point(global_position)
 
 
 ## Takes a dict with scale data and a position and sets the balloon to that location
 func set_balloon_position(global_position: Dictionary) -> void:
-	$Balloon.pivot_offset = $Balloon.size/2
-	$Balloon.scale.x = global_position["scale_x"]
-	$Balloon.scale.y = global_position["scale_y"]
+	balloon.pivot_offset = balloon.size/2
+	balloon.scale.x = global_position["scale_x"]
+	balloon.scale.y = global_position["scale_y"]
 	self.set_global_position(global_position["position"])
 
 
