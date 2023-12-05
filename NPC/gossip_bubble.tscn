@@ -10,7 +10,9 @@
 default_font = ExtResource("1_bxp22")
 default_font_size = 20
 
-[node name="GossipBalloon" type="MarginContainer"]
+[node name="GossipBalloon" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 offset_left = -101.0
 offset_top = -78.0
 offset_right = 3.0
@@ -20,28 +22,27 @@ script = ExtResource("1_632ns")
 [node name="Balloon" type="NinePatchRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
+offset_right = 104.0
+offset_bottom = 78.0
 texture = ExtResource("2_1swno")
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
-[node name="Dialogue" type="MarginContainer" parent="Balloon"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Dialogue" type="MarginContainer" parent="."]
+layout_mode = 2
 offset_left = 7.0
 offset_top = 4.0
-offset_right = -8.0
-offset_bottom = -10.0
+offset_right = 111.0
+offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Dialogue"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue"]
 layout_mode = 2
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Dialogue/VBoxContainer"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
@@ -51,25 +52,20 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_ogjqg")]
+[node name="DialogueLabel" parent="Dialogue/VBoxContainer" instance=ExtResource("2_ogjqg")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
 
-[node name="Responses" type="MarginContainer" parent="Balloon"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.279
-anchor_top = 0.717
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -11.038
-offset_top = -1.341
-offset_right = 6.0
-offset_bottom = 30.0
+[node name="Responses" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 17.978
+offset_top = 54.585
+offset_right = 122.978
+offset_bottom = 132.585
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/Responses" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -77,9 +73,9 @@ theme_override_constants/separation = 2
 script = ExtResource("3_53yyv")
 response_template = NodePath("ResponseExample")
 
-[node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
+[node name="ResponseExample" type="Button" parent="Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="response_selected" from="Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

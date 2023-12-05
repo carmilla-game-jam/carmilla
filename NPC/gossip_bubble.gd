@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 
 @onready var balloon: NinePatchRect = %Balloon
@@ -84,8 +84,6 @@ func start(dialogue_resource: DialogueResource, title: String, potential_positio
 	resource = dialogue_resource
 	balloon_positions = potential_positions
 	set_balloon_position(find_valid_balloon_positions(balloon_positions).pick_random())
-	$Balloon.pivot_offset = $Balloon.size/2
-	$Balloon.scale.x = -1
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 
@@ -97,13 +95,12 @@ func next(next_id: String) -> void:
 ### Helpers
 
 # Returns a list of valid positions for the balloon to be so that it doesn't fall out of the viewport
-func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array[Vector2]:
-	var valid_positions: Array[Vector2]
+func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array[Dictionary]:
+	var valid_positions: Array[Dictionary]
 	
 	# var current_top_left = self.get_rect().position
 	# var current_bottom_right = self.get_rect().end
-	print(self.position)
-	print(self.global_position)
+	# print(self.position)
 	var new_balloon_position_top = self.position + potential_positions[0].global_position
 	var new_balloon_position_bottom = self.position + potential_positions[1].global_position
 
@@ -117,23 +114,43 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 	var top_right_corner = Vector2(new_balloon_position_top.x + 2*(-self.position.x), new_balloon_position_top.y)
 	var bottom_left_corner = Vector2(new_balloon_position_bottom.x, new_balloon_position_bottom.y + 2*(-self.position.y))
 	var bottom_right_corner = Vector2(new_balloon_position_bottom.x + 2*(-self.position.x), new_balloon_position_bottom.y + 2*(-self.position.y))
+
+	# print("top left ", top_left_position, " ", top_left_corner)
+	# print("top right ", top_right_position, " ", top_right_corner)
+	# print("bottom left ", bottom_left_position, " ", bottom_left_corner)
+	# print("bottom right ", bottom_right_position, " ", bottom_right_corner)
 	
-	print("top left ", top_left_position, " ", top_left_corner)
-	print("top right ", top_right_position, " ", top_right_corner)
-	print("bottom left ", bottom_left_position, " ", bottom_left_corner)
-	print("bottom right ", bottom_right_position, " ", bottom_right_corner)
+	var top_left_metadata = {
+		"scale_x": 1,
+		"scale_y": 1,
+		"position": top_left_position,
+	}
+	var top_right_metadata = {
+		"scale_x": -1,
+		"scale_y": 1,
+		"position": top_right_position,
+	}
+	var bottom_left_metadata = {
+		"scale_x": 1,
+		"scale_y": -1,
+		"position": bottom_left_position,
+	}
+	var bottom_right_metadata = {
+		"scale_x": -1,
+		"scale_y": -1,
+		"position": bottom_right_position,
+	}
 	
 	if is_position_valid(top_left_corner):
-		valid_positions.append(top_left_position)
+		valid_positions.append(top_left_metadata)
 	if is_position_valid(top_right_corner):
-		valid_positions.append(top_right_position)
+		valid_positions.append(top_right_metadata)
 	if is_position_valid(bottom_left_corner):
-		valid_positions.append(bottom_left_position)
+		valid_positions.append(bottom_left_metadata)
 	if is_position_valid(bottom_right_corner):
-		valid_positions.append(bottom_right_position)
+		valid_positions.append(bottom_right_metadata)
 
-	print(valid_positions)
-	# return [new_balloon_position_top, new_balloon_position_bottom]
+	# print(valid_positions)
 	return valid_positions
 
 
@@ -141,13 +158,16 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 func is_position_valid(global_position: Vector2) -> bool:
 	return get_viewport().get_visible_rect().has_point(global_position)
 
-## Takes a global position and sets the balloon to that location
-func set_balloon_position(global_position: Vector2) -> void:
-	self.set_global_position(global_position)
-	print(global_position)
+
+## Takes a dict with scale data and a position and sets the balloon to that location
+func set_balloon_position(global_position: Dictionary) -> void:
+	$Balloon.pivot_offset = $Balloon.size/2
+	$Balloon.scale.x = global_position["scale_x"]
+	$Balloon.scale.y = global_position["scale_y"]
+	self.set_global_position(global_position["position"])
+
 
 ### Signals
-
 
 func _on_mutated(_mutation: Dictionary) -> void:
 	is_waiting_for_input = false
