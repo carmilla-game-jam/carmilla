@@ -6,27 +6,24 @@ extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 
-# TODO: erase all elements in the array with a certain value
-func erase_all(input_buffer: Array, vector: Vector2) -> Array:
-	return []
 
 func handle_input() -> void:
-	if Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_just_pressed("right"):
 		input_buffer.append(Vector2.RIGHT)
-	elif Input.is_action_just_pressed("ui_left"):
+	elif Input.is_action_just_pressed("left"):
 		input_buffer.append(Vector2.LEFT)
-	elif Input.is_action_just_pressed("ui_up"):
+	elif Input.is_action_just_pressed("up"):
 		input_buffer.append(Vector2.UP)
-	elif Input.is_action_just_pressed("ui_down"):
+	elif Input.is_action_just_pressed("down"):
 		input_buffer.append(Vector2.DOWN)
 
-	if Input.is_action_just_released("ui_right"):
+	if !Input.is_action_pressed("right"):
 		input_buffer.erase(Vector2.RIGHT)
-	elif Input.is_action_just_released("ui_left"):
+	if !Input.is_action_pressed("left"):
 		input_buffer.erase(Vector2.LEFT)
-	elif Input.is_action_just_released("ui_up"):
+	if !Input.is_action_pressed("up"):
 		input_buffer.erase(Vector2.UP)
-	elif Input.is_action_just_released("ui_down"):
+	if !Input.is_action_pressed("down"):
 		input_buffer.erase(Vector2.DOWN)
 
 	input_buffer_readout = input_buffer[-1]
@@ -42,20 +39,26 @@ func handle_input() -> void:
 	
 	if Input.is_action_just_pressed("talk"):
 		pass
+		
+		
 func handle_sus_area() -> void:
 	# TODO: if overlapping with sus zone then decrease bar
 	pass
+
 
 func _physics_process(delta) -> void:
 	handle_input()
 	handle_sus_area()
 	move_and_slide()
 
+
 func _on_hearing_area_2d_area_entered(area) -> void:
 	area.get_parent().open_dialog_box()
 
+
 func _on_hearing_area_2d_area_exited(area) -> void:
 	area.get_parent().close_dialog_box()
+
 
 func _on_sus_area_2d_area_entered(area) -> void:
 	area.get_parent().close_dialog_box()

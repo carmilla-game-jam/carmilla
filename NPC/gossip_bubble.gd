@@ -83,7 +83,9 @@ func start(dialogue_resource: DialogueResource, title: String, potential_positio
 	is_waiting_for_input = false
 	resource = dialogue_resource
 	balloon_positions = potential_positions
-	set_balloon_position(balloon_positions[0].global_position)
+	set_balloon_position(find_valid_balloon_positions(balloon_positions).pick_random())
+	$Balloon.pivot_offset = $Balloon.size/2
+	$Balloon.scale.x = -1
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 
@@ -94,25 +96,55 @@ func next(next_id: String) -> void:
 
 ### Helpers
 
-#
+# Returns a list of valid positions for the balloon to be so that it doesn't fall out of the viewport
 func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array[Vector2]:
 	var valid_positions: Array[Vector2]
-	for potential_position in potential_positions:
-		#if potential_position.position.y
-		#self.rect_global_position.x
-		is_position_valid(self.position + potential_position.position)
+	
+	# var current_top_left = self.get_rect().position
+	# var current_bottom_right = self.get_rect().end
+	print(self.position)
+	print(self.global_position)
+	var new_balloon_position_top = self.position + potential_positions[0].global_position
+	var new_balloon_position_bottom = self.position + potential_positions[1].global_position
 
-	return []
+	var top_left_position = new_balloon_position_top
+	var top_right_position = Vector2(new_balloon_position_top.x + (-self.position.x), new_balloon_position_top.y)
+	var bottom_left_position = Vector2(new_balloon_position_bottom.x, new_balloon_position_bottom.y + (-self.position.y))
+	var bottom_right_position = Vector2(new_balloon_position_bottom.x + (-self.position.x), new_balloon_position_bottom.y + (-self.position.y))
+
+	# TODO: refactor to extend from the position variables above
+	var top_left_corner = new_balloon_position_top
+	var top_right_corner = Vector2(new_balloon_position_top.x + 2*(-self.position.x), new_balloon_position_top.y)
+	var bottom_left_corner = Vector2(new_balloon_position_bottom.x, new_balloon_position_bottom.y + 2*(-self.position.y))
+	var bottom_right_corner = Vector2(new_balloon_position_bottom.x + 2*(-self.position.x), new_balloon_position_bottom.y + 2*(-self.position.y))
+	
+	print("top left ", top_left_position, " ", top_left_corner)
+	print("top right ", top_right_position, " ", top_right_corner)
+	print("bottom left ", bottom_left_position, " ", bottom_left_corner)
+	print("bottom right ", bottom_right_position, " ", bottom_right_corner)
+	
+	if is_position_valid(top_left_corner):
+		valid_positions.append(top_left_position)
+	if is_position_valid(top_right_corner):
+		valid_positions.append(top_right_position)
+	if is_position_valid(bottom_left_corner):
+		valid_positions.append(bottom_left_position)
+	if is_position_valid(bottom_right_corner):
+		valid_positions.append(bottom_right_position)
+
+	print(valid_positions)
+	# return [new_balloon_position_top, new_balloon_position_bottom]
+	return valid_positions
 
 
 ## Check if position falls within the viewport
-func is_position_valid(position: Vector2) -> bool:
-	return false
+func is_position_valid(global_position: Vector2) -> bool:
+	return get_viewport().get_visible_rect().has_point(global_position)
 
-## Takes a position and sets the balloon to that location
-func set_balloon_position(position: Vector2) -> void:
-	print(position)
-	self.set_global_position(self.position + position)
+## Takes a global position and sets the balloon to that location
+func set_balloon_position(global_position: Vector2) -> void:
+	self.set_global_position(global_position)
+	print(global_position)
 
 ### Signals
 
