@@ -1,7 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://c3adctvmc5qyc"]
+[gd_scene load_steps=30 format=3 uid="uid://c3adctvmc5qyc"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_psycw"]
 [ext_resource type="Texture2D" uid="uid://celj2aofyl208" path="res://assets/spritesheets/FEMM-NP.png" id="2_xl2wn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugh5d"]
+radius = 12.1655
 
 [sub_resource type="Animation" id="Animation_cfy4x"]
 resource_name = "IdleDown"
@@ -42,6 +45,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_26hye"]
@@ -84,6 +99,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.5708]
+}
 
 [sub_resource type="Animation" id="Animation_27dhy"]
 resource_name = "IdleRight"
@@ -124,6 +151,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
 }
 
 [sub_resource type="Animation" id="Animation_t3vi3"]
@@ -166,6 +205,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
 
 [sub_resource type="Animation" id="Animation_8khot"]
 resource_name = "WalkDown"
@@ -206,6 +257,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_hdcry"]
@@ -248,6 +311,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [8]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
 
 [sub_resource type="Animation" id="Animation_qqsci"]
 resource_name = "WalkRight"
@@ -289,6 +364,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [8]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
 
 [sub_resource type="Animation" id="Animation_5n8ef"]
 resource_name = "WalkUp"
@@ -329,6 +416,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DirectionMarker2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gimba"]
@@ -418,11 +517,24 @@ radius = 39.0512
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_psycw")
 
+[node name="DirectionMarker2D" type="Marker2D" parent="."]
+position = Vector2(1, 11)
+rotation = 3.14159
+
+[node name="ActionableArea2D" type="Area2D" parent="DirectionMarker2D"]
+position = Vector2(0, 18)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DirectionMarker2D/ActionableArea2D"]
+shape = SubResource("CircleShape2D_ugh5d")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_xl2wn")
 offset = Vector2(2.08165e-12, 2.08165e-12)
+hframes = 8
 region_enabled = true
-region_rect = Rect2(64, 72, 64, 64)
+region_rect = Rect2(0, 200, 512, 64)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -444,12 +556,14 @@ shape = SubResource("RectangleShape2D_egtfs")
 
 [node name="HearingArea2D" type="Area2D" parent="."]
 position = Vector2(1, 0)
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HearingArea2D"]
 shape = SubResource("CircleShape2D_tp4wy")
 
 [node name="SusArea2D" type="Area2D" parent="."]
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SusArea2D"]

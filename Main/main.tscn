@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dunwhvl8nri27"]
+[gd_scene load_steps=5 format=3 uid="uid://dunwhvl8nri27"]
 
 [ext_resource type="Texture2D" uid="uid://bcokq1agykhmp" path="res://assets/dummy/Carmilla Environment MockUp.png" id="1_n1gyw"]
 [ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_t28of"]
 [ext_resource type="PackedScene" uid="uid://d3vvbaes1jchw" path="res://NPC/npc.tscn" id="4_ne71g"]
+[ext_resource type="Resource" uid="uid://cy46m64yvnhn4" path="res://NPC/npc_resources/sidone.tres" id="4_ui5uv"]
 
 [node name="Main" type="Node2D"]
 
@@ -15,3 +16,7 @@ position = Vector2(217, 167)
 
 [node name="NPC" parent="." instance=ExtResource("4_ne71g")]
 position = Vector2(78, 109)
+
+[node name="Sidone" parent="." instance=ExtResource("4_ne71g")]
+position = Vector2(108, 243)
+npc_resource = ExtResource("4_ui5uv")

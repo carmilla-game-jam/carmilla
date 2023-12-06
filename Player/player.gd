@@ -37,7 +37,7 @@ func handle_input() -> void:
 	if(velocity != Vector2.ZERO):
 		animation_tree["parameters/Idle/blend_position"] = velocity.normalized()
 		animation_tree["parameters/Walk/blend_position"] = velocity.normalized()
-	
+
 	if Input.is_action_just_pressed("talk"):
 		pass
 		
@@ -46,6 +46,13 @@ func handle_sus_area() -> void:
 	# TODO: if overlapping with sus zone then decrease bar
 	pass
 
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].get_parent().open_dialog_box()
+			return
 
 func _physics_process(delta) -> void:
 	camera.position = position
