@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://dvvep8mkaandu"]
 
 [ext_resource type="Script" path="res://NPC/gossip_bubble.gd" id="1_632ns"]
-[ext_resource type="FontFile" uid="uid://buk8rv6jrveso" path="res://assets/ui/TinyUnicode.ttf" id="1_bxp22"]
+[ext_resource type="FontFile" uid="uid://d2260ii5s7nm6" path="res://assets/ui/CelticTime.ttf" id="1_nwxnx"]
 [ext_resource type="Texture2D" uid="uid://bt4kwgggca5vb" path="res://assets/ui/speech_bubble.png" id="2_1swno"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ogjqg"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_53yyv"]
 
 [sub_resource type="Theme" id="Theme_ph7eb"]
-default_font = ExtResource("1_bxp22")
-default_font_size = 20
+default_font = ExtResource("1_nwxnx")
+default_font_size = 16
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
 [node name="GossipBalloon" type="Control"]
 layout_mode = 3
@@ -23,7 +24,6 @@ script = ExtResource("1_632ns")
 
 [node name="Balloon" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 50)
 layout_mode = 0
 offset_right = 107.0
 offset_bottom = 84.0
@@ -50,7 +50,6 @@ layout_mode = 2
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Dialogue/VBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 bbcode_enabled = true
@@ -83,5 +82,5 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
-[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="gui_input" from="Balloon/BalloonBackground" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
