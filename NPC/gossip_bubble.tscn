@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvvep8mkaandu"]
+[gd_scene load_steps=6 format=3 uid="uid://dvvep8mkaandu"]
 
 [ext_resource type="Script" path="res://NPC/gossip_bubble.gd" id="1_632ns"]
-[ext_resource type="FontFile" uid="uid://d2260ii5s7nm6" path="res://assets/ui/CelticTime.ttf" id="1_nwxnx"]
+[ext_resource type="Theme" uid="uid://cc5mrivogeh77" path="res://NPC/gossip_bubble_theme.tres" id="1_n87rb"]
 [ext_resource type="Texture2D" uid="uid://bt4kwgggca5vb" path="res://assets/ui/speech_bubble.png" id="2_1swno"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ogjqg"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_53yyv"]
-
-[sub_resource type="Theme" id="Theme_ph7eb"]
-default_font = ExtResource("1_nwxnx")
-default_font_size = 16
-RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
 [node name="GossipBalloon" type="Control"]
 layout_mode = 3
@@ -19,7 +14,7 @@ offset_top = -78.0
 offset_right = 3.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_ph7eb")
+theme = ExtResource("1_n87rb")
 script = ExtResource("1_632ns")
 
 [node name="Balloon" type="MarginContainer" parent="."]
@@ -39,25 +34,13 @@ patch_margin_bottom = 8
 [node name="Dialogue" type="MarginContainer" parent="."]
 layout_mode = 2
 offset_left = 7.0
-offset_top = 4.0
+offset_top = 6.0
 offset_right = 99.0
 offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue"]
-layout_mode = 2
-
-[node name="CharacterLabel" type="RichTextLabel" parent="Dialogue/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-mouse_filter = 1
-bbcode_enabled = true
-text = "Character"
-fit_content = true
-scroll_active = false
-
-[node name="DialogueLabel" parent="Dialogue/VBoxContainer" instance=ExtResource("2_ogjqg")]
+[node name="DialogueLabel" parent="Dialogue" instance=ExtResource("2_ogjqg")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -82,5 +65,4 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
-[connection signal="gui_input" from="Balloon/BalloonBackground" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

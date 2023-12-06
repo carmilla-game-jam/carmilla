@@ -1,13 +1,16 @@
 extends Node2D
 
-@export var dialog_resource: DialogueResource
-@export var dialog_start: String = "start"
+var dialog_resource: DialogueResource
+var dialog_start: String
 
 var balloon_node
 
 func open_dialog_box() -> void:
 	print("collided opened")
-	balloon_node = show_dialogue_balloon(dialog_resource, dialog_start, [$GossipBubbleUpMarker2D, $GossipBubbleDownMarker2D])
+	
+	# Check if we have a dialog file
+	if dialog_resource:
+		balloon_node = show_dialogue_balloon(dialog_resource, dialog_start, [$GossipBubbleUpMarker2D, $GossipBubbleDownMarker2D])
 
 func close_dialog_box() -> void:
 	if is_instance_valid(balloon_node):

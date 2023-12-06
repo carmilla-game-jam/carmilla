@@ -3,7 +3,7 @@ extends Control
 
 @onready var camera: Camera2D = get_node("/root/Camera")
 @onready var balloon: MarginContainer = %Balloon
-@onready var character_label: RichTextLabel = %CharacterLabel
+# @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
@@ -34,8 +34,8 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 
-		character_label.visible = not dialogue_line.character.is_empty()
-		character_label.text = tr(dialogue_line.character, "dialogue")
+		# character_label.visible = not dialogue_line.character.is_empty()
+		# character_label.text = tr(dialogue_line.character, "dialogue")
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
@@ -183,6 +183,7 @@ func _on_mutated(_mutation: Dictionary) -> void:
 	)
 
 
+## Currently disconnected for the gossip balloons
 func _on_balloon_gui_input(event: InputEvent) -> void:
 	# If the user clicks on the balloon while it's typing then skip typing
 	if dialogue_label.is_typing and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
