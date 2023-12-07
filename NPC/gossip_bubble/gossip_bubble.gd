@@ -9,7 +9,7 @@ extends Control
 ## The dialogue resource
 var resource: DialogueResource
 
-## Valid balloon positions
+## Potential balloon positions
 var balloon_positions: Array[Marker2D] = []
 
 ## Temporary game states
@@ -35,6 +35,9 @@ var dialogue_line: DialogueLine:
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
+
+		# Find best position for this balloon
+		set_balloon_position(find_valid_balloon_positions(balloon_positions)[0])
 
 		# Show our balloon
 		balloon.show()
@@ -74,7 +77,6 @@ func start(dialogue_resource: DialogueResource, title: String, potential_positio
 	is_waiting_for_input = false
 	resource = dialogue_resource
 	balloon_positions = potential_positions
-	set_balloon_position(find_valid_balloon_positions(balloon_positions)[0])
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 

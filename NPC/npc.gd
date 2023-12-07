@@ -4,7 +4,6 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	if npc_resource.gossip_resource:
-		print("title: ", npc_resource.gossip_title)
 		$Gossip.set("dialog_resource", npc_resource.gossip_resource)
 		$Gossip.set("dialog_title", npc_resource.gossip_title)
 	if npc_resource.conversation_resource:

@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://diy1aop2pwocd"]
+[gd_scene load_steps=7 format=3 uid="uid://diy1aop2pwocd"]
 
 [ext_resource type="Script" path="res://NPC/conversation_bubble/conversation_bubble.gd" id="1_ut8tr"]
 [ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://NPC/conversation_bubble/conversation_bubble_theme.tres" id="2_gp5a8"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r6uwk"]
-[ext_resource type="Texture2D" uid="uid://dxlvja5wfmxc8" path="res://assets/dummy/dummy_player.png" id="2_xi26w"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_j8xb8"]
 [ext_resource type="Texture2D" uid="uid://b0qucbd18oal6" path="res://assets/ui/dialog_bubble2.png" id="4_gulbp"]
 [ext_resource type="Texture2D" uid="uid://bu1rfo6fmj8aa" path="res://assets/ui/dialog_speaker.png" id="6_qx35c"]
@@ -15,7 +14,6 @@ script = ExtResource("1_ut8tr")
 [node name="Portrait" type="Sprite2D" parent="."]
 position = Vector2(487, 168)
 scale = Vector2(1.3, 9.64844)
-texture = ExtResource("2_xi26w")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
