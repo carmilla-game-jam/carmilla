@@ -16,7 +16,6 @@ script = ExtResource("1_a7tok")
 npc_resource = ExtResource("2_taov3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-frame = 8
 region_rect = Rect2(0, 64, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

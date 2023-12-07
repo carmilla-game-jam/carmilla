@@ -159,6 +159,7 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 
 ## Check if position falls within the viewport
 func is_position_valid(global_position: Vector2) -> bool:
+	# TODO: Viewport size will change when scaling the window, don't rely on it
 	var camera_rect = Rect2(Vector2(camera.get_screen_center_position() - Vector2(get_viewport().size/2)), get_viewport().size)
 	return camera_rect.has_point(global_position)
 
