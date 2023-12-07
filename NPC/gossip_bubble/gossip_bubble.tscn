@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvvep8mkaandu"]
 
-[ext_resource type="Script" path="res://NPC/gossip_bubble.gd" id="1_632ns"]
-[ext_resource type="Theme" uid="uid://cc5mrivogeh77" path="res://NPC/gossip_bubble_theme.tres" id="1_n87rb"]
+[ext_resource type="Theme" uid="uid://cc5mrivogeh77" path="res://NPC/gossip_bubble/gossip_bubble_theme.tres" id="1_n87rb"]
 [ext_resource type="Texture2D" uid="uid://bt4kwgggca5vb" path="res://assets/ui/speech_bubble.png" id="2_1swno"]
+[ext_resource type="Script" path="res://NPC/gossip_bubble/gossip_bubble.gd" id="2_15tbo"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ogjqg"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_53yyv"]
 
@@ -15,7 +15,7 @@ offset_right = 3.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_n87rb")
-script = ExtResource("1_632ns")
+script = ExtResource("2_15tbo")
 
 [node name="Balloon" type="MarginContainer" parent="."]
 unique_name_in_owner = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtgmslexw6s3x"]
+[gd_scene load_steps=10 format=3 uid="uid://cx1m4t0hcgafq"]
 
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="1_hbvof"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="2_xa3fr"]

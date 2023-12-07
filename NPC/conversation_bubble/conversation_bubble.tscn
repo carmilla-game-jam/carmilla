@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://diy1aop2pwocd"]
 
-[ext_resource type="Script" path="res://NPC/conversation_bubble.gd" id="1_y306h"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_3hyuq"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_xu5l1"]
+[ext_resource type="Script" path="res://NPC/conversation_bubble/conversation_bubble.gd" id="1_ut8tr"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r6uwk"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_j8xb8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_235ry"]
 content_margin_left = 6.0
@@ -91,7 +91,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="ConversationBalloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_y306h")
+script = ExtResource("1_ut8tr")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
@@ -128,7 +128,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_3hyuq")]
+[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_r6uwk")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -153,7 +153,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
-script = ExtResource("3_xu5l1")
+script = ExtResource("3_j8xb8")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
