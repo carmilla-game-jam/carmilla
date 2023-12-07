@@ -1,126 +1,104 @@
-[gd_scene load_steps=10 format=3 uid="uid://diy1aop2pwocd"]
+[gd_scene load_steps=8 format=3 uid="uid://diy1aop2pwocd"]
 
 [ext_resource type="Script" path="res://NPC/conversation_bubble/conversation_bubble.gd" id="1_ut8tr"]
+[ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://NPC/conversation_bubble/conversation_bubble_theme.tres" id="2_gp5a8"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r6uwk"]
+[ext_resource type="Texture2D" uid="uid://dxlvja5wfmxc8" path="res://assets/dummy/dummy_player.png" id="2_xi26w"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_j8xb8"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_235ry"]
-content_margin_left = 6.0
-content_margin_top = 3.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
-bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.345098, 0.345098, 0.345098, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufjut"]
-content_margin_left = 6.0
-content_margin_top = 3.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
-bg_color = Color(0.227451, 0.227451, 0.227451, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcbqo"]
-content_margin_left = 6.0
-content_margin_top = 3.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
-bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6i7a"]
-content_margin_left = 6.0
-content_margin_top = 3.0
-content_margin_right = 6.0
-content_margin_bottom = 3.0
-bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-
-[sub_resource type="Theme" id="Theme_qq3yp"]
-default_font_size = 9
-Button/styles/disabled = SubResource("StyleBoxFlat_235ry")
-Button/styles/focus = SubResource("StyleBoxFlat_ufjut")
-Button/styles/hover = SubResource("StyleBoxFlat_fcbqo")
-Button/styles/normal = SubResource("StyleBoxFlat_t6i7a")
-MarginContainer/constants/margin_bottom = 4
-MarginContainer/constants/margin_left = 8
-MarginContainer/constants/margin_right = 8
-MarginContainer/constants/margin_top = 4
-Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
+[ext_resource type="Texture2D" uid="uid://b0qucbd18oal6" path="res://assets/ui/dialog_bubble2.png" id="4_gulbp"]
+[ext_resource type="Texture2D" uid="uid://bu1rfo6fmj8aa" path="res://assets/ui/dialog_speaker.png" id="6_qx35c"]
 
 [node name="ConversationBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_ut8tr")
 
+[node name="Portrait" type="Sprite2D" parent="."]
+position = Vector2(487, 168)
+scale = Vector2(1.3, 9.64844)
+texture = ExtResource("2_xi26w")
+
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = -69.0
+offset_top = -105.0
 offset_right = -4.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = SubResource("Theme_qq3yp")
+theme = ExtResource("2_gp5a8")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 1.0
+anchor_right = 0.987
 anchor_bottom = 1.0
+offset_left = -0.203
+offset_top = -103.0
+offset_right = 0.20297
+offset_bottom = 3.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Dialogue"]
+[node name="BalloonBG" type="NinePatchRect" parent="Balloon/Dialogue"]
+layout_mode = 2
+texture = ExtResource("4_gulbp")
+region_rect = Rect2(0, 0, 128, 64)
+patch_margin_left = 16
+patch_margin_top = 48
+patch_margin_right = 16
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="DialogueContainer" type="MarginContainer" parent="Balloon/Dialogue"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DialogueLabel" parent="Balloon/Dialogue/DialogueContainer" instance=ExtResource("2_r6uwk")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue..."
+
+[node name="Character" type="MarginContainer" parent="Balloon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = -0.2
+anchor_right = 0.016
+anchor_bottom = 0.17
+offset_left = -11.096
+offset_right = 106.904
+
+[node name="CharacterBG" type="NinePatchRect" parent="Balloon/Character"]
+layout_mode = 2
+texture = ExtResource("6_qx35c")
+region_rect = Rect2(0, 0, 48, 16)
+patch_margin_left = 16
+patch_margin_top = 6
+patch_margin_right = 16
+patch_margin_bottom = 6
+axis_stretch_horizontal = 1
+
+[node name="CharacterContainer" type="MarginContainer" parent="Balloon/Character"]
 layout_mode = 2
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/VBoxContainer"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Character/CharacterContainer"]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 bbcode_enabled = true
@@ -128,23 +106,12 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_r6uwk")]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-text = "Dialogue..."
-
 [node name="Responses" type="MarginContainer" parent="Balloon"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.226
-anchor_top = 0.166
-anchor_right = 0.961
-anchor_bottom = 0.168
-offset_left = -3.286
-offset_top = -168.624
-offset_right = -0.871002
-offset_bottom = -0.752
+layout_mode = 2
+offset_left = 158.0
+offset_top = -70.0
+offset_right = 575.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 

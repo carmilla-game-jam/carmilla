@@ -1,17 +1,15 @@
 extends Node2D
 
 var dialog_resource: DialogueResource
-var dialog_start: String
+var dialog_title: String
 
 var balloon_node
 
 func open_dialog_box() -> void:
-	print("collided opened")
-
 	# Check if we have a dialog file
 	print(dialog_resource)
 	if dialog_resource:
-		balloon_node = show_dialogue_balloon(dialog_resource, dialog_start)
+		balloon_node = show_dialogue_balloon(dialog_resource, dialog_title)
 
 func close_dialog_box() -> void:
 	if is_instance_valid(balloon_node):

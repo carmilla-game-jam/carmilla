@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dlt3y63frliks"]
+
+[ext_resource type="FontFile" uid="uid://d2260ii5s7nm6" path="res://assets/ui/CelticTime.ttf" id="1_pyagn"]
+
+[resource]
+default_font = ExtResource("1_pyagn")
+default_font_size = 24
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 4
+RichTextLabel/colors/default_color = Color(0.188235, 0.219608, 0.262745, 1)

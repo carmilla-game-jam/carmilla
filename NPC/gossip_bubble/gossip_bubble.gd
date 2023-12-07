@@ -3,9 +3,8 @@ extends Control
 
 @onready var camera: Camera2D = get_node("/root/Camera")
 @onready var balloon: MarginContainer = %Balloon
-# @onready var character_label: RichTextLabel = %CharacterLabel
+@onready var balloon_bg: NinePatchRect = %BalloonBG
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
-@onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -34,16 +33,8 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 
-		# character_label.visible = not dialogue_line.character.is_empty()
-		# character_label.text = tr(dialogue_line.character, "dialogue")
-
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
-		
-		# TODO: Set balloon size to be equal to the total dialog size
-
-		responses_menu.hide()
-		responses_menu.set_responses(dialogue_line.responses)
 
 		# Show our balloon
 		balloon.show()
@@ -55,10 +46,7 @@ var dialogue_line: DialogueLine:
 			await dialogue_label.finished_typing
 
 		# Wait for input
-		if dialogue_line.responses.size() > 0:
-			balloon.focus_mode = Control.FOCUS_NONE
-			responses_menu.show()
-		elif dialogue_line.time != "":
+		if dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
 			next(dialogue_line.next_id)
@@ -118,29 +106,29 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 	var bottom_left_corner = Vector2(new_balloon_position_bottom.x, new_balloon_position_bottom.y + 2*(-self.position.y))
 	var bottom_right_corner = Vector2(new_balloon_position_bottom.x + 2*(-self.position.x), new_balloon_position_bottom.y + 2*(-self.position.y))
 
-	# print("top left ", top_left_position, " ", top_left_corner)
-	# print("top right ", top_right_position, " ", top_right_corner)
-	# print("bottom left ", bottom_left_position, " ", bottom_left_corner)
-	# print("bottom right ", bottom_right_position, " ", bottom_right_corner)
+	print("top left ", top_left_position, " ", top_left_corner)
+	print("top right ", top_right_position, " ", top_right_corner)
+	print("bottom left ", bottom_left_position, " ", bottom_left_corner)
+	print("bottom right ", bottom_right_position, " ", bottom_right_corner)
 	
 	var top_left_metadata = {
-		"scale_x": 1,
-		"scale_y": 1,
+		"texture": "res://assets/ui/speech_bubble_top_left.png",
+		"grow_direction": GROW_DIRECTION_BEGIN,
 		"position": top_left_position,
 	}
 	var top_right_metadata = {
-		"scale_x": -1,
-		"scale_y": 1,
+		"texture": "res://assets/ui/speech_bubble_top_right.png",
+		"grow_direction": GROW_DIRECTION_BEGIN,
 		"position": top_right_position,
 	}
 	var bottom_left_metadata = {
-		"scale_x": 1,
-		"scale_y": -1,
+		"texture": "res://assets/ui/speech_bubble_bottom_left.png",
+		"grow_direction": GROW_DIRECTION_END,
 		"position": bottom_left_position,
 	}
 	var bottom_right_metadata = {
-		"scale_x": -1,
-		"scale_y": -1,
+		"texture": "res://assets/ui/speech_bubble_bottom_right.png",
+		"grow_direction": GROW_DIRECTION_END,
 		"position": bottom_right_position,
 	}
 	
@@ -166,9 +154,8 @@ func is_position_valid(global_position: Vector2) -> bool:
 
 ## Takes a dict with scale data and a position and sets the balloon to that location
 func set_balloon_position(global_position: Dictionary) -> void:
-	balloon.pivot_offset = balloon.size/2
-	balloon.scale.x = global_position["scale_x"]
-	balloon.scale.y = global_position["scale_y"]
+	balloon.grow_vertical = global_position["grow_direction"]
+	balloon_bg.texture = load(global_position["texture"])
 	self.set_global_position(global_position["position"])
 
 
@@ -182,27 +169,3 @@ func _on_mutated(_mutation: Dictionary) -> void:
 			will_hide_balloon = false
 			balloon.hide()
 	)
-
-
-## Currently disconnected for the gossip balloons
-func _on_balloon_gui_input(event: InputEvent) -> void:
-	# If the user clicks on the balloon while it's typing then skip typing
-	if dialogue_label.is_typing and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-		get_viewport().set_input_as_handled()
-		dialogue_label.skip_typing()
-		return
-
-	if not is_waiting_for_input: return
-	if dialogue_line.responses.size() > 0: return
-
-	# When there are no response options the balloon itself is the clickable thing
-	get_viewport().set_input_as_handled()
-
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
-		next(dialogue_line.next_id)
-	elif event.is_action_pressed("ui_accept") and get_viewport().gui_get_focus_owner() == balloon:
-		next(dialogue_line.next_id)
-
-
-func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
-	next(response.next_id)

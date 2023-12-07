@@ -218,6 +218,21 @@ tracks/3/keys = {
 "values": [3.14159]
 }
 
+[sub_resource type="Animation" id="Animation_pd0mw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionMarker2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_8khot"]
 resource_name = "WalkDown"
 length = 0.7
@@ -430,21 +445,6 @@ tracks/3/keys = {
 "values": [3.14159]
 }
 
-[sub_resource type="Animation" id="Animation_pd0mw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DirectionMarker2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gimba"]
 _data = {
 "IdleDown": SubResource("Animation_cfy4x"),
@@ -548,7 +548,7 @@ shape = SubResource("CircleShape2D_ugh5d")
 texture = ExtResource("2_xl2wn")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 region_enabled = true
-region_rect = Rect2(0, 72, 64, 64)
+region_rect = Rect2(64, 72, 64, 64)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
