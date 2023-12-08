@@ -39,7 +39,7 @@ func set_responses(next_responses: Array) -> void:
 	# Add new items
 	if _responses.size() > 0:
 		for response in _responses:
-			var item: Control
+			var item: Button
 			if is_instance_valid(response_template):
 				item = response_template.duplicate(DUPLICATE_GROUPS | DUPLICATE_SCRIPTS | DUPLICATE_SIGNALS)
 				item.show()
