@@ -39,18 +39,6 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Carmilla"
 
-[dotnet]
-
-project/assembly_name="Carmilla"
-
-[dotnet]
-
-project/assembly_name="Carmilla"
-
-[dotnet]
-
-project/assembly_name="Carmilla"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

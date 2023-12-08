@@ -531,6 +531,8 @@ radius = 95.021
 radius = 39.0512
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
+position = Vector2(2.08165e-12, -24)
 script = ExtResource("1_psycw")
 
 [node name="DirectionMarker2D" type="Marker2D" parent="."]

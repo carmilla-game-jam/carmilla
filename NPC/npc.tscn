@@ -12,6 +12,8 @@ size = Vector2(21, 20)
 size = Vector2(21, 44)
 
 [node name="NPC" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_a7tok")
 npc_resource = ExtResource("2_taov3")
 
