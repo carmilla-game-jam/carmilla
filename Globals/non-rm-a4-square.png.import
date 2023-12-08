@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b282oyuqmhh78"
-path="res://.godot/imported/non-rm-a4-square.png-130e86b09db3fb2972435cc64c42e54b.ctex"
+uid="uid://d6j2lha8wnuk"
+path="res://.godot/imported/non-rm-a4-square.png-2075e1031e838d3e3c0dbafc00009828.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/maptiles/gothic/non-rm-a4-square.png"
-dest_files=["res://.godot/imported/non-rm-a4-square.png-130e86b09db3fb2972435cc64c42e54b.ctex"]
+source_file="res://Globals/non-rm-a4-square.png"
+dest_files=["res://.godot/imported/non-rm-a4-square.png-2075e1031e838d3e3c0dbafc00009828.ctex"]
 
 [params]
 
