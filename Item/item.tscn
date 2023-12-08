@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccmxmi2xn83hm"]
+
+[ext_resource type="Script" path="res://Item/item.gd" id="1_durgf"]
+[ext_resource type="Texture2D" uid="uid://c7cehfg6mygkv" path="res://assets/spritesheets/key_items.png" id="1_k7paq"]
+[ext_resource type="Script" path="res://NPC/conversation.gd" id="2_eb78d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_il7da"]
+size = Vector2(14.5, 14.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jef3t"]
+size = Vector2(14.5, 14.5)
+
+[node name="Item" type="StaticBody2D"]
+script = ExtResource("1_durgf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k7paq")
+hframes = 6
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_il7da")
+
+[node name="Actionable" type="Node2D" parent="."]
+script = ExtResource("2_eb78d")
+
+[node name="ActionableArea" type="Area2D" parent="Actionable"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable/ActionableArea"]
+position = Vector2(-0.25, -0.25)
+shape = SubResource("RectangleShape2D_jef3t")

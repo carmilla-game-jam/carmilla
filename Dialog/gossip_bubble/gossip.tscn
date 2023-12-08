@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw0faioh0f52p"]
+
+[ext_resource type="Script" path="res://NPC/gossip.gd" id="1_gic8h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c5pr"]
+size = Vector2(21, 44)
+
+[node name="Gossip" type="Node2D"]
+script = ExtResource("1_gic8h")
+
+[node name="GossipCollision" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GossipCollision"]
+position = Vector2(0.5, 9)
+shape = SubResource("RectangleShape2D_7c5pr")
+
+[node name="GossipBubbleUpMarker2D" type="Marker2D" parent="."]
+position = Vector2(0, -17)
+
+[node name="GossipBubbleDownMarker2D" type="Marker2D" parent="."]
+position = Vector2(0, 8)
