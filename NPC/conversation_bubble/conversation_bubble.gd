@@ -75,7 +75,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 ## Start some dialogue
-func start(dialogue_resource: DialogueResource, title: String, extra_game_states: Array = []) -> void:
+func start(dialogue_resource: DialogueResource, title: String, portrait: Texture2D, extra_game_states: Array = []) -> void:
+	$Portrait.texture = portrait
 	temporary_game_states =  [self] + extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource

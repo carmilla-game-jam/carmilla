@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://cy46m64yvnhn4"]
+[gd_resource type="Resource" script_class="NPCResource" load_steps=5 format=3 uid="uid://cy46m64yvnhn4"]
 
 [ext_resource type="Resource" uid="uid://b7iwxty6d7bxj" path="res://NPC/npc_resources/conversation_resources/sidone.dialogue" id="1_mgkht"]
+[ext_resource type="Texture2D" uid="uid://cyklqg8fkjkc3" path="res://assets/dummy/dummy_portrait.webp" id="2_ntbml"]
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_xyu4n"]
 [ext_resource type="Texture2D" uid="uid://cxif6atlteher" path="res://assets/spritesheets/sidone.png" id="3_r38fa"]
 
@@ -10,6 +11,8 @@ texture = ExtResource("3_r38fa")
 hframes = 1
 vframes = 1
 frame = 0
+is_item = false
+portrait = ExtResource("2_ntbml")
 gossip_title = "start"
 conversation_resource = ExtResource("1_mgkht")
 conversation_title = "start"

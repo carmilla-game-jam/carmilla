@@ -10,6 +10,7 @@ texture = ExtResource("3_4a8jd")
 hframes = 8
 vframes = 19
 frame = 8
+is_item = false
 gossip_resource = ExtResource("1_ytijf")
 gossip_title = "test_long"
 conversation_title = "start"
