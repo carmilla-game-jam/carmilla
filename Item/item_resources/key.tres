@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://wlvhbf6fyyum"]
+
+[ext_resource type="Resource" uid="uid://c3blalng1h1at" path="res://Item/item_resources/item.dialogue" id="1_hakr3"]
+[ext_resource type="Script" path="res://Item/item_resource.gd" id="1_sv3um"]
+[ext_resource type="Texture2D" uid="uid://c7cehfg6mygkv" path="res://assets/spritesheets/key_items.png" id="2_m5kqt"]
+
+[resource]
+script = ExtResource("1_sv3um")
+is_collidable = false
+is_sprite_visible = true
+destroy_on_interaction = true
+name = ""
+texture = ExtResource("2_m5kqt")
+hframes = 6
+vframes = 4
+frame = 0
+conversation_resource = ExtResource("1_hakr3")
+conversation_title = "key"

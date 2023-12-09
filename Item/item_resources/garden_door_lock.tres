@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://d3n7imtg023h3"]
+
+[ext_resource type="Resource" uid="uid://c3blalng1h1at" path="res://Item/item_resources/item.dialogue" id="1_02qkl"]
+[ext_resource type="Script" path="res://Item/item_resource.gd" id="2_55c2t"]
+
+[resource]
+script = ExtResource("2_55c2t")
+id = 3
+is_collidable = true
+is_sprite_visible = false
+name = "garden_door_lock"
+hframes = 6
+vframes = 4
+frame = 0
+conversation_resource = ExtResource("1_02qkl")
+conversation_title = "garden_door_lock"

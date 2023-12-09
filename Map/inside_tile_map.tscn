@@ -1,24 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ciju50teunatx"]
+[gd_scene load_steps=8 format=3 uid="uid://ciju50teunatx"]
 
 [ext_resource type="TileSet" uid="uid://dshjit0prmfx6" path="res://Map/tile_set.tres" id="1_gvtac"]
 [ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_u3thh"]
 [ext_resource type="PackedScene" uid="uid://d3vvbaes1jchw" path="res://NPC/npc.tscn" id="3_kqhfg"]
 [ext_resource type="Resource" uid="uid://cy46m64yvnhn4" path="res://NPC/npc_resources/sidone.tres" id="4_4gahr"]
 [ext_resource type="PackedScene" uid="uid://ccmxmi2xn83hm" path="res://Item/item.tscn" id="5_servt"]
-[ext_resource type="Resource" uid="uid://b7iwxty6d7bxj" path="res://NPC/npc_resources/conversation_resources/sidone.dialogue" id="6_307u2"]
-[ext_resource type="Script" path="res://Item/item_resource.gd" id="6_q7o1m"]
-[ext_resource type="Texture2D" uid="uid://c7cehfg6mygkv" path="res://assets/spritesheets/key_items.png" id="7_qsnqk"]
-
-[sub_resource type="Resource" id="Resource_ne08w"]
-script = ExtResource("6_q7o1m")
-texture = ExtResource("7_qsnqk")
-hframes = 6
-vframes = 4
-frame = 0
-is_collidable = false
-is_sprite_visible = false
-conversation_resource = ExtResource("6_307u2")
-conversation_title = "start"
+[ext_resource type="Resource" uid="uid://wlvhbf6fyyum" path="res://Item/item_resources/key.tres" id="6_c3gdg"]
+[ext_resource type="Resource" uid="uid://d3n7imtg023h3" path="res://Item/item_resources/garden_door_lock.tres" id="7_oyl6r"]
 
 [node name="InsideTileMap" type="TileMap"]
 y_sort_enabled = true
@@ -67,6 +55,10 @@ npc_resource = ExtResource("4_4gahr")
 
 [node name="NPC3" parent="." instance=ExtResource("3_kqhfg")]
 
-[node name="Item" parent="." instance=ExtResource("5_servt")]
+[node name="Key" parent="." instance=ExtResource("5_servt")]
 position = Vector2(-237, -35)
-item_resource = SubResource("Resource_ne08w")
+item_resource = ExtResource("6_c3gdg")
+
+[node name="Door" parent="." instance=ExtResource("5_servt")]
+position = Vector2(0, -622)
+item_resource = ExtResource("7_oyl6r")
