@@ -3,7 +3,6 @@
 [center]Carmilla[/center]: (A muddy key? Wonder what it opens.)
 set state["items"]["key"]["obtained"] = true
 do emit("item_destroyed", state["items"]["key"]["id"])
-do debug(state)
 
 => END
 
@@ -19,7 +18,7 @@ do debug(state)
 
 [center]Carmilla[/center]: (This is...!!)
 set state["items"]["handkerchief"]["obtained"] = true
-do debug(state)
+do emit("item_destroyed", state["items"]["handkerchief"]["id"])
 
 => END
 
@@ -29,8 +28,7 @@ if state["items"]["key"]["obtained"]:
 	[center]Carmilla[/center]: (The key fits!)
 	set state["locks_opened"]["garden"] = true
 	do emit("item_destroyed", state["items"]["garden_door_lock"]["id"])
-	do debug(state)
 else:
-	[center]Carmilla: (It's locked.)
+	[center]Carmilla[/center]: (It's locked.)
 	
 => END

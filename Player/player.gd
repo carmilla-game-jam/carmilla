@@ -38,7 +38,7 @@ func handle_input() -> void:
 		animation_tree["parameters/Idle/blend_position"] = velocity.normalized()
 		animation_tree["parameters/Walk/blend_position"] = velocity.normalized()
 
-	if Input.is_action_just_pressed("talk"):
+	if Input.is_action_just_pressed("interact"):
 		pass
 		
 		

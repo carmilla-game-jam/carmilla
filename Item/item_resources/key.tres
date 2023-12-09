@@ -6,13 +6,15 @@
 
 [resource]
 script = ExtResource("1_sv3um")
-is_collidable = false
-is_sprite_visible = true
-destroy_on_interaction = true
+id = 0
 name = ""
+is_sprite_visible = true
 texture = ExtResource("2_m5kqt")
 hframes = 6
 vframes = 4
 frame = 0
+is_collidable = false
+collision_area_x = 14.0
+collision_area_y = 14.0
 conversation_resource = ExtResource("1_hakr3")
 conversation_title = "key"

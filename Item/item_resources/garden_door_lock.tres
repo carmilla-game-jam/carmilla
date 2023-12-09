@@ -6,11 +6,13 @@
 [resource]
 script = ExtResource("2_55c2t")
 id = 3
-is_collidable = true
-is_sprite_visible = false
 name = "garden_door_lock"
+is_sprite_visible = false
 hframes = 6
 vframes = 4
 frame = 0
+is_collidable = true
+collision_area_x = 32.0
+collision_area_y = 16.0
 conversation_resource = ExtResource("1_02qkl")
 conversation_title = "garden_door_lock"

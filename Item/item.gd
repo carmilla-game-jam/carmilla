@@ -13,6 +13,10 @@ func _ready() -> void:
 		$Actionable.set("dialog_title", item_resource.conversation_title)
 	if !item_resource.is_collidable:
 		$CollisionShape2D.disabled = true
+	var collision_shape = RectangleShape2D.new()
+	collision_shape.size.x = item_resource.collision_area_x
+	collision_shape.size.y = item_resource.collision_area_y
+	$CollisionShape2D.shape = collision_shape
 	if !item_resource.is_sprite_visible:
 		$Sprite2D.visible = false
 	$Sprite2D.texture = item_resource.texture
