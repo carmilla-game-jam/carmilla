@@ -9,10 +9,15 @@ extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 
-var in_sus_mode: bool = false
+var is_cat_mode: bool = false
 var in_sus_zone_minor: bool
 var in_sus_zone_major: bool
 
+func _ready():
+	$HearingArea2D.monitoring = false
+	$HearingArea2D.monitorable = false
+	$HearingArea2D/CollisionShape2D.disabled = true
+	is_cat_mode = false
 
 func handle_input() -> void:
 	if Input.is_action_just_pressed("right"):
@@ -57,6 +62,9 @@ func handle_sus_area(delta) -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("cat_mode_toggle"):
+		toggle_cat_mode()
+	
 	if Input.is_action_just_pressed("ui_accept"):
 		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
 		if actionables.size() > 0:
@@ -70,6 +78,18 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 	print(State.state["sus"]["level"])
 
+func toggle_cat_mode() -> void:
+	if !is_cat_mode:
+		$HearingArea2D.monitoring = true
+		$HearingArea2D.monitorable = true
+		$HearingArea2D/CollisionShape2D.disabled = false
+		is_cat_mode = true
+		# TODO: Add in circle visibility toggle too
+	else:
+		$HearingArea2D.monitoring = false
+		$HearingArea2D.monitorable = false
+		$HearingArea2D/CollisionShape2D.disabled = true
+		is_cat_mode = false
 
 func _on_hearing_area_2d_area_entered(area) -> void:
 	area.get_parent().open_dialog_box()
