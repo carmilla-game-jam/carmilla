@@ -52,8 +52,10 @@ position = Vector2(-157, -71)
 npc_resource = ExtResource("4_4gahr")
 
 [node name="NPC2" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(288, -79)
 
 [node name="NPC3" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(155, -23)
 
 [node name="Key" parent="." instance=ExtResource("5_servt")]
 position = Vector2(-237, -35)

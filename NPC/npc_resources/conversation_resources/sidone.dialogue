@@ -2,6 +2,7 @@
 
 [center]Sidone[/center]: HellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooHellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooHellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 - Hi
+	set state["sus"] = state["sus"] - state["sus"]["convo_fail_rate"]
 - Helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 => END

@@ -1,11 +1,17 @@
 extends CharacterBody2D
 
 @export var SPEED = 75
+@export var sus_decrease_rate_minor = 10
+@export var sus_decrease_rate_major = 50
 @onready var input_buffer = [Vector2.ZERO]
 @onready var input_buffer_readout = Vector2()
 @onready var camera: Camera2D = get_node("/root/Camera")
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+
+var in_sus_mode: bool = false
+var in_sus_zone_minor: bool
+var in_sus_zone_major: bool
 
 
 func handle_input() -> void:
@@ -40,11 +46,14 @@ func handle_input() -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		pass
-		
-		
-func handle_sus_area() -> void:
+
+
+func handle_sus_area(delta) -> void:
 	# TODO: if overlapping with sus zone then decrease bar
-	pass
+	if in_sus_zone_major:
+		State.state["sus"]["level"] -= sus_decrease_rate_major * delta
+	elif in_sus_zone_minor:
+		State.state["sus"]["level"] -= sus_decrease_rate_minor * delta
 
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -57,17 +66,25 @@ func _unhandled_input(_event: InputEvent) -> void:
 func _physics_process(delta) -> void:
 	camera.position = position
 	handle_input()
-	handle_sus_area()
+	handle_sus_area(delta)
 	move_and_slide()
+	print(State.state["sus"]["level"])
 
 
 func _on_hearing_area_2d_area_entered(area) -> void:
 	area.get_parent().open_dialog_box()
+	in_sus_zone_minor = true
 
 
 func _on_hearing_area_2d_area_exited(area) -> void:
 	area.get_parent().close_dialog_box()
+	in_sus_zone_minor = false
 
 
 func _on_sus_area_2d_area_entered(area) -> void:
 	area.get_parent().close_dialog_box()
+	in_sus_zone_major = true
+
+
+func _on_sus_area_2d_area_exited(area) -> void:
+	in_sus_zone_major = false

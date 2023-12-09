@@ -3,6 +3,10 @@ extends Node
 signal item_destroyed(id: int)
 
 var state: Dictionary = {
+	"sus": {
+		"level": 1000,
+		"convo_fail_rate": 200,
+		},
 	"gossip": {
 		"sidone": {
 			"1": true,
@@ -29,5 +33,5 @@ var state: Dictionary = {
 	},
 	"locks_opened": {
 		"garden": false,
-	}
+	},
 }
