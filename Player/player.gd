@@ -17,6 +17,9 @@ func _ready():
 	$HearingArea2D.monitoring = false
 	$HearingArea2D.monitorable = false
 	$HearingArea2D/CollisionShape2D.disabled = true
+	$SusArea2D.monitoring = false
+	$SusArea2D.monitorable = false
+	$SusArea2D/CollisionShape2D.disabled = true
 	is_cat_mode = false
 
 func handle_input() -> void:
@@ -55,14 +58,16 @@ func handle_input() -> void:
 
 func handle_sus_area(delta) -> void:
 	# TODO: if overlapping with sus zone then decrease bar
-	if in_sus_zone_major:
-		State.state["sus"]["level"] -= sus_decrease_rate_major * delta
-	elif in_sus_zone_minor:
-		State.state["sus"]["level"] -= sus_decrease_rate_minor * delta
+	if is_cat_mode:
+		if in_sus_zone_major:
+			State.state["sus"]["level"] -= sus_decrease_rate_major * delta
+		elif in_sus_zone_minor:
+			State.state["sus"]["level"] -= sus_decrease_rate_minor * delta
 
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("cat_mode_toggle"):
+		print("cat mode toggle")
 		toggle_cat_mode()
 	
 	if Input.is_action_just_pressed("ui_accept"):
@@ -76,19 +81,24 @@ func _physics_process(delta) -> void:
 	handle_input()
 	handle_sus_area(delta)
 	move_and_slide()
-	print(State.state["sus"]["level"])
 
 func toggle_cat_mode() -> void:
 	if !is_cat_mode:
 		$HearingArea2D.monitoring = true
 		$HearingArea2D.monitorable = true
 		$HearingArea2D/CollisionShape2D.disabled = false
+		$SusArea2D.monitoring = true
+		$SusArea2D.monitorable = true
+		$SusArea2D/CollisionShape2D.disabled = false
 		is_cat_mode = true
 		# TODO: Add in circle visibility toggle too
 	else:
 		$HearingArea2D.monitoring = false
 		$HearingArea2D.monitorable = false
 		$HearingArea2D/CollisionShape2D.disabled = true
+		$SusArea2D.monitoring = false
+		$SusArea2D.monitorable = false
+		$SusArea2D/CollisionShape2D.disabled = true
 		is_cat_mode = false
 
 func _on_hearing_area_2d_area_entered(area) -> void:

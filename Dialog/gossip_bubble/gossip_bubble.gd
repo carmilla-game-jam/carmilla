@@ -66,9 +66,9 @@ func _ready() -> void:
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 
-func _unhandled_input(_event: InputEvent) -> void:
+# func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
-	get_viewport().set_input_as_handled()
+	# get_viewport().set_input_as_handled()
 
 
 ## Start some dialogue
@@ -108,10 +108,10 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 	var bottom_left_corner = Vector2(new_balloon_position_bottom.x, new_balloon_position_bottom.y + 2*(-self.position.y))
 	var bottom_right_corner = Vector2(new_balloon_position_bottom.x + 2*(-self.position.x), new_balloon_position_bottom.y + 2*(-self.position.y))
 
-	print("top left ", top_left_position, " ", top_left_corner)
-	print("top right ", top_right_position, " ", top_right_corner)
-	print("bottom left ", bottom_left_position, " ", bottom_left_corner)
-	print("bottom right ", bottom_right_position, " ", bottom_right_corner)
+	# print("top left ", top_left_position, " ", top_left_corner)
+	# print("top right ", top_right_position, " ", top_right_corner)
+	# print("bottom left ", bottom_left_position, " ", bottom_left_corner)
+	# print("bottom right ", bottom_right_position, " ", bottom_right_corner)
 	
 	var top_left_metadata = {
 		"texture": "res://assets/ui/speech_bubble_top_left.png",
@@ -143,7 +143,7 @@ func find_valid_balloon_positions(potential_positions: Array[Marker2D]) -> Array
 	if is_position_valid(bottom_right_corner):
 		valid_positions.append(bottom_right_metadata)
 
-	print(valid_positions)
+	# print(valid_positions)
 	return valid_positions
 
 
