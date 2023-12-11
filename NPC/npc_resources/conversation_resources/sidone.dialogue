@@ -2,7 +2,7 @@
 
 [center]Sidone[/center]: HellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooHellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooHellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 - Hi
-	set state["sus"]["level"] -= state["sus"]["convo_fail_rate"]
+	do decrease_sus_bar(state["sus"]["convo_fail_loss_rate"])
 - Helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 => END

@@ -23,14 +23,6 @@ func _ready():
 	is_cat_mode = false
 
 func handle_input() -> void:
-	if Input.is_action_just_pressed("right"):
-		input_buffer.append(Vector2.RIGHT)
-	elif Input.is_action_just_pressed("left"):
-		input_buffer.append(Vector2.LEFT)
-	elif Input.is_action_just_pressed("up"):
-		input_buffer.append(Vector2.UP)
-	elif Input.is_action_just_pressed("down"):
-		input_buffer.append(Vector2.DOWN)
 
 	if !Input.is_action_pressed("right"):
 		input_buffer.erase(Vector2.RIGHT)
@@ -41,31 +33,42 @@ func handle_input() -> void:
 	if !Input.is_action_pressed("down"):
 		input_buffer.erase(Vector2.DOWN)
 
+	if Input.is_action_just_pressed("interact"):
+		pass
+
+
+func update_animations() -> void:
 	input_buffer_readout = input_buffer[-1]
 	velocity = input_buffer_readout * SPEED
 
 	animation_tree.set("parameters/conditions/idle", velocity == Vector2.ZERO)
 	animation_tree.set("parameters/conditions/is_moving", velocity != Vector2.ZERO)
-	# print(input_buffer)
 	
 	if(velocity != Vector2.ZERO):
 		animation_tree["parameters/Idle/blend_position"] = velocity.normalized()
 		animation_tree["parameters/Walk/blend_position"] = velocity.normalized()
-
-	if Input.is_action_just_pressed("interact"):
-		pass
 
 
 func handle_sus_area(delta) -> void:
 	# TODO: if overlapping with sus zone then decrease bar
 	if is_cat_mode:
 		if in_sus_zone_major:
-			State.state["sus"]["level"] -= sus_decrease_rate_major * delta
+			State.decrease_sus_bar(sus_decrease_rate_major * delta)
 		elif in_sus_zone_minor:
-			State.state["sus"]["level"] -= sus_decrease_rate_minor * delta
+			State.decrease_sus_bar(sus_decrease_rate_minor * delta)
 
 
 func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("right"):
+		input_buffer.append(Vector2.RIGHT)
+	elif Input.is_action_just_pressed("left"):
+		input_buffer.append(Vector2.LEFT)
+	elif Input.is_action_just_pressed("up"):
+		input_buffer.append(Vector2.UP)
+	elif Input.is_action_just_pressed("down"):
+		input_buffer.append(Vector2.DOWN)
+
+
 	if Input.is_action_just_pressed("cat_mode_toggle"):
 		print("cat mode toggle")
 		toggle_cat_mode()
@@ -79,6 +82,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 func _physics_process(delta) -> void:
 	camera.position = position
 	handle_input()
+	update_animations()
 	handle_sus_area(delta)
 	move_and_slide()
 
