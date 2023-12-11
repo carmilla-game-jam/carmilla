@@ -5,22 +5,14 @@ extends CharacterBody2D
 @export var sus_decrease_rate_major = 50
 @onready var input_buffer = [Vector2.ZERO]
 @onready var input_buffer_readout = Vector2()
+@onready var sus_area_buffer_minor = []
+@onready var sus_area_buffer_major = []
 @onready var camera: Camera2D = get_node("/root/Camera")
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var state_machine: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 
-var is_cat_mode: bool = false
-var in_sus_zone_minor: bool
-var in_sus_zone_major: bool
-
 func _ready():
-	$HearingArea2D.monitoring = false
-	$HearingArea2D.monitorable = false
-	$HearingArea2D/CollisionShape2D.disabled = true
-	$SusArea2D.monitoring = false
-	$SusArea2D.monitorable = false
-	$SusArea2D/CollisionShape2D.disabled = true
-	is_cat_mode = false
+	camera.enabled = true
 
 func handle_input() -> void:
 
@@ -51,10 +43,10 @@ func update_animations() -> void:
 
 func handle_sus_area(delta) -> void:
 	# TODO: if overlapping with sus zone then decrease bar
-	if is_cat_mode:
-		if in_sus_zone_major:
+	if State.state["sus"]["enabled"]:
+		if !sus_area_buffer_major.is_empty():
 			State.decrease_sus_bar(sus_decrease_rate_major * delta)
-		elif in_sus_zone_minor:
+		elif !sus_area_buffer_minor.is_empty():
 			State.decrease_sus_bar(sus_decrease_rate_minor * delta)
 
 
@@ -72,7 +64,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("cat_mode_toggle"):
 		print("cat mode toggle")
 		toggle_cat_mode()
-	
+
 	if Input.is_action_just_pressed("ui_accept"):
 		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
 		if actionables.size() > 0:
@@ -87,14 +79,14 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 
 func toggle_cat_mode() -> void:
-	if !is_cat_mode:
+	if !State.state["sus"]["enabled"]:
 		$HearingArea2D.monitoring = true
 		$HearingArea2D.monitorable = true
 		$HearingArea2D/CollisionShape2D.disabled = false
 		$SusArea2D.monitoring = true
 		$SusArea2D.monitorable = true
 		$SusArea2D/CollisionShape2D.disabled = false
-		is_cat_mode = true
+		State.enable_cat_mode()
 		# TODO: Add in circle visibility toggle too
 	else:
 		$HearingArea2D.monitoring = false
@@ -103,22 +95,23 @@ func toggle_cat_mode() -> void:
 		$SusArea2D.monitoring = false
 		$SusArea2D.monitorable = false
 		$SusArea2D/CollisionShape2D.disabled = true
-		is_cat_mode = false
+		State.disable_cat_mode()
+
 
 func _on_hearing_area_2d_area_entered(area) -> void:
 	area.get_parent().open_dialog_box()
-	in_sus_zone_minor = true
+	sus_area_buffer_minor.append(area)
 
 
 func _on_hearing_area_2d_area_exited(area) -> void:
 	area.get_parent().close_dialog_box()
-	in_sus_zone_minor = false
+	sus_area_buffer_minor.erase(area)
 
 
 func _on_sus_area_2d_area_entered(area) -> void:
 	area.get_parent().close_dialog_box()
-	in_sus_zone_major = true
+	sus_area_buffer_major.append(area)
 
 
 func _on_sus_area_2d_area_exited(area) -> void:
-	in_sus_zone_major = false
+	sus_area_buffer_major.erase(area)

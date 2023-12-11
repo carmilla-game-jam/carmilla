@@ -3,5 +3,6 @@
 [ext_resource type="Script" path="res://Globals/camera_2d.gd" id="1_3lhlr"]
 
 [node name="Camera" type="Camera2D"]
+enabled = false
 process_callback = 0
 script = ExtResource("1_3lhlr")

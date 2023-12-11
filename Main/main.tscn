@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dunwhvl8nri27"]
 
 [ext_resource type="Texture2D" uid="uid://bcokq1agykhmp" path="res://assets/dummy/Carmilla Environment MockUp.png" id="1_n1gyw"]
-[ext_resource type="PackedScene" uid="uid://bmv3ku4wf6dvd" path="res://Map/outside_tile_map.tscn" id="5_la6c7"]
+[ext_resource type="PackedScene" uid="uid://d0dlhmvwdw6do" path="res://UI/ui.tscn" id="3_gbmyf"]
 [ext_resource type="PackedScene" uid="uid://ciju50teunatx" path="res://Map/inside_tile_map.tscn" id="6_fy0pd"]
 
 [node name="Main" type="Node2D"]
@@ -11,8 +11,6 @@ visible = false
 position = Vector2(176, 161)
 texture = ExtResource("1_n1gyw")
 
-[node name="OutsideTileMap" parent="." instance=ExtResource("5_la6c7")]
-visible = false
-layer_4/tile_data = PackedInt32Array(196600, 1572871, 8, 262136, 1572871, 8, 327672, 1572871, 8, 65544, 1310727, 16, 131080, 1572871, 8, 196616, 1572871, 8, 262152, 1572871, 8, -131062, 1048583, 12, 589809, 1048583, 12, 786419, 1310727, 16, 589819, 196608, 13)
-
 [node name="InsideTileMap" parent="." instance=ExtResource("6_fy0pd")]
+
+[node name="UI" parent="." instance=ExtResource("3_gbmyf")]

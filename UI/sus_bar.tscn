@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi485nx7bjq5q"]
+
+[ext_resource type="Texture2D" uid="uid://cidt74nm217jt" path="res://UI/sus_bar_container.png" id="1_8xqw4"]
+[ext_resource type="Script" path="res://UI/sus_bar_ui.gd" id="1_qf1j5"]
+[ext_resource type="Texture2D" uid="uid://dpf0af7pu0qwl" path="res://UI/sus_bar_fill.png" id="2_k6v53"]
+
+[node name="SusBar" type="TextureProgressBar"]
+offset_right = 23.0
+offset_bottom = 46.0
+max_value = 1000.0
+value = 1000.0
+fill_mode = 3
+texture_over = ExtResource("1_8xqw4")
+texture_progress = ExtResource("2_k6v53")
+texture_progress_offset = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("1_qf1j5")

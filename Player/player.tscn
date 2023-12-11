@@ -574,16 +574,22 @@ shape = SubResource("RectangleShape2D_egtfs")
 position = Vector2(1, 0)
 collision_layer = 0
 collision_mask = 2
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HearingArea2D"]
 shape = SubResource("CircleShape2D_tp4wy")
+disabled = true
 
 [node name="SusArea2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SusArea2D"]
 shape = SubResource("CircleShape2D_vx5ud")
+disabled = true
 
 [connection signal="area_entered" from="HearingArea2D" to="." method="_on_hearing_area_2d_area_entered"]
 [connection signal="area_exited" from="HearingArea2D" to="." method="_on_hearing_area_2d_area_exited"]
