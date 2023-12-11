@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dpf0af7pu0qwl" path="res://UI/sus_bar_fill.png" id="2_k6v53"]
 
 [node name="SusBar" type="TextureProgressBar"]
+self_modulate = Color(1, 1, 1, 0.392157)
 offset_right = 23.0
 offset_bottom = 46.0
 max_value = 1000.0
