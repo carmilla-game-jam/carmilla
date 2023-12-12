@@ -7,8 +7,6 @@ class_name NPCResource
 @export var vframes: int = 19
 @export var frame: int = 0
 
-@export var is_item: bool = false
-
 @export var portrait: Texture2D
 
 @export var gossip_resource: DialogueResource

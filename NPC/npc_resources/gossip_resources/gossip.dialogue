@@ -1,0 +1,162 @@
+~ sidone_family_1
+
+No one has seen that "Mademoiselle Sidone" in society before, which family do you think is sponsoring her?
+set state["gossip"]["sidone"]["family"]["1"] = true
+
+=> END
+
+~ sidone_fashion_1
+
+I feel like I’ve seen that gown that the deer masked mademoiselle is wearing. Is that from last season?
+set state["gossip"]["sidone"]["fashion"]["1"] = true
+
+=> END
+
+~ sidone_gossip_1
+
+I don’t believe I recognize the deer masked lady, does anyone have her family name?
+set state["gossip"]["sidone"]["gossip"]["1"] = true
+
+=> END
+
+~ sidone_general_1
+
+You don't generally dress up your lady in waiting for a masquerade, if that's who she is.
+
+=> END
+
+~ sidone_general_2
+
+The woman in the green dress was looking for something by the (place where the letter is).
+
+=> END
+
+~ sidone_general_3
+
+Did you see the deer masked woman hand in hand with one of the women from the Dietrich family?
+
+=> END
+
+~ mathilde_family_1
+
+She's been in mourning for quite a while now, but is she here to look for a partner?
+set state["gossip"]["mathilde"]["family"]["1"] = true
+
+=> END
+
+~ mathilde_fashion_1
+
+Is a raven mask appropriate for a masquerade? It's not quite befitting of the gaiety for this party.
+set state["gossip"]["mathilde"]["fashion"]["1"] = true
+
+=> END
+
+~ mathilde_gossip_1
+
+Did you hear, Madame Mathilde is at this party! It's been a while since I’ve seen her.
+set state["gossip"]["mathilde"]["gossip"]["1"] = true
+
+=> END
+
+~ mathilde_general_1
+
+Would anyone be able to introduce me to the madame in the bird mask?
+
+=> END
+
+~ mathilde_general_2
+
+The woman in the purple dress rushed by just now, I wonder where she was going?
+
+=> END
+
+~ mathilde_general_3
+
+I hear her sister-in-law just debuted this season! So soon after the Dietrich family tragedy too…
+
+=> END
+
+~ helene_family_1
+
+She's been in mourning for quite a while now, but is she here to look for a partner?
+set state["gossip"]["helene"]["family"]["1"] = true
+
+=> END
+
+~ helene_fashion_1
+
+Have you seen that new debutante’s cross stitching efforts? It's quite juvenile.
+set state["gossip"]["helene"]["fashion"]["1"] = true
+
+=> END
+
+~ helene_gossip_1
+
+Mademoiselle Helene is popular today. I hear she's gotten quite a few callers for this season.
+set state["gossip"]["helene"]["gossip"]["1"] = true
+
+=> END
+
+~ helene_general_1
+
+They say the young Mademoiselle of the Dietrich family is a self-professed Vampire hunter!
+
+=> END
+
+~ helene_general_2
+
+Did you say you could introduce me to the young women in the rabbit mask? I hear she’s got quite a few callers.
+
+=> END
+
+~ helene_general_3
+
+I believe the golden haired mademoiselle just debuted this season.
+
+=> END
+
+~ general_footprints_1
+
+Oh! Someone’s left quite a muddy mess on the carpet of the salon.
+
+~ key_1
+
+Seems like someone has lost the only key to the garden.
+
+=> END
+
+~ key_2
+
+I think I saw something shining in the _where the garden key is_.
+
+=> END
+
+~ general_1
+
+I wonder who the woman in the cat mask is, has anyone been able to ask her to dance?
+
+=> END
+
+~ general_2
+
+I wish I had some better news but there’s just been some rumors of the most dreadful deaths in the village two days' ride away.
+
+=> END
+
+~ general_3
+
+Not to worry, the hostess will be able to introduce you to the mademoiselle if you are looking for a dance.
+
+=> END
+
+~ general_4
+
+A chance to be someone entirely different for a night! The true allure of a masquerade.
+
+=> END
+
+~ general_5
+
+Everyone’s so dressed up!
+
+=> END

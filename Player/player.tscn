@@ -525,10 +525,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 size = Vector2(24, 22)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tp4wy"]
-radius = 95.021
+radius = 95.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vx5ud"]
-radius = 39.0512
+radius = 40.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1

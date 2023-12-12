@@ -15,8 +15,37 @@ var state: Dictionary = {
 		},
 	"gossip": {
 		"sidone": {
-			"1": true,
-			"2": false,
+			"family": {
+				"1": false,
+			},
+			"fashion": {
+				"1": false,
+			},
+			"gossip": {
+				"1": false
+			}
+		},
+		"mathilde": {
+			"family": {
+				"1": false,
+			},
+			"fashion": {
+				"1": false,
+			},
+			"gossip": {
+				"1": false
+			}
+		},
+		"helene": {
+			"family": {
+				"1": false,
+			},
+			"fashion": {
+				"1": false,
+			},
+			"gossip": {
+				"1": false
+			}
 		},
 	},
 	"items": {
