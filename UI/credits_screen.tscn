@@ -80,8 +80,8 @@ grow_vertical = 2
 theme = ExtResource("3_7jkg5")
 alignment = 1
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "BACK"
 
-[connection signal="button_up" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/BackButton" to="." method="_on_credits_button_button_up"]
