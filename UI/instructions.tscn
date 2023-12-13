@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlx5wuqgp1scl"]
+
+[ext_resource type="Texture2D" uid="uid://bcokq1agykhmp" path="res://assets/dummy/Carmilla Environment MockUp.png" id="1_xxuop"]
+[ext_resource type="Script" path="res://UI/instructions.gd" id="2_rvjnh"]
+
+[node name="InstructionsContainer" type="ScrollContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 300)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -20.0
+offset_right = 180.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+script = ExtResource("2_rvjnh")
+
+[node name="Instructions" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_xxuop")

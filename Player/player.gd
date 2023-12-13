@@ -61,7 +61,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 	if Input.is_action_just_pressed("cat_mode_toggle"):
-		print("cat mode toggle")
 		toggle_cat_mode()
 
 	if Input.is_action_just_pressed("interact"):
@@ -76,6 +75,9 @@ func _physics_process(delta) -> void:
 	update_animations()
 	handle_sus_area(delta)
 	move_and_slide()
+	
+	print(sus_area_buffer_major)
+	print(sus_area_buffer_minor)
 
 func toggle_cat_mode() -> void:
 	if !State.state["sus"]["enabled"]:
