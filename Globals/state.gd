@@ -74,6 +74,9 @@ var state: Dictionary = {
 func decrease_sus_bar(amount: float) -> void:
 	state["sus"]["level"] -= amount
 	sus_bar_changed.emit()
+	if state["sus"]["level"] <= 0:
+		Cutscenes.transitioning_target_scene = "sus_end"
+		SceneTransition.change_scene("res://UI/cutscenes/cutscene.tscn")
 
 # TODO: Rename functions so that they're about the bar and not the mode
 func enable_cat_mode() -> void:
