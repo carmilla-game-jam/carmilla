@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_start_button_button_up():
-	Cutscenes.transitioning_target_scene = "sidone_end"
+	Cutscenes.transitioning_target_scene = "opening"
 	SceneTransition.change_scene("res://UI/cutscenes/cutscene.tscn")
 
 
