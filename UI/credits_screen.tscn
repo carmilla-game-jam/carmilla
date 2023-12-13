@@ -35,9 +35,9 @@ texture = ExtResource("2_3owmh")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = -88.0
-offset_top = -164.0
+offset_top = -174.0
 offset_right = 487.0
-offset_bottom = 30.0
+offset_bottom = 41.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -54,7 +54,8 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
 theme_override_fonts/font = ExtResource("4_37j32")
-text = "Created by D.A.D.S.
+text = "
+Created by D.A.D.S.
 
 Dialog manager addon: github.com/nathanhoad/godot_dialogue_manager
 Gothic Castle: kokororeflections.com
@@ -67,14 +68,14 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 53.0
-offset_top = 0.5
-offset_right = 253.0
-offset_bottom = 62.5
+anchor_left = 1.064
+anchor_top = 0.507
+anchor_right = 3.191
+anchor_bottom = 1.433
+offset_left = -0.016001
+offset_top = 0.0309981
+offset_right = 0.045979
+offset_bottom = -0.0110059
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_7jkg5")
