@@ -126,5 +126,6 @@ script = ExtResource("6_xkruq")
 layout_mode = 2
 text = "Response"
 
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

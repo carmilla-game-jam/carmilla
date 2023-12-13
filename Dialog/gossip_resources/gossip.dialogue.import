@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cdepvwudg5ma7"
+path="res://.godot/imported/gossip.dialogue-c5b940411a429339552389e5373cc02e.tres"
+
+[deps]
+
+source_file="res://Dialog/gossip_resources/gossip.dialogue"
+dest_files=["res://.godot/imported/gossip.dialogue-c5b940411a429339552389e5373cc02e.tres"]
+
+[params]
+
+defaults=true

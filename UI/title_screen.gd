@@ -12,7 +12,8 @@ func _process(delta):
 
 
 func _on_start_button_button_up():
-	SceneTransition.change_scene("res://Main/main.tscn")
+	Cutscenes.transitioning_target_scene = "sidone_end"
+	SceneTransition.change_scene("res://UI/cutscenes/cutscene.tscn")
 
 
 func _on_credits_button_button_up():

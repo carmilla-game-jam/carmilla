@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b7iwxty6d7bxj"
+path="res://.godot/imported/sidone.dialogue-a259bb72fb3b74938b36078d627a503b.tres"
+
+[deps]
+
+source_file="res://Dialog/conversation_resources/sidone.dialogue"
+dest_files=["res://.godot/imported/sidone.dialogue-a259bb72fb3b74938b36078d627a503b.tres"]
+
+[params]
+
+defaults=true

@@ -14,3 +14,5 @@ texture = ExtResource("1_n1gyw")
 [node name="InsideTileMap" parent="." instance=ExtResource("6_fy0pd")]
 
 [node name="UI" parent="." instance=ExtResource("3_gbmyf")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

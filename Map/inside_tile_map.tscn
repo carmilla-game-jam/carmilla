@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_u3thh"]
 [ext_resource type="PackedScene" uid="uid://d3vvbaes1jchw" path="res://NPC/npc.tscn" id="3_kqhfg"]
 [ext_resource type="Resource" uid="uid://cy46m64yvnhn4" path="res://NPC/npc_resources/sidone.tres" id="4_4gahr"]
-[ext_resource type="Resource" uid="uid://bd4stttad02b2" path="res://NPC/npc_resources/gossip_resources/npc_sidone_family_1.tres" id="5_4xomn"]
+[ext_resource type="Resource" uid="uid://bd4stttad02b2" path="res://Dialog/gossip_resources/npc_sidone_family_1.tres" id="5_ao50p"]
 [ext_resource type="PackedScene" uid="uid://ccmxmi2xn83hm" path="res://Item/item.tscn" id="5_servt"]
+[ext_resource type="Resource" uid="uid://b47unx2hi5khd" path="res://Dialog/gossip_resources/npc_sidone_fashion_1.tres" id="6_6woqi"]
 [ext_resource type="Resource" uid="uid://wlvhbf6fyyum" path="res://Item/item_resources/key.tres" id="6_c3gdg"]
-[ext_resource type="Resource" uid="uid://b47unx2hi5khd" path="res://NPC/npc_resources/gossip_resources/npc_sidone_fashion_1.tres" id="6_g15se"]
 [ext_resource type="Resource" uid="uid://d3n7imtg023h3" path="res://Item/item_resources/garden_door_lock.tres" id="7_oyl6r"]
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="7_u3soe"]
 
@@ -71,11 +71,11 @@ npc_resource = ExtResource("4_4gahr")
 
 [node name="NPC_sidone_family_1" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(288, -79)
-npc_resource = ExtResource("5_4xomn")
+npc_resource = ExtResource("5_ao50p")
 
 [node name="NPC_sidone_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(155, -23)
-npc_resource = ExtResource("6_g15se")
+npc_resource = ExtResource("6_6woqi")
 
 [node name="NPC_sidone_fashion_2" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-299, 140)
