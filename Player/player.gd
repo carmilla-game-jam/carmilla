@@ -42,7 +42,6 @@ func update_animations() -> void:
 
 
 func handle_sus_area(delta) -> void:
-	# TODO: if overlapping with sus zone then decrease bar
 	if State.state["sus"]["enabled"]:
 		if !sus_area_buffer_major.is_empty():
 			State.decrease_sus_bar(sus_decrease_rate_major * delta)
@@ -65,7 +64,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		print("cat mode toggle")
 		toggle_cat_mode()
 
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("interact"):
 		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].get_parent().open_dialog_box()
@@ -92,7 +91,6 @@ func toggle_cat_mode() -> void:
 		sus_area_buffer_minor.append($SusArea2D.get_overlapping_areas())
 		State.enable_cat_mode()
 		
-		# TODO: Add in circle visibility toggle too
 	else:
 		$HearingArea2D.monitoring = false
 		$HearingArea2D.monitorable = false

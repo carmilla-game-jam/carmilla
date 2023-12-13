@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbivyq1xjojgs"]
+[gd_scene load_steps=5 format=3 uid="uid://cbivyq1xjojgs"]
 
 [ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="1_doxfm"]
 [ext_resource type="Texture2D" uid="uid://d4bd8v20ululw" path="res://assets/ui/titlescreen_bg.png" id="1_ehu2b"]
+[ext_resource type="Script" path="res://UI/title_screen.gd" id="1_obxsh"]
 [ext_resource type="FontFile" uid="uid://7fihbvph6d4p" path="res://assets/ui/JmhcthulhumbusarcadeRegular-AXW6.otf" id="3_0kfka"]
 
 [node name="TitleScreen" type="Control"]
@@ -15,6 +16,7 @@ offset_right = -424.0
 offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_obxsh")
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(640, 360)
@@ -24,10 +26,10 @@ anchor_left = -1.287
 anchor_top = -3.164
 anchor_right = 5.521
 anchor_bottom = 2.209
-offset_left = -0.0219979
-offset_top = -0.0119977
-offset_right = 0.0260086
-offset_bottom = -0.00300741
+offset_left = -1.022
+offset_top = -1.012
+offset_right = -0.973991
+offset_bottom = -1.00301
 texture = ExtResource("1_ehu2b")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -79,3 +81,6 @@ theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
 theme_override_fonts/font = ExtResource("3_0kfka")
 text = "based off \"Carmilla\" by Sheridan Le Fanu"
 horizontal_alignment = 1
+
+[connection signal="button_up" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_button_up"]

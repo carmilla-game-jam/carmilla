@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2ycqdiyloiok"]
+
+[ext_resource type="Script" path="res://UI/credits_screen.gd" id="1_s3bnh"]
+[ext_resource type="Texture2D" uid="uid://d4bd8v20ululw" path="res://assets/ui/titlescreen_bg.png" id="2_3owmh"]
+[ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="3_7jkg5"]
+[ext_resource type="FontFile" uid="uid://7fihbvph6d4p" path="res://assets/ui/JmhcthulhumbusarcadeRegular-AXW6.otf" id="4_37j32"]
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = 213.0
+offset_right = -424.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s3bnh")
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.287
+anchor_top = -3.164
+anchor_right = 5.521
+anchor_bottom = 2.209
+offset_left = -1.02201
+offset_top = -1.012
+offset_right = -0.973991
+offset_bottom = -1.00301
+texture = ExtResource("2_3owmh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -88.0
+offset_top = -164.0
+offset_right = 487.0
+offset_bottom = 30.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
+theme_override_fonts/font = ExtResource("4_37j32")
+theme_override_font_sizes/font_size = 36
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Text" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
+theme_override_fonts/font = ExtResource("4_37j32")
+text = "Created by D.A.D.S.
+
+Dialog manager addon: github.com/nathanhoad/godot_dialogue_manager
+Gothic Castle: kokororeflections.com
+UI assets pack 2: srtoasty.itch.io/ui-assets-pack-2
+Motema: fishxels.itch.io
+Key items: twitter.com/Pixelahead"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 53.0
+offset_top = 0.5
+offset_right = 253.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_7jkg5")
+alignment = 1
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="button_up" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_button_up"]
