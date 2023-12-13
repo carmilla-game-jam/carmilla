@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://c3adctvmc5qyc"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_psycw"]
-[ext_resource type="Texture2D" uid="uid://celj2aofyl208" path="res://assets/spritesheets/FEMM-NP.png" id="2_xl2wn"]
+[ext_resource type="Texture2D" uid="uid://2kgj88gf8447" path="res://assets/spritesheets/Carmilla SpriteSheet-DRAFT.png" id="3_ih3ls"]
 [ext_resource type="Texture2D" uid="uid://cbwet0btfmc4n" path="res://assets/ui/circle_-filled_.png" id="3_ynlsy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ugh5d"]
@@ -523,7 +523,7 @@ states/Walk/position = Vector2(433, 58)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_kplig"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_abxdv"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_dtkh6")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egtfs"]
-size = Vector2(24, 22)
+size = Vector2(24, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tp4wy"]
 radius = 95.0
@@ -562,7 +562,7 @@ parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(-0.00261778, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 11)
+position = Vector2(1, 12)
 shape = SubResource("RectangleShape2D_egtfs")
 
 [node name="HearingArea2D" type="Area2D" parent="."]
@@ -599,7 +599,7 @@ scale = Vector2(0.40375, 0.40375)
 texture = ExtResource("3_ynlsy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xl2wn")
+texture = ExtResource("3_ih3ls")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 region_enabled = true
 region_rect = Rect2(64, 72, 64, 64)
