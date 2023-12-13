@@ -75,9 +75,6 @@ func _physics_process(delta) -> void:
 	update_animations()
 	handle_sus_area(delta)
 	move_and_slide()
-	
-	print(sus_area_buffer_major)
-	print(sus_area_buffer_minor)
 
 func toggle_cat_mode() -> void:
 	if !State.state["sus"]["enabled"]:
@@ -85,12 +82,13 @@ func toggle_cat_mode() -> void:
 		$HearingArea2D.monitorable = true
 		$HearingArea2D/CollisionShape2D.disabled = false
 		$HearingArea2D/Sprite2D.visible = true
-		sus_area_buffer_minor.append($HearingArea2D.get_overlapping_areas())
+		# TODO: bug. appending empty arrays
+		sus_area_buffer_minor.append_array($HearingArea2D.get_overlapping_areas())
 		$SusArea2D.monitoring = true
 		$SusArea2D.monitorable = true
 		$SusArea2D/CollisionShape2D.disabled = false
 		$SusArea2D/Sprite2D.visible = true
-		sus_area_buffer_minor.append($SusArea2D.get_overlapping_areas())
+		sus_area_buffer_major.append_array($SusArea2D.get_overlapping_areas())
 		State.enable_cat_mode()
 		
 	else:
