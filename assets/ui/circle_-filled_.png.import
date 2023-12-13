@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlry7vsth7v7l"
-path="res://.godot/imported/sus_bar_bg.png-a56d6946ea11356ec751e9fb7ccc0dc8.ctex"
+uid="uid://cbwet0btfmc4n"
+path="res://.godot/imported/circle_-filled_.png-f05e7a8970bca2a4ec36e2e8618b6238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Globals/sus_bar_bg.png"
-dest_files=["res://.godot/imported/sus_bar_bg.png-a56d6946ea11356ec751e9fb7ccc0dc8.ctex"]
+source_file="res://assets/ui/circle_-filled_.png"
+dest_files=["res://.godot/imported/circle_-filled_.png-f05e7a8970bca2a4ec36e2e8618b6238.ctex"]
 
 [params]
 

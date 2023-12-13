@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbivyq1xjojgs"]
+[gd_scene load_steps=4 format=3 uid="uid://cbivyq1xjojgs"]
 
 [ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="1_doxfm"]
+[ext_resource type="Texture2D" uid="uid://d4bd8v20ululw" path="res://assets/ui/titlescreen_bg.png" id="1_ehu2b"]
+[ext_resource type="FontFile" uid="uid://7fihbvph6d4p" path="res://assets/ui/JmhcthulhumbusarcadeRegular-AXW6.otf" id="3_0kfka"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -14,15 +16,32 @@ offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.287
+anchor_top = -3.164
+anchor_right = 5.521
+anchor_bottom = 2.209
+offset_left = -0.0219979
+offset_top = -0.0119977
+offset_right = 0.0260086
+offset_bottom = -0.00300741
+texture = ExtResource("1_ehu2b")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.564
-anchor_right = 1.564
-anchor_bottom = 1.0
-offset_left = 53.016
-offset_right = -53.016
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 53.0
+offset_top = -21.5
+offset_right = 253.0
+offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_doxfm")
@@ -36,15 +55,27 @@ text = "START"
 layout_mode = 2
 text = "CREDITS"
 
-[node name="Background" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(640, 360)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -1.287
-anchor_top = -3.164
-anchor_right = 5.521
-anchor_bottom = 2.209
-offset_left = -0.0219944
-offset_top = -0.0119977
-offset_right = 0.0259638
-offset_bottom = -0.00300741
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -52.0
+offset_top = -113.0
+offset_right = 458.0
+offset_bottom = -46.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
+theme_override_fonts/font = ExtResource("3_0kfka")
+theme_override_font_sizes/font_size = 36
+text = "Vampire! At the Masquerade"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.792157, 0.572549, 1)
+theme_override_fonts/font = ExtResource("3_0kfka")
+text = "based off \"Carmilla\" by Sheridan Le Fanu"
+horizontal_alignment = 1

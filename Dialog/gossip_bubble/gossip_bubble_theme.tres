@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://cc5mrivogeh77"]
 
-[ext_resource type="FontFile" uid="uid://d2260ii5s7nm6" path="res://assets/ui/CelticTime.ttf" id="1_0732r"]
+[ext_resource type="FontFile" uid="uid://cxktd653shyka" path="res://assets/ui/PfWestaSevenCondensed-KMBy.ttf" id="1_xfmgl"]
 
 [resource]
-default_font = ExtResource("1_0732r")
-default_font_size = 16
+default_font = ExtResource("1_xfmgl")
+default_font_size = 8
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)

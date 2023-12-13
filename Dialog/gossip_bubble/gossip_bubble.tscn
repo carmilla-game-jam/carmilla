@@ -42,7 +42,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
+theme_override_constants/margin_bottom = 9
 
 [node name="DialogueLabel" parent="Balloon/Dialogue" instance=ExtResource("2_ogjqg")]
 unique_name_in_owner = true

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Item/item.gd" id="1_durgf"]
 [ext_resource type="Texture2D" uid="uid://c7cehfg6mygkv" path="res://assets/spritesheets/key_items.png" id="1_k7paq"]
-[ext_resource type="Script" path="res://NPC/conversation.gd" id="2_eb78d"]
+[ext_resource type="Script" path="res://Item/item_description.gd" id="3_2bs3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il7da"]
 size = Vector2(14, 14)
@@ -22,7 +22,7 @@ vframes = 4
 shape = SubResource("RectangleShape2D_il7da")
 
 [node name="Actionable" type="Node2D" parent="."]
-script = ExtResource("2_eb78d")
+script = ExtResource("3_2bs3l")
 
 [node name="ActionableArea" type="Area2D" parent="Actionable"]
 collision_layer = 4

@@ -83,18 +83,22 @@ func toggle_cat_mode() -> void:
 		$HearingArea2D.monitoring = true
 		$HearingArea2D.monitorable = true
 		$HearingArea2D/CollisionShape2D.disabled = false
+		$HearingArea2D/Sprite2D.visible = true
 		$SusArea2D.monitoring = true
 		$SusArea2D.monitorable = true
 		$SusArea2D/CollisionShape2D.disabled = false
+		$SusArea2D/Sprite2D.visible = true
 		State.enable_cat_mode()
 		# TODO: Add in circle visibility toggle too
 	else:
 		$HearingArea2D.monitoring = false
 		$HearingArea2D.monitorable = false
 		$HearingArea2D/CollisionShape2D.disabled = true
+		$HearingArea2D/Sprite2D.visible = false
 		$SusArea2D.monitoring = false
 		$SusArea2D.monitorable = false
 		$SusArea2D/CollisionShape2D.disabled = true
+		$SusArea2D/Sprite2D.visible = false
 		State.disable_cat_mode()
 
 
