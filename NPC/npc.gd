@@ -1,3 +1,4 @@
+@tool
 extends CharacterBody2D
 
 @export var npc_resource: NPCResource

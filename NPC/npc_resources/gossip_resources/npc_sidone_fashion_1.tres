@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://b47unx2hi5khd"]
+
+[ext_resource type="Resource" uid="uid://cdepvwudg5ma7" path="res://NPC/npc_resources/gossip_resources/gossip.dialogue" id="1_7ijla"]
+[ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_7bg80"]
+[ext_resource type="Texture2D" uid="uid://8n5uy6iitlum" path="res://assets/spritesheets/FEML-NP.png" id="3_3qylj"]
+
+[resource]
+script = ExtResource("2_7bg80")
+texture = ExtResource("3_3qylj")
+hframes = 8
+vframes = 6
+frame = 0
+gossip_resource = ExtResource("1_7ijla")
+gossip_title = "sidone_fashion_1"
+conversation_title = "start"

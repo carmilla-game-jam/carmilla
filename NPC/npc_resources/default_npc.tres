@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://bp2ghe7c6gsqk"]
 
-[ext_resource type="Resource" uid="uid://bj2angfadjr45" path="res://NPC/npc_resources/gossip_resources/gossip1.dialogue" id="1_ytijf"]
+[ext_resource type="Resource" uid="uid://cdepvwudg5ma7" path="res://NPC/npc_resources/gossip_resources/gossip.dialogue" id="1_qd1lm"]
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_2bxda"]
 [ext_resource type="Texture2D" uid="uid://jle6he0iqqm5" path="res://assets/spritesheets/FEMM-NMM.png" id="3_4a8jd"]
 
@@ -10,7 +10,6 @@ texture = ExtResource("3_4a8jd")
 hframes = 8
 vframes = 19
 frame = 8
-is_item = false
-gossip_resource = ExtResource("1_ytijf")
+gossip_resource = ExtResource("1_qd1lm")
 gossip_title = "test_long"
 conversation_title = "start"
