@@ -25,7 +25,7 @@ var dialogue_line: DialogueLine:
 
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
-			queue_free()
+			close_balloon()
 			return
 
 		dialogue_line = next_dialogue_line
@@ -87,6 +87,10 @@ func start(dialogue_resource: DialogueResource, title: String, portrait: Texture
 func next(next_id: String) -> void:
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
 
+
+func close_balloon() -> void:
+	State.disable_cat_mode()
+	queue_free()
 
 ### Signals
 

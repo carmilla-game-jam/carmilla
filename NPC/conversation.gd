@@ -16,7 +16,7 @@ func open_dialog_box() -> void:
 func close_dialog_box() -> void:
 	if is_instance_valid(balloon_node):
 		State.disable_cat_mode()
-		balloon_node.queue_free()
+		balloon_node.close_balloon()
 
 func show_dialogue_balloon(resource: DialogueResource, title: String, portrait: Texture2D, extra_game_states: Array = []) -> Node:
 	var balloon = Balloons.conversation_bubble_scene.instantiate()
