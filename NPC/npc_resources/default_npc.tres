@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://bp2ghe7c6gsqk"]
 
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_2bxda"]
-[ext_resource type="Texture2D" uid="uid://jle6he0iqqm5" path="res://assets/spritesheets/FEMM-NMM.png" id="3_4a8jd"]
+[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="2_2uw4w"]
 
 [resource]
 script = ExtResource("2_2bxda")
-texture = ExtResource("3_4a8jd")
+texture = ExtResource("2_2uw4w")
 hframes = 8
-vframes = 19
+vframes = 6
 frame = 8
 gossip_title = "start"
 conversation_title = "start"

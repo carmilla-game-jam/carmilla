@@ -6,22 +6,22 @@ dddddddddddddddddddddddddddddddddddddd
 
 ~ sidone_family_1
 
-I don’t believe I recognize the deer masked lady, does anyone have her family name?
 set state["gossip"]["sidone"]["family"]["1"] = true
+I don’t believe I recognize the deer masked lady, does anyone have her family name?
 
 => END
 
 ~ sidone_fashion_1
 
-I feel like I’ve seen that gown that the deer masked mademoiselle is wearing. Is that from last season?
 set state["gossip"]["sidone"]["fashion"]["1"] = true
+I feel like I’ve seen that gown that the deer masked mademoiselle is wearing. Is that from last season?
 
 => END
 
 ~ sidone_gossip_1
 
-The Mademoiselle in the deer mask seems to be quite a poor dancer. She even stepped on my feet.
 set state["gossip"]["sidone"]["gossip"]["1"] = true
+The Mademoiselle in the deer mask seems to be quite a poor dancer. She even stepped on my feet.
 
 => END
 
@@ -51,22 +51,22 @@ You don't generally dress up your lady in waiting for a masquerade, if that's wh
 
 ~ mathilde_family_1
 
-I hear her sister-in-law just debuted this season! So soon after the Dietrich family tragedy too...
 set state["gossip"]["mathilde"]["family"]["1"] = true
+I hear her sister-in-law just debuted this season! So soon after the Dietrich family tragedy too...
 
 => END
 
 ~ mathilde_fashion_1
 
-Is a raven mask appropriate for a masquerade? It's not quite befitting of the gaiety for this party.
 set state["gossip"]["mathilde"]["fashion"]["1"] = true
+Is a raven mask appropriate for a masquerade? It's not quite befitting of the gaiety for this party.
 
 => END
 
 ~ mathilde_gossip_1
 
-She's been in mourning for quite a while now, but is she here to look for a partner or is she acting as a sponsor?
 set state["gossip"]["mathilde"]["gossip"]["1"] = true
+She's been in mourning for quite a while now, but is she here to look for a partner or is she acting as a sponsor?
 
 => END
 
@@ -90,22 +90,22 @@ Would anyone be able to introduce me to the madame in the bird mask? Has anyone 
 
 ~ helene_family_1
 
-I believe the golden haired mademoiselle just debuted this season.
 set state["gossip"]["helene"]["family"]["1"] = true
+I believe the golden haired mademoiselle just debuted this season.
 
 => END
 
 ~ helene_fashion_1
 
-Have you seen that new debutante’s cross stitching efforts? It's quite juvenile.
 set state["gossip"]["helene"]["fashion"]["1"] = true
+Have you seen that new debutante’s cross stitching efforts? It's quite juvenile.
 
 => END
 
 ~ helene_gossip_1
 
-She seems quite frazzled by the amount of suitors she has. It is her first masquerade after all.
 set state["gossip"]["helene"]["gossip"]["1"] = true
+She seems quite frazzled by the amount of suitors she has. It is her first masquerade after all.
 
 => END
 

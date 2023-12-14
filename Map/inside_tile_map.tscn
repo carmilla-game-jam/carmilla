@@ -1,23 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://ciju50teunatx"]
+[gd_scene load_steps=17 format=3 uid="uid://ciju50teunatx"]
 
 [ext_resource type="TileSet" uid="uid://dshjit0prmfx6" path="res://Map/tile_set.tres" id="1_gvtac"]
 [ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_u3thh"]
 [ext_resource type="PackedScene" uid="uid://d3vvbaes1jchw" path="res://NPC/npc.tscn" id="3_kqhfg"]
 [ext_resource type="Resource" uid="uid://cy46m64yvnhn4" path="res://NPC/npc_resources/sidone.tres" id="4_4gahr"]
-[ext_resource type="Resource" uid="uid://bd4stttad02b2" path="res://Dialog/gossip_resources/npc_sidone_family_1.tres" id="5_ao50p"]
+[ext_resource type="Resource" uid="uid://bd4stttad02b2" path="res://NPC/npc_resources/npc_sidone_family_1.tres" id="5_7cgcs"]
 [ext_resource type="PackedScene" uid="uid://ccmxmi2xn83hm" path="res://Item/item.tscn" id="5_servt"]
-[ext_resource type="Resource" uid="uid://b47unx2hi5khd" path="res://Dialog/gossip_resources/npc_sidone_fashion_1.tres" id="6_6woqi"]
+[ext_resource type="Resource" uid="uid://b47unx2hi5khd" path="res://NPC/npc_resources/npc_sidone_fashion_1.tres" id="6_bvx6k"]
 [ext_resource type="Resource" uid="uid://wlvhbf6fyyum" path="res://Item/item_resources/key.tres" id="6_c3gdg"]
 [ext_resource type="Resource" uid="uid://d3n7imtg023h3" path="res://Item/item_resources/garden_door_lock.tres" id="7_oyl6r"]
-[ext_resource type="Script" path="res://NPC/npc_resource.gd" id="7_u3soe"]
-
-[sub_resource type="Resource" id="Resource_3qhre"]
-script = ExtResource("7_u3soe")
-hframes = 8
-vframes = 19
-frame = 0
-gossip_title = "start"
-conversation_title = "start"
+[ext_resource type="Resource" uid="uid://48qx826tr52l" path="res://NPC/npc_resources/npc_sidone_gossip_1.tres" id="7_rrgbm"]
+[ext_resource type="Resource" uid="uid://dnkp7mihv7pw8" path="res://NPC/npc_resources/npc_mathilde_gossip_1.tres" id="8_upkgn"]
+[ext_resource type="Resource" uid="uid://dvoui7b52tn3x" path="res://NPC/npc_resources/npc_mathilde_fashion_1.tres" id="9_2mjrg"]
+[ext_resource type="Resource" uid="uid://x4w5qca6s1e" path="res://NPC/npc_resources/npc_mathilde_family_1.tres" id="10_ex1km"]
+[ext_resource type="Resource" uid="uid://u3jstr15thr1" path="res://NPC/npc_resources/npc_helene_family_1.tres" id="11_wcmfw"]
+[ext_resource type="Resource" uid="uid://dkih16x684m8m" path="res://NPC/npc_resources/npc_helene_fashion_1.tres" id="12_u6rxx"]
+[ext_resource type="Resource" uid="uid://cramkigwgctsm" path="res://NPC/npc_resources/npc_helene_gossip_1.tres" id="13_roj7a"]
 
 [node name="InsideTileMap" type="TileMap"]
 y_sort_enabled = true
@@ -71,15 +69,39 @@ npc_resource = ExtResource("4_4gahr")
 
 [node name="NPC_sidone_family_1" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-140, -286)
-npc_resource = ExtResource("5_ao50p")
+npc_resource = ExtResource("5_7cgcs")
 
 [node name="NPC_sidone_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(60, -393)
-npc_resource = ExtResource("6_6woqi")
+npc_resource = ExtResource("6_bvx6k")
 
-[node name="NPC_sidone_fashion_2" parent="." instance=ExtResource("3_kqhfg")]
+[node name="NPC_sidone_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-145, -544)
-npc_resource = SubResource("Resource_3qhre")
+npc_resource = ExtResource("7_rrgbm")
+
+[node name="NPC_mathilde_family_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(-1336, -589)
+npc_resource = ExtResource("10_ex1km")
+
+[node name="NPC_mathilde_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(-675, -672)
+npc_resource = ExtResource("9_2mjrg")
+
+[node name="NPC_mathilde_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(-25, -495)
+npc_resource = ExtResource("8_upkgn")
+
+[node name="NPC_helene_family_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(405, -457)
+npc_resource = ExtResource("11_wcmfw")
+
+[node name="NPC_helene_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(1093, -689)
+npc_resource = ExtResource("12_u6rxx")
+
+[node name="NPC_helene_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(653, -655)
+npc_resource = ExtResource("13_roj7a")
 
 [node name="NPC" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-169, -249)
@@ -103,13 +125,13 @@ position = Vector2(-932, -466)
 position = Vector2(-895, -493)
 
 [node name="NPC43" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-784, -583)
+position = Vector2(-1070, -484)
 
 [node name="NPC44" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-906, -581)
 
 [node name="NPC45" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-747, -573)
+position = Vector2(-1119, -477)
 
 [node name="NPC46" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-1331, -684)
@@ -122,9 +144,6 @@ position = Vector2(-1077, -695)
 
 [node name="NPC49" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-1036, -678)
-
-[node name="NPC50" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1336, -589)
 
 [node name="NPC51" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-1311, -564)
@@ -147,9 +166,6 @@ position = Vector2(696, -486)
 [node name="NPC58" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(661, -467)
 
-[node name="NPC56" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(405, -457)
-
 [node name="NPC36" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-626, -514)
 
@@ -158,9 +174,6 @@ position = Vector2(-647, -486)
 
 [node name="NPC34" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(134, -252)
-
-[node name="NPC33" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-25, -495)
 
 [node name="NPC32" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-66, -500)
@@ -172,16 +185,13 @@ position = Vector2(181, -273)
 position = Vector2(170, -215)
 
 [node name="NPC29" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-768, -676)
+position = Vector2(-767, -627)
 
 [node name="NPC28" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-809, -667)
+position = Vector2(-810, -630)
 
 [node name="NPC27" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-654, -630)
-
-[node name="NPC26" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-675, -672)
 
 [node name="NPC25" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-642, -670)
@@ -225,9 +235,6 @@ position = Vector2(400, -650)
 [node name="NPC20" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(356, -608)
 
-[node name="NPC21" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(653, -655)
-
 [node name="NPC22" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(613, -631)
 
@@ -244,19 +251,16 @@ position = Vector2(886, -654)
 position = Vector2(875, -686)
 
 [node name="NPC62" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(461, -602)
+position = Vector2(-1156, -600)
 
 [node name="NPC63" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(494, -596)
+position = Vector2(-1107, -599)
 
 [node name="NPC64" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(955, -532)
+position = Vector2(890, -504)
 
 [node name="NPC66" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(1060, -705)
-
-[node name="NPC67" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(1093, -689)
 
 [node name="NPC68" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(1096, -589)
@@ -265,10 +269,10 @@ position = Vector2(1096, -589)
 position = Vector2(1061, -578)
 
 [node name="NPC65" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(982, -543)
+position = Vector2(925, -523)
 
 [node name="NPC24" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-169, -249)
+position = Vector2(397, -490)
 
 [node name="NPC6" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(134, -498)

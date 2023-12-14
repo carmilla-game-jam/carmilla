@@ -40,14 +40,14 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Sidone[/center]: Of course, not many here would express such interest!
 	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Sidone[/center]: I would be delighted to accompany you.
-	set state["convo"]["sidone"]["fashion_done"]["1"]
+	set state["convo"]["sidone"]["fashion_done"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Sidone[/center]: It’s nothing much, but I do enjoy old roman myths of the roman goddess Diana. 
 	[center]Carmilla[/center]: Oh! I hear there’s a most marvelous statuette of the goddess in the garden.
 	[center]Sidone[/center]: I see, I haven't been to the gardens yet.
 	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Sidone[/center]: I would be delighted to accompany you.
-	set state["convo"]["sidone"]["fashion_done"]["2"]
+	set state["convo"]["sidone"]["fashion_done"] = true
 
 => END
 
@@ -58,7 +58,7 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Carmilla[/center]: Indeed, a person's character is how I decide to stray away or lean closer...
 	[center]Sidone[/center]: Oh, how do you judge my character then?
 	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
-	set state["convo"]["sidone"]["family_done"]["1"]
+	set state["convo"]["sidone"]["family_done"] = true
 - I've heard that no family here is untouched by adversity.
 	[center]Sidone[/center]: Yes, but I've persevered through it all. Do not bring up the past.
 	[center]Carmilla[/center]: O-oh I thought... *ahem* Please ignore what I've said, my love.
@@ -69,7 +69,7 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Carmilla[/center]: I've been quite nosy myself. I suppose it's natural for a masquerade.
 	[center]Sidone[/center]: That's true. Frankly, I've been finding it quite titillating.
 	[center]Carmilla[/center]: (I must admit that she piques my interest.)
-	set state["convo"]["sidone"]["family_done"]["2"]
+	set state["convo"]["sidone"]["family_done"] = true
 
 => END
 
@@ -85,13 +85,13 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Carmilla[/center]: I'm happy to teach you more about it, but I'd rather get to know you better, Mademoiselle Doe.
 	[center]Sidone[/center]: Hehe. How very coquettish of you, Mademoiselle Cat.
 	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
-	set state["convo"]["sidone"]["gossip_done"]["1"]
+	set state["convo"]["sidone"]["gossip_done"] = true
 - Are you also new to these events?
 	[center]Sidone[/center]: I am, but I'm quite enjoying how it's been going so far.
 	[center]Carmilla[/center]: Have you met anyone that has caught your fancy yet?
 	[center]Sidone[/center]: There’s been a nice lad here or there, but nothing too serious.
 	[center]Carmilla[/center]: (Hah, a lad! I'll be happy to show you a time a lad could never...)
-	set state["convo"]["sidone"]["gossip_done"]["2"]
+	set state["convo"]["sidone"]["gossip_done"] = true
 
 => END
 

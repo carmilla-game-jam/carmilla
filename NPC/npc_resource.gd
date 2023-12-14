@@ -4,7 +4,7 @@ class_name NPCResource
 
 @export var texture: Texture2D
 @export var hframes: int = 8
-@export var vframes: int = 19
+@export var vframes: int = 6
 @export var frame: int = 0
 
 @export var portrait: Texture2D
