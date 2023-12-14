@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cidt74nm217jt" path="res://assets/ui/sus_bar_container.png" id="1_8xqw4"]
 [ext_resource type="Script" path="res://UI/sus_bar/sus_bar_ui.gd" id="1_qf1j5"]
 [ext_resource type="Texture2D" uid="uid://wkhsrmx5ml5k" path="res://assets/ui/sus_bar_bg.png" id="1_txg6u"]
-[ext_resource type="Texture2D" uid="uid://dpf0af7pu0qwl" path="res://assets/ui/sus_bar_fill.png" id="2_k6v53"]
+[ext_resource type="Texture2D" uid="uid://ct63lwcuu1xu7" path="res://assets/ui/sus_bar_fill.png" id="2_k6v53"]
 
 [node name="SusBar" type="TextureProgressBar"]
 self_modulate = Color(1, 1, 1, 0.392157)
@@ -15,5 +15,5 @@ fill_mode = 3
 texture_under = ExtResource("1_txg6u")
 texture_over = ExtResource("1_8xqw4")
 texture_progress = ExtResource("2_k6v53")
-texture_progress_offset = Vector2(2.08165e-12, 2.08165e-12)
+texture_progress_offset = Vector2(4, 4)
 script = ExtResource("1_qf1j5")
