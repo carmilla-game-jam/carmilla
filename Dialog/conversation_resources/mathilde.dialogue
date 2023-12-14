@@ -35,14 +35,14 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mathilde[/center]: It helps to dabble in the avantgarde.
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
-	set state["convo"]["mathilde"]["fashion_done"]["1"]
+	set state["convo"]["mathilde"]["fashion_done"]["1"] = true
 - I couldn't help but notice the needlework on your handkerchief.
 	[center]Mathilde[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
 	[center]Carmilla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
 	[center]Mathilde[/center]: Only if you indulge me so.
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
-	set state["convo"]["mathilde"]["fashion_done"]["2"]
+	set state["convo"]["mathilde"]["fashion_done"]["2"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mathilde[/center]: The raven... I still hold memories of what has been lost to me.
 	[center]Carmilla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
@@ -63,13 +63,13 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: Maybe a walk with me can ease the pain?
 	[center]Mathilde[/center]: Maybe another time. I quite enjoy the view here.
 	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
-	set state["convo"]["mathilde"]["family_done"]["1"]
+	set state["convo"]["mathilde"]["family_done"]["1"] = true
 - I am finding that everyone's curiosity is a bit overwhelming.
 	[center]Mathilde[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
 	[center]Carmilla[/center]: Oh my, you must tell me more.
 	[center]Mathilde[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
 	[center]Carmilla[/center]: (Her wisdom draws me closer...)
-	set state["convo"]["mathilde"]["family_done"]["2"]
+	set state["convo"]["mathilde"]["family_done"]["2"] = true
 
 => END
 
@@ -80,7 +80,7 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: You seem quite well humored about this whole enterprise.
 	[center]Mathilde[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
 	[center]Carmilla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
-	set state["convo"]["mathilde"]["gossip_done"]["1"]
+	set state["convo"]["mathilde"]["gossip_done"]["1"] = true
 - Has your dance card been filling up?
 	[center]Mathilde[/center]: Unfortunately there's been a minor miscommunication on my part.
 	[center]Carmilla[/center]: Shall I speak to the hostess to fix it?
@@ -91,7 +91,7 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: Then, we must make up for all the fun you've missed.
 	[center]Mathilde[/center]: How astute. Tell me... how have you been amusing yourself?
 	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
-	set state["convo"]["mathilde"]["gossip_done"]["2"]
+	set state["convo"]["mathilde"]["gossip_done"]["2"] = true
 
 => END
 
