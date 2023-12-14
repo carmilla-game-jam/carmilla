@@ -1,4 +1,4 @@
-extends ScrollContainer
+extends MarginContainer
 
 
 # On click or tab toggle visibility

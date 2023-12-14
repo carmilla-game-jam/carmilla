@@ -4,4 +4,4 @@ func _ready():
 	$VBoxContainer/BackButton.grab_focus()
 
 func _on_credits_button_button_up():
-	SceneTransition.change_scene("res://UI/title_screen.tscn")
+	SceneTransition.change_scene("title")

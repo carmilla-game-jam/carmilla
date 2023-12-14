@@ -12,9 +12,8 @@ func _process(delta):
 
 
 func _on_start_button_button_up():
-	Cutscenes.transitioning_target_scene = "opening"
-	SceneTransition.change_scene("res://UI/cutscenes/cutscene.tscn")
+	SceneTransition.change_scene("opening")
 
 
 func _on_credits_button_button_up():
-	SceneTransition.change_scene("res://UI/credits_screen.tscn")
+	SceneTransition.change_scene("credits")

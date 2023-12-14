@@ -1,24 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlx5wuqgp1scl"]
+[gd_scene load_steps=4 format=3 uid="uid://dlx5wuqgp1scl"]
 
-[ext_resource type="Texture2D" uid="uid://bcokq1agykhmp" path="res://assets/dummy/Carmilla Environment MockUp.png" id="1_xxuop"]
+[ext_resource type="Texture2D" uid="uid://bcocy2f0agge1" path="res://assets/ui/dialog_bubble.png" id="2_4t1eb"]
 [ext_resource type="Script" path="res://UI/instructions.gd" id="2_rvjnh"]
+[ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="3_ux31u"]
 
-[node name="InstructionsContainer" type="ScrollContainer"]
-custom_minimum_size = Vector2(2.08165e-12, 300)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -20.0
-offset_right = 180.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-horizontal_scroll_mode = 0
+[node name="MarginContainer" type="MarginContainer"]
 script = ExtResource("2_rvjnh")
 
-[node name="Instructions" type="TextureRect" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1_xxuop")
+texture = ExtResource("2_4t1eb")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_ux31u")
+text = "	Mistress Mircalla, We’ve been faithful to your cause, having sought long and hard, only to be led to this very schloss. We believe the mademoiselle from your dreams is in attendance tonight at this masquerade. Please don on the mask we’ve prepared for you and begin your hunt.
+
+	I have written a letter of introduction to the hostess of the masquerade by the name [name]. However, rousing suspicion is unwise. 
+[warning about going up or down]
+wasd to move
+space to interact
+‘z’ to switch to cat monster form
+tab to toggle instructions
+
+	Remember, your cat form would allow you to overhear selective societal whispers. Listen to these societal whispers to learn more about these women and engage them in conversation.
+
+You will have more luck finding who she is that way.
+
+But should you tax the patience of her or the guests, you may find yourself removed from the party.
+
+We eagerly await your success."

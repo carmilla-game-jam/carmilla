@@ -4,31 +4,39 @@ var transitioning_target_scene: String
 var dialog_resource: DialogueResource = load("res://UI/cutscenes/cutscene_resources/cutscenes.dialogue")
 
 var scenes: Dictionary = {
+	"title": {
+		"scene_path": "res://UI/title_screen.tscn",
+	},
+	"credits": {
+		"scene_path": "res://UI/credits_screen.tscn",
+	},
 	"opening": {
-		"bg": "res://assets/dummy/Carmilla Environment MockUp.png",
+		"scene_path": "res://UI/cutscenes/cutscene.tscn",
+		"bg": "res://assets/ui/titlescreen_bg.png",
 		"next_scene": {
 			"name": "main",
-			"scene_path": "res://Main/main.tscn",
 		},
 	},
-	"main": {},
+	"main": {
+		"scene_path": "res://Main/main.tscn",
+	},
 	"sus_end": {
-		"bg": "res://assets/dummy/Carmilla Environment MockUp.png",
+		"scene_path": "res://UI/cutscenes/cutscene.tscn",
+		"bg": "res://assets/ui/titlescreen_bg.png",
 	},
 	"sidone_end": {
-		"bg": "res://assets/dummy/Carmilla Environment MockUp.png",
+		"scene_path": "res://UI/cutscenes/cutscene.tscn",
+		"bg": "res://assets/ui/titlescreen_bg.png",
 		"dialog_title": "sidone_end",
-		"next_scene": {
-			"name": "main",
-			"scene_path": "res://Main/main.tscn",
-		},
 	},
 	"helene_end": {
-		"bg": "res://assets/dummy/Carmilla Environment MockUp.png",
+		"scene_path": "res://UI/cutscenes/cutscene.tscn",
+		"bg": "res://assets/ui/titlescreen_bg.png",
 		"dialog_title": "helene_end",
 	},
 	"mathile_end": {
-		"bg": "res://assets/dummy/Carmilla Environment MockUp.png",
+		"scene_path": "res://UI/cutscenes/cutscene.tscn",
+		"bg": "res://assets/ui/titlescreen_bg.png",
 		"dialog_title": "mathile_end",
 	},
 }
