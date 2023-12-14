@@ -76,12 +76,12 @@ scroll_following = true
 [node name="Character" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.016
-anchor_top = -0.2
-anchor_right = 0.016
-anchor_bottom = 0.17
-offset_left = -11.096
-offset_right = 106.904
+anchor_left = 0.092
+anchor_right = 0.092
+offset_left = -59.052
+offset_top = -20.0
+offset_right = 58.948
+offset_bottom = 17.0
 
 [node name="CharacterBG" type="NinePatchRect" parent="Balloon/Character"]
 layout_mode = 2

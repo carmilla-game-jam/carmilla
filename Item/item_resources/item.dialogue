@@ -9,7 +9,8 @@ do emit("item_destroyed", state["items"]["key"]["id"])
 ~ letter
 [center]Carmilla[/center]: (What’s this letter doing in this corner? I wonder who it’s for?)
 [center]Carmilla[/center]: (reading)
-[center]Carmilla[/center]: Dearest S,\nI'm compelled to express what my heart has long held. In the confines of societal divides, your grace and spirit shine brighter than any with a station of nobility. Our family circumstances have torn us apart but I dream of the nights where we are reunited under the glow of the moon.\nLovingly yours,\nA.D. 
+[center]Carmilla[/center]: "Dearest S,\nI'm compelled to express what my heart has long held. In the confines of societal divides, your grace and spirit shine brighter than any with a station of nobility."
+[center]Carmilla[/center]: "Our family circumstances have torn us apart but I dream of the nights where we are reunited under the glow of the moon.\nLovingly yours,\nA.D. 
 set state["items"]["letter"]["obtained"] = true
 do debug(state)
 
@@ -18,7 +19,6 @@ do debug(state)
 ~ handkerchief
 [center]Carmilla[/center]: (This is the handkerchief from my dreams. She passed by here this night. She’s close.)
 set state["items"]["handkerchief"]["obtained"] = true
-do emit("item_destroyed", state["items"]["handkerchief"]["id"])
 
 => END
 
