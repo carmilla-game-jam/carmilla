@@ -100,7 +100,7 @@ set state["convo"]["mathilde"]["met"] = true
 [center]Mathilde[/center]: Yes, I've not been able to open my heart to another in some time.
 [center]Carmilla[/center]: Do you care to be whisked away?
 [center]Mathilde[/center]: I would not have it any other way.
-# do SceneTransition
+do SceneTransition.change_scene("mathilde_end")
 => END
 
 ~ bad_choice

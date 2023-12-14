@@ -100,7 +100,7 @@ set state["convo"]["helene"]["met"] = true
 [center]Helene[/center]: Our conversations have been the moon and the stars and stars on a clear night.
 [center]Carmilla[/center]: Do you care to be whisked away?
 [center]Helene[/center]: You lead the way then, Where shall we depart?
-# do SceneTransition
+do SceneTransition.change_scene("helene_end")
 => END
 
 ~ bad_choice

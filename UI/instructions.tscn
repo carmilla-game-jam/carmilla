@@ -30,17 +30,17 @@ layout_mode = 2
 theme = ExtResource("3_ux31u")
 text = "	Mistress Mircalla, We’ve been faithful to your cause, having sought long and hard, only to be led to this very schloss. We believe the mademoiselle from your dreams is in attendance tonight at this masquerade. Please don on the mask we’ve prepared for you and begin your hunt.
 
-	I have written a letter of introduction to the hostess of the masquerade by the name [name]. However, rousing suspicion is unwise. 
-[warning about going up or down]
-wasd to move
-space to interact
+	I have written a letter of introduction to the hostess of the masquerade by the name Cirmalla. However, rousing suspicion is unwise. 
+
+The instructions are as follows:
+Arrow keys to move
+SPACE to interact
 ‘z’ to switch to cat monster form
-tab to toggle instructions
+TAB to reread these instructions
 
-	Remember, your cat form would allow you to overhear selective societal whispers. Listen to these societal whispers to learn more about these women and engage them in conversation.
+	Remember, your cat form would allow you to overhear selective societal whispers. Listen to these pieces of gossip to learn more about these women and engage them in conversation based on what you may have overheard.
+Hopefully through conversation, you will have more luck finding the woman in your dreams.
 
-You will have more luck finding who she is that way.
+	An indicator shall appear on the right side of the screen to warn you of any impending danger. However, should you tax the patience of the guests at this party with suspicious activity or vile words, we won’t be able to hide your misdeeds and you shall be removed from the premise of tonight’s events.
 
-But should you tax the patience of her or the guests, you may find yourself removed from the party.
-
-We eagerly await your success."
+	We eagerly await your success."
