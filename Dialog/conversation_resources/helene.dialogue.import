@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cvo0udsf1vf2h"
+path="res://.godot/imported/helene.dialogue-39c98692024c3f5e39d11295da312a20.tres"
+
+[deps]
+
+source_file="res://Dialog/conversation_resources/helene.dialogue"
+dest_files=["res://.godot/imported/helene.dialogue-39c98692024c3f5e39d11295da312a20.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,109 @@
+~ greeting
+
+if state["convo"]["mathilde"]["met"]:
+	[center]Mathilde[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
+else:
+	[center]Mathilde[/center]: (She sees you approach and is curious to hear how you start the conversation...)
+- Introduce yourself
+	=> introduction
+- Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["mathilde"]["met"]]
+	=> fashion
+- Family [if is_convo_category_unlocked("family") and state["convo"]["mathilde"]["met"]]
+	=> family
+- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"]]
+	=> gossip
+- Invite (ends the masquerade) [if is_all_convos_finished("mathilde") and state["convo"]["mathilde"]["met"]]
+	=> invite
+=> END
+
+~ introduction
+
+[center]Mathilde[/center]: I bid you a pleasant evening.
+[center]Carmilla[/center]: I don’t believe we’ve been introduced.
+[center]Mathilde[/center]: No? But you seem to know me.
+[center]Carmilla[/center]: As you seem familiar with me.
+[center]Mathilde[/center]: When we’re all confidants of the hostess, are we not soon to be friends?
+set state["convo"]["mathilde"]["met"] = true
+
+=> END
+
+~ fashion
+[center]Mathilde[/center]: Lovely evening, friend.
+- I admire your dress. Which shop did you patronize?
+	[center]Mathilde[/center]: This? A family friend had imported the silks and I had the family seamstress put together the pieces.
+	[center]Carmilla[/center]: Still, your eye in this is quite sublime!
+	[center]Mathilde[/center]: It helps to dabble in the avantgarde.
+	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
+	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
+	set state["convo"]["mathilde"]["fashion_done"]["1"]
+- I couldn't help but notice the needlework on your handkerchief.
+	[center]Mathilde[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
+	[center]Carmilla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
+	[center]Mathilde[/center]: Only if you indulge me so.
+	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
+	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
+	set state["convo"]["mathilde"]["fashion_done"]["2"]
+- Your mask seems to hold a story, would you indulge me?
+	[center]Mathilde[/center]: The raven... I still hold memories of what has been lost to me.
+	[center]Carmilla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
+	[center]Mathilde[/center]: Yes... yes I hope so as well.
+	=> bad_choice
+
+=> END
+
+~ family
+[center]Mathilde[/center]: Lovely evening, friend.
+- Here's a philosophical quandry; is there more to life than a family name?
+	[center]Mathilde[/center]: I believe that one's family name can carry them farther in life than you think.
+	[center]Carmilla[/center]: Is that from experience, Madame?
+	[center]Mathilde[/center]: I will not lie and say I had no stakes in the prestige.
+	=> bad_choice
+- I've heard that no family here is untouched by adversity.
+	[center]Mathilde[/center]: 'Tis true. Time can heal all, although I sometimes wish it would hurry a little faster.
+	[center]Carmilla[/center]: Maybe a walk with me can ease the pain?
+	[center]Mathilde[/center]: Maybe another time. I quite enjoy the view here.
+	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
+	set state["convo"]["mathilde"]["family_done"]["1"]
+- I am finding that everyone's curiosity is a bit overwhelming.
+	[center]Mathilde[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
+	[center]Carmilla[/center]: Oh my, you must tell me more.
+	[center]Mathilde[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
+	[center]Carmilla[/center]: (Her wisdom draws me closer...)
+	set state["convo"]["mathilde"]["family_done"]["2"]
+
+=> END
+
+~ gossip
+[center]Mathilde[/center]: Lovely evening, friend.
+- I hear you're the talk of the town.
+	[center]Mathilde[/center]: Idle mouths run idle thoughts, but they do have a reason to chatter.
+	[center]Carmilla[/center]: You seem quite well humored about this whole enterprise.
+	[center]Mathilde[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
+	[center]Carmilla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
+	set state["convo"]["mathilde"]["gossip_done"]["1"]
+- Has your dance card been filling up?
+	[center]Mathilde[/center]: Unfortunately there's been a minor miscommunication on my part.
+	[center]Carmilla[/center]: Shall I speak to the hostess to fix it?
+	[center]Mathilde[/center]: Very kind of you, but I shall ask myself.
+	=> bad_choice
+- Are you also new to these events?
+	[center]Mathilde[/center]: No, but it's been a while since I've been to such a party.
+	[center]Carmilla[/center]: Then, we must make up for all the fun you've missed.
+	[center]Mathilde[/center]: How astute. Tell me... how have you been amusing yourself?
+	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
+	set state["convo"]["mathilde"]["gossip_done"]["2"]
+
+=> END
+
+~ invite
+[center]Carmilla[/center]: Our conversations have been the moon and the stars and stars on a clear night.
+[center]Mathilde[/center]: Yes, I've not been able to open my heart to another in some time.
+[center]Carmilla[/center]: Do you care to be whisked away?
+[center]Mathilde[/center]: I would not have it any other way.
+# do SceneTransition
+=> END
+
+~ bad_choice
+[center]Carmilla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
+do decrease_sus_bar(state["sus"]["convo_fail_loss_rate"])
+=> END

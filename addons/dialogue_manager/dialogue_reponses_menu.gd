@@ -39,7 +39,7 @@ func set_responses(next_responses: Array) -> void:
 	# Add new items
 	if _responses.size() > 0:
 		for response in _responses:
-			var item: Button
+			var item: Control
 			if is_instance_valid(response_template):
 				item = response_template.duplicate(DUPLICATE_GROUPS | DUPLICATE_SCRIPTS | DUPLICATE_SIGNALS)
 				item.show()
@@ -49,7 +49,14 @@ func set_responses(next_responses: Array) -> void:
 			if not response.is_allowed:
 				item.name = String(item.name) + "Disallowed"
 				item.disabled = true
-			item.text = response.text
+
+			# If the item has a response property then use that
+			if "response" in item:
+				item.response = response
+			# Otherwise assume we can just set the text
+			else:
+				item.text = response.text
+
 			add_child(item)
 
 		_configure_focus()

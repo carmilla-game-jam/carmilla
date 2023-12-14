@@ -6,7 +6,7 @@ dddddddddddddddddddddddddddddddddddddd
 
 ~ sidone_family_1
 
-No one has seen that "Mademoiselle Sidone" in society before, which family do you think is sponsoring her?
+I don’t believe I recognize the deer masked lady, does anyone have her family name?
 set state["gossip"]["sidone"]["family"]["1"] = true
 
 => END
@@ -20,14 +20,14 @@ set state["gossip"]["sidone"]["fashion"]["1"] = true
 
 ~ sidone_gossip_1
 
-I don’t believe I recognize the deer masked lady, does anyone have her family name?
+The Mademoiselle in the deer mask seems to be quite a poor dancer. She even stepped on my feet.
 set state["gossip"]["sidone"]["gossip"]["1"] = true
 
 => END
 
 ~ sidone_general_1
 
-You don't generally dress up your lady in waiting for a masquerade, if that's who she is.
+No one has seen that "Mademoiselle Sidonie" in society before, which family do you think is sponsoring her?
 
 => END
 
@@ -43,9 +43,15 @@ Did you see the deer masked woman hand in hand with one of the women from the Di
 
 => END
 
+~ sidone_general_4
+
+You don't generally dress up your lady in waiting for a masquerade, if that's who she is.
+
+=> END
+
 ~ mathilde_family_1
 
-She's been in mourning for quite a while now, but is she here to look for a partner?
+I hear her sister-in-law just debuted this season! So soon after the Dietrich family tragedy too...
 set state["gossip"]["mathilde"]["family"]["1"] = true
 
 => END
@@ -59,14 +65,14 @@ set state["gossip"]["mathilde"]["fashion"]["1"] = true
 
 ~ mathilde_gossip_1
 
-Did you hear, Madame Mathilde is at this party! It's been a while since I’ve seen her.
+She's been in mourning for quite a while now, but is she here to look for a partner or is she acting as a sponsor?
 set state["gossip"]["mathilde"]["gossip"]["1"] = true
 
 => END
 
 ~ mathilde_general_1
 
-Would anyone be able to introduce me to the madame in the bird mask?
+Did you hear, Madame Mathilde is at this party! It's been a while since I’ve seen her.
 
 => END
 
@@ -78,13 +84,13 @@ The woman in the purple dress rushed by just now, I wonder where she was going?
 
 ~ mathilde_general_3
 
-I hear her sister-in-law just debuted this season! So soon after the Dietrich family tragedy too…
+Would anyone be able to introduce me to the madame in the bird mask? Has anyone asked for a dance yet?
 
 => END
 
 ~ helene_family_1
 
-She's been in mourning for quite a while now, but is she here to look for a partner?
+I believe the golden haired mademoiselle just debuted this season.
 set state["gossip"]["helene"]["family"]["1"] = true
 
 => END
@@ -98,7 +104,7 @@ set state["gossip"]["helene"]["fashion"]["1"] = true
 
 ~ helene_gossip_1
 
-Mademoiselle Helene is popular today. I hear she's gotten quite a few callers for this season.
+She seems quite frazzled by the amount of suitors she has. It is her first masquerade after all.
 set state["gossip"]["helene"]["gossip"]["1"] = true
 
 => END
@@ -111,13 +117,13 @@ They say the young Mademoiselle of the Dietrich family is a self-professed Vampi
 
 ~ helene_general_2
 
-Did you say you could introduce me to the young women in the rabbit mask? I hear she’s got quite a few callers.
+Mademoiselle Helene is popular today. I hear she's gotten quite a few callers for this season.
 
 => END
 
 ~ helene_general_3
 
-I believe the golden haired mademoiselle just debuted this season.
+Did you say you could introduce me to the young women in the rabbit mask? I hear her dance card is filling up.
 
 => END
 
@@ -163,6 +169,6 @@ A chance to be someone entirely different for a night! The true allure of a masq
 
 ~ general_5
 
-Everyone’s so dressed up!
+Did you hear about the misfortune in the Dietrich family?
 
 => END

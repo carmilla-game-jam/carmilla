@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cefhjx7kgx6ry"
+path="res://.godot/imported/mathilde.dialogue-c8975cd0cef5e9bca0fc22275304cd7a.tres"
+
+[deps]
+
+source_file="res://Dialog/conversation_resources/mathilde.dialogue"
+dest_files=["res://.godot/imported/mathilde.dialogue-c8975cd0cef5e9bca0fc22275304cd7a.tres"]
+
+[params]
+
+defaults=true

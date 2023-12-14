@@ -48,6 +48,53 @@ var state: Dictionary = {
 			}
 		},
 	},
+	"convo": {
+		"sidone": {
+			"met": false,
+			"fashion_done": {
+				"1": false,
+				"2": false,
+			},
+			"family_done": {
+				"1": false,
+				"2": false,
+			},
+			"gossip_done": {
+				"1": false,
+				"2": false,
+			},
+		},
+		"mathilde": {
+			"met": false,
+			"fashion_done": {
+				"1": false,
+				"2": false,
+			},
+			"family_done": {
+				"1": false,
+				"2": false,
+			},
+			"gossip_done": {
+				"1": false,
+				"2": false,
+			},
+		},
+		"helene": {
+			"met": false,
+			"fashion_done": {
+				"1": false,
+				"2": false,
+			},
+			"family_done": {
+				"1": false,
+				"2": false,
+			},
+			"gossip_done": {
+				"1": false,
+				"2": false,
+			},
+		},
+	},
 	"items": {
 		"key": {
 			"id": 0,
@@ -70,6 +117,20 @@ var state: Dictionary = {
 		"garden": false,
 	},
 }
+
+func is_all_convos_finished(name: String) -> bool:
+	var fashion_done = state["convo"][name]["fashion_done"].values().all(func(value): return value)
+	var family_done = state["convo"][name]["family_done"].values().all(func(value): return value)
+	var gossip_done = state["convo"][name]["gossip_done"].values().all(func(value): return value)
+	print("convos finished: ", fashion_done, family_done, gossip_done)
+	return fashion_done && family_done && gossip_done
+
+func is_convo_category_unlocked(topic: String) -> bool:
+	var sidone_done = state["gossip"]["sidone"][topic].values().all(func(value): return value)
+	var mathilde_done = state["gossip"]["mathilde"][topic].values().all(func(value): return value)
+	var helene_done = state["gossip"]["helene"][topic].values().all(func(value): return value)
+	print("convos unlocked: ", sidone_done, mathilde_done, helene_done)
+	return sidone_done && mathilde_done && helene_done
 
 func decrease_sus_bar(amount: float) -> void:
 	state["sus"]["level"] -= amount
