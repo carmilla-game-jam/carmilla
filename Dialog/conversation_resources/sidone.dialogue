@@ -44,7 +44,7 @@ set state["convo"]["sidone"]["met"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Sidone[/center]: It’s nothing much, but I do enjoy old roman myths of the roman goddess Diana. 
 	[center]Carmilla[/center]: Oh! I hear there’s a most marvelous statuette of the goddess in the garden.
-	[center]Sidone[/center]:I see, I haven't been to the gardens yet.
+	[center]Sidone[/center]: I see, I haven't been to the gardens yet.
 	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Sidone[/center]: I would be delighted to accompany you.
 	set state["convo"]["sidone"]["fashion_done"]["2"]
