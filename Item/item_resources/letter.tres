@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://bpmy584dqfr4l"]
+
+[ext_resource type="Resource" uid="uid://c3blalng1h1at" path="res://Item/item_resources/item.dialogue" id="1_agwf2"]
+[ext_resource type="Script" path="res://Item/item_resource.gd" id="2_mqpsk"]
+[ext_resource type="Texture2D" uid="uid://coan6e0cf0o5t" path="res://assets/spritesheets/key_items.png" id="3_je1p6"]
+
+[resource]
+script = ExtResource("2_mqpsk")
+id = 1
+name = "letter"
+is_sprite_visible = true
+texture = ExtResource("3_je1p6")
+hframes = 6
+vframes = 4
+frame = 23
+is_collidable = false
+collision_area_x = 14.0
+collision_area_y = 14.0
+conversation_resource = ExtResource("1_agwf2")
+conversation_title = "letter"

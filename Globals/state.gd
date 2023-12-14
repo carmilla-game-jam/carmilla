@@ -85,6 +85,14 @@ var state: Dictionary = {
 			"id": 3,
 			"obtained": false,
 		},
+		"footprints_garden": {
+			"id": 4,
+			"obtained": false,
+		},
+		"footprints_inside": {
+			"id": 5,
+			"obtained": false,
+		},
 	},
 	"locks_opened": {
 		"garden": false,
