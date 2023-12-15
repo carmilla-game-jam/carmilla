@@ -578,7 +578,7 @@ disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="HearingArea2D"]
 visible = false
-self_modulate = Color(1, 1, 1, 0.184314)
+self_modulate = Color(0.6, 0, 0.0431373, 0.133333)
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("3_ynlsy")
 
@@ -594,8 +594,7 @@ disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="SusArea2D"]
 visible = false
-modulate = Color(0.792157, 0, 0.105882, 1)
-self_modulate = Color(1, 1, 1, 0.32549)
+self_modulate = Color(0.537255, 0, 0.0313726, 0.333333)
 scale = Vector2(0.40375, 0.40375)
 texture = ExtResource("3_ynlsy")
 
