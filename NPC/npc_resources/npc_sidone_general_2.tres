@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://j1yjjwaihacq"]
+
+[ext_resource type="Resource" uid="uid://cdepvwudg5ma7" path="res://Dialog/gossip_resources/gossip.dialogue" id="1_io238"]
+[ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_pb6n6"]
+[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_wkwfr"]
+
+[resource]
+script = ExtResource("2_pb6n6")
+texture = ExtResource("3_wkwfr")
+hframes = 8
+vframes = 6
+frame = 17
+gossip_resource = ExtResource("1_io238")
+gossip_title = "sidone_general_2"
+conversation_title = "start"

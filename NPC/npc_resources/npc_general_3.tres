@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://dlvyo0s8g7qs7"]
+
+[ext_resource type="Resource" uid="uid://cdepvwudg5ma7" path="res://Dialog/gossip_resources/gossip.dialogue" id="1_msyri"]
+[ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_a1yay"]
+[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_4rgdo"]
+
+[resource]
+script = ExtResource("2_a1yay")
+texture = ExtResource("3_4rgdo")
+hframes = 8
+vframes = 6
+frame = 0
+gossip_resource = ExtResource("1_msyri")
+gossip_title = "general_3"
+conversation_title = "start"

@@ -28,19 +28,20 @@ theme_override_constants/margin_bottom = 20
 [node name="Label" type="RichTextLabel" parent="MarginContainer"]
 layout_mode = 2
 theme = ExtResource("3_ux31u")
+bbcode_enabled = true
 text = "	Mistress Mircalla, We’ve been faithful to your cause, having sought long and hard, only to be led to this very schloss. We believe the mademoiselle from your dreams is in attendance tonight at this masquerade. Please don on the mask we’ve prepared for you and begin your hunt.
 
 	I have written a letter of introduction to the hostess of the masquerade by the name Cirmalla. However, rousing suspicion is unwise. 
 
 The instructions are as follows:
-Arrow keys to move
-SPACE to interact
-‘z’ to switch to cat monster form
-TAB to reread these instructions
+[color=#FF0000]Arrow keys[/color] to move
+[color=#FF0000]SPACE[/color] to interact
+[color=#FF0000]z[/color] to switch to cat monster form
+[color=#FF0000]TAB[/color] to reread these instructions
 
-	Remember, your cat form would allow you to overhear selective societal whispers. Listen to these pieces of gossip to learn more about these women and engage them in conversation based on what you may have overheard.
+	Remember, your cat form, although monstrous, would allow you to overhear selective societal whispers. [color=#FF0000]Listen to these pieces of gossip to learn more about these women and engage them in conversation based on what you may have overheard.[/color]
 Hopefully through conversation, you will have more luck finding the woman in your dreams.
 
-	An indicator shall appear on the right side of the screen to warn you of any impending danger. However, should you tax the patience of the guests at this party with suspicious activity or vile words, we won’t be able to hide your misdeeds and you shall be removed from the premise of tonight’s events.
+	An indicator shall appear on the right side of the screen to represent your goodwill at this party. However, should you tax the patience of the guests at this party with suspicious activity such as [color=#FF0000]appearing too close to them in cat form[/color], or [color=#FF0000]selecting the wrong topic of conversation[/color] with the women, this indicator shall decrease. When the bar runs out, we will no longer be able to hide your misdeeds and you shall be removed from the premise of tonight’s events.
 
 	We eagerly await your success."

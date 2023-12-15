@@ -6,12 +6,12 @@ else:
 	[center]Sidone[/center]: (She sees you approach and is curious to hear how you start the conversation...)
 - Introduce yourself
 	=> introduction
+- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["sidone"]["met"]]
+	=> gossip
 - Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["sidone"]["met"]]
 	=> fashion
 - Family [if is_convo_category_unlocked("family") and state["convo"]["sidone"]["met"]]
 	=> family
-- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["sidone"]["met"]]
-	=> gossip
 - Invite (ends the masquerade) [if is_all_convos_finished("sidone") and state["convo"]["sidone"]["met"]]
 	=> invite
 => END
@@ -96,10 +96,10 @@ set state["convo"]["sidone"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars and stars on a clear night.
+[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night.
 [center]Sidone[/center]: Yes, I've not been able to open my heart to another in some time.
 [center]Carmilla[/center]: Do you care to be whisked away?
-[center]Sidone[/center]: So we'll walk elsewhere, hand in hand.
+[center]Sidone[/center]: Then we must walk to a secret location, hand in hand.
 do SceneTransition.change_scene("sidone_end")
 => END
 

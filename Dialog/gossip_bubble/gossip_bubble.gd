@@ -45,8 +45,7 @@ var dialogue_line: DialogueLine:
 
 		dialogue_label.show()
 		if not dialogue_line.text.is_empty():
-			dialogue_label.type_out()
-			await dialogue_label.finished_typing
+			dialogue_label.skip_typing()
 
 		# Wait for input
 		if dialogue_line.time != "":

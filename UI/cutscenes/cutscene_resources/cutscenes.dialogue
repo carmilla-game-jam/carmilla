@@ -1,27 +1,30 @@
+~ opening
+
+[center]Carmilla[/center]: (A dream of a pair of hands embroidering a handkerchief. Somehow you know this woman is the one for you.)
+
+=> END
+
 ~ sus_end
 
-YOU DIED
+[center]Hostess[/center]: As the hostess of this masquerade, we took a chance by providing an unknown woman like you with an invitation.
+[center]Hostess[/center]: It was evidently a lapse in judgement. Please see yourself to the exit.
 
 => END
 
 ~ sidone_end
 
-[center]Carmilla[/center]: You are mine, you shall be mine, you and I are one forever.
+[center]Carmilla[/center]: Yes, very—a cruel love—a strange love. Love will have its sacrifices...
 
 => END
 
 ~ helene_end
 
-[center]Carmilla[/center]: Let's go somewhere, just the two of us...
+[center]Carmilla[/center]: x_x
 
 => END
 
 ~ mathilde_end
 
-[center]Carmilla[/center]: Dearest, your little heart is wounded; think me not cruel because I obey the irresistible law of my strength and weakness;
-[center]Carmilla[/center]: if your dear heart is wounded, my wild heart bleeds with yours. In the rapture of my enormous humiliation I live in your warm life,
-[center]Carmilla[/center]: and you shall die—die, sweetly die—into mine.
-[center]Carmilla[/center]: I cannot help it; as I draw near to you, you, in your turn, will draw near to others, and learn the rapture of that cruelty, which yet is love;
-[center]Carmilla[/center]: so, for a while, seek to know no more of me and mine, but trust me with all your loving spirit.”
+[center]Carmilla[/center]: “You are mine, you shall be mine, you and I are one forever.”
 
 => END

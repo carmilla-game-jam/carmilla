@@ -6,12 +6,12 @@ else:
 	[center]Mathilde[/center]: (She sees you approach and is curious to hear how you start the conversation...)
 - Introduce yourself
 	=> introduction
+- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"]]
+	=> gossip
 - Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["mathilde"]["met"]]
 	=> fashion
 - Family [if is_convo_category_unlocked("family") and state["convo"]["mathilde"]["met"]]
 	=> family
-- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"]]
-	=> gossip
 - Invite (ends the masquerade) [if is_all_convos_finished("mathilde") and state["convo"]["mathilde"]["met"]]
 	=> invite
 => END
@@ -96,7 +96,7 @@ set state["convo"]["mathilde"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars and stars on a clear night.
+[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night.
 [center]Mathilde[/center]: Yes, I've not been able to open my heart to another in some time.
 [center]Carmilla[/center]: Do you care to be whisked away?
 [center]Mathilde[/center]: I would not have it any other way.

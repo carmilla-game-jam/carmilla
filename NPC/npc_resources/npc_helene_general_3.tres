@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://d65055wmp6h3"]
+
+[ext_resource type="Resource" uid="uid://cdepvwudg5ma7" path="res://Dialog/gossip_resources/gossip.dialogue" id="1_uckcu"]
+[ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_exs22"]
+[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_vgwiq"]
+
+[resource]
+script = ExtResource("2_exs22")
+texture = ExtResource("3_vgwiq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_resource = ExtResource("1_uckcu")
+gossip_title = "helene_general_3"
+conversation_title = "start"

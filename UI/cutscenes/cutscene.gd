@@ -29,5 +29,5 @@ func show_dialogue_balloon(resource: DialogueResource, title: String, portrait: 
 
 func _unhandled_input(event):
 	# TODO: Fix input handler. Mouse click isn't working to progress to the next scene
-	if next_scene && (event.is_action_pressed("ui_accept") || event is InputEventMouseButton && event.is_pressed() && event.button_index == 1):
+	if next_scene && (event is InputEventMouseButton && event.is_pressed() && event.button_index == 1 || event.is_action_pressed("interact")):
 		SceneTransition.change_scene(Cutscenes.scenes[current_scene]["next_scene"]["name"])
