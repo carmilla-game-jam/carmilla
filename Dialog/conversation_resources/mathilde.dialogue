@@ -1,9 +1,9 @@
 ~ greeting
 
 if state["convo"]["mathilde"]["met"]:
-	[center]Mathilde[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
+	[center]Mlle Raven[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
 else:
-	[center]Mathilde[/center]: (She sees you approach and is curious to hear how you start the conversation...)
+	[center]Mlle Raven[/center]: (She sees you approach and is curious to hear how you start the conversation...)
 - Introduce yourself
 	=> introduction
 - Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"]]
@@ -18,78 +18,78 @@ else:
 
 ~ introduction
 
-[center]Mathilde[/center]: I bid you a pleasant evening.
+[center]Mlle Raven[/center]: I bid you a pleasant evening.
 [center]Carmilla[/center]: I don’t believe we’ve been introduced.
-[center]Mathilde[/center]: No? But you seem to know me.
+[center]Mlle Raven[/center]: No? But you seem to know me.
 [center]Carmilla[/center]: As you seem familiar with me.
-[center]Mathilde[/center]: When we’re all confidants of the hostess, are we not soon to be friends?
+[center]Mlle Raven[/center]: When we’re all confidants of the hostess, are we not soon to be friends?
 set state["convo"]["mathilde"]["met"] = true
 
 => END
 
 ~ fashion
-[center]Mathilde[/center]: Lovely evening, friend.
+[center]Mlle Raven[/center]: Lovely evening, friend.
 - I admire your dress. Which shop did you patronize?
-	[center]Mathilde[/center]: This? A family friend had imported the silks and I had the family seamstress put together the pieces.
+	[center]Mlle Raven[/center]: This? A family friend had imported the silks and I had the family seamstress put together the pieces.
 	[center]Carmilla[/center]: Still, your eye in this is quite sublime!
-	[center]Mathilde[/center]: It helps to dabble in the avantgarde.
+	[center]Mlle Raven[/center]: It helps to dabble in the avantgarde.
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
-	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
+	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
 - I couldn't help but notice the needlework on your handkerchief.
-	[center]Mathilde[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
+	[center]Mlle Raven[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
 	[center]Carmilla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
-	[center]Mathilde[/center]: Only if you indulge me so.
+	[center]Mlle Raven[/center]: Only if you indulge me so.
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
-	[center]Mathilde[/center]: Of course. I've been waiting for you to ask...
+	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
 - Your mask seems to hold a story, would you indulge me?
-	[center]Mathilde[/center]: The raven... I still hold memories of what has been lost to me.
+	[center]Mlle Raven[/center]: The raven... I still hold memories of what has been lost to me.
 	[center]Carmilla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
-	[center]Mathilde[/center]: Yes... yes I hope so as well.
+	[center]Mlle Raven[/center]: Yes... yes I hope so as well.
 	=> bad_choice
 
 => END
 
 ~ family
-[center]Mathilde[/center]: Lovely evening, friend.
+[center]Mlle Raven[/center]: Lovely evening, friend.
 - Here's a philosophical quandry; is there more to life than a family name?
-	[center]Mathilde[/center]: I believe that one's family name can carry them farther in life than you think.
+	[center]Mlle Raven[/center]: I believe that one's family name can carry them farther in life than you think.
 	[center]Carmilla[/center]: Is that from experience, Madame?
-	[center]Mathilde[/center]: I will not lie and say I had no stakes in the prestige.
+	[center]Mlle Raven[/center]: I will not lie and say I had no stakes in the prestige.
 	=> bad_choice
 - I've heard that no family here is untouched by adversity.
-	[center]Mathilde[/center]: 'Tis true. Time can heal all, although I sometimes wish it would hurry a little faster.
+	[center]Mlle Raven[/center]: 'Tis true. Time can heal all, although I sometimes wish it would hurry a little faster.
 	[center]Carmilla[/center]: Maybe a walk with me can ease the pain?
-	[center]Mathilde[/center]: Maybe another time. I quite enjoy the view here.
+	[center]Mlle Raven[/center]: Maybe another time. I quite enjoy the view here.
 	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
 	set state["convo"]["mathilde"]["family_done"] = true
 - I am finding that everyone's curiosity is a bit overwhelming.
-	[center]Mathilde[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
+	[center]Mlle Raven[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
 	[center]Carmilla[/center]: Oh my, you must tell me more.
-	[center]Mathilde[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
+	[center]Mlle Raven[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
 	[center]Carmilla[/center]: (Her wisdom draws me closer...)
 	set state["convo"]["mathilde"]["family_done"] = true
 
 => END
 
 ~ gossip
-[center]Mathilde[/center]: Lovely evening, friend.
+[center]Mlle Raven[/center]: Lovely evening, friend.
 - I hear you're the talk of the town.
-	[center]Mathilde[/center]: Idle mouths run idle thoughts, but they do have a reason to chatter.
+	[center]Mlle Raven[/center]: Idle mouths run idle thoughts, but they do have a reason to chatter.
 	[center]Carmilla[/center]: You seem quite well humored about this whole enterprise.
-	[center]Mathilde[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
+	[center]Mlle Raven[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
 	[center]Carmilla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
 - Has your dance card been filling up?
-	[center]Mathilde[/center]: Unfortunately there's been a minor miscommunication on my part.
+	[center]Mlle Raven[/center]: Unfortunately there's been a minor miscommunication on my part.
 	[center]Carmilla[/center]: Shall I speak to the hostess to fix it?
-	[center]Mathilde[/center]: Very kind of you, but I shall ask myself.
+	[center]Mlle Raven[/center]: Very kind of you, but I shall ask myself.
 	=> bad_choice
 - Are you also new to these events?
-	[center]Mathilde[/center]: No, but it's been a while since I've been to such a party.
+	[center]Mlle Raven[/center]: No, but it's been a while since I've been to such a party.
 	[center]Carmilla[/center]: Then, we must make up for all the fun you've missed.
-	[center]Mathilde[/center]: How astute. Tell me... how have you been amusing yourself?
+	[center]Mlle Raven[/center]: How astute. Tell me... how have you been amusing yourself?
 	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
 
@@ -97,9 +97,9 @@ set state["convo"]["mathilde"]["met"] = true
 
 ~ invite
 [center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night.
-[center]Mathilde[/center]: Yes, I've not been able to open my heart to another in some time.
+[center]Mlle Raven[/center]: Yes, I've not been able to open my heart to another in some time.
 [center]Carmilla[/center]: Do you care to be whisked away?
-[center]Mathilde[/center]: I would not have it any other way.
+[center]Mlle Raven[/center]: I would not have it any other way.
 do SceneTransition.change_scene("mathilde_end")
 => END
 

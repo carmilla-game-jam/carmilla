@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bt4kwgggca5vb" path="res://assets/ui/speech_bubble_top_left.png" id="3_b1pdh"]
 
 [node name="GossipBalloon" type="Control"]
+z_index = 3
 layout_mode = 3
 anchors_preset = 0
 offset_left = -101.0

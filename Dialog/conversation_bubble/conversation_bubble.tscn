@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://diy1aop2pwocd"]
+[gd_scene load_steps=8 format=3 uid="uid://diy1aop2pwocd"]
 
 [ext_resource type="Script" path="res://Dialog/conversation_bubble/conversation_bubble.gd" id="1_k26hx"]
 [ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="2_rg2vd"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_y7lci"]
 [ext_resource type="Texture2D" uid="uid://bu1rfo6fmj8aa" path="res://assets/ui/dialog_speaker.png" id="5_51voh"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_xkruq"]
+
+[sub_resource type="Theme" id="Theme_crsbh"]
+RichTextLabel/colors/default_color = Color(0.85098, 0.827451, 0.780392, 1)
 
 [node name="ConversationBalloon" type="CanvasLayer"]
 layer = 100
@@ -80,8 +83,9 @@ anchor_left = 0.092
 anchor_right = 0.092
 offset_left = -59.052
 offset_top = -20.0
-offset_right = 58.948
+offset_right = 87.948
 offset_bottom = 17.0
+theme = SubResource("Theme_crsbh")
 
 [node name="CharacterBG" type="NinePatchRect" parent="Balloon/Character"]
 layout_mode = 2

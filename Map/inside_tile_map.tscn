@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://ciju50teunatx"]
+[gd_scene load_steps=88 format=3 uid="uid://ciju50teunatx"]
 
 [ext_resource type="TileSet" uid="uid://dshjit0prmfx6" path="res://Map/tile_set.tres" id="1_gvtac"]
 [ext_resource type="PackedScene" uid="uid://c3adctvmc5qyc" path="res://Player/player.tscn" id="2_u3thh"]
@@ -38,6 +38,10 @@
 [ext_resource type="Resource" uid="uid://2xieibs6c4wu" path="res://NPC/npc_resources/npc_general_2.tres" id="28_ls0u2"]
 [ext_resource type="Resource" uid="uid://c0oqaayi6t7t5" path="res://NPC/npc_resources/npc_key_1.tres" id="28_q781q"]
 [ext_resource type="Resource" uid="uid://dlvyo0s8g7qs7" path="res://NPC/npc_resources/npc_general_3.tres" id="29_iucl6"]
+[ext_resource type="Resource" uid="uid://b6e4c1clv081l" path="res://NPC/npc_resources/helene.tres" id="39_35jai"]
+[ext_resource type="Resource" uid="uid://bln251mggxcx4" path="res://NPC/npc_resources/mathilde.tres" id="40_ys4yn"]
+[ext_resource type="Resource" uid="uid://un4s06i27t44" path="res://Item/item_resources/footprints_inside_1.tres" id="41_3eu0w"]
+[ext_resource type="Resource" uid="uid://dl277hw6wg734" path="res://Item/item_resources/footprints_inside_2.tres" id="42_xean8"]
 
 [sub_resource type="Resource" id="Resource_2lh4c"]
 script = ExtResource("7_u3soe")
@@ -45,6 +49,42 @@ texture = ExtResource("8_rfimq")
 hframes = 8
 vframes = 6
 frame = 13
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_x88vn"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_0o6nm"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_gudrd"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_xlc5h"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
 gossip_title = "start"
 conversation_title = "start"
 
@@ -57,6 +97,60 @@ frame = 12
 gossip_title = "start"
 conversation_title = "start"
 
+[sub_resource type="Resource" id="Resource_jvxyo"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 7
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_papsb"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_58got"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_gi8ma"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 16
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_w3blc"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 8
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_04tlq"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 8
+gossip_title = "start"
+conversation_title = "start"
+
 [sub_resource type="Resource" id="Resource_2akrq"]
 script = ExtResource("7_u3soe")
 texture = ExtResource("8_rfimq")
@@ -66,12 +160,39 @@ frame = 18
 gossip_title = "start"
 conversation_title = "start"
 
+[sub_resource type="Resource" id="Resource_mjbt5"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
 [sub_resource type="Resource" id="Resource_uv22l"]
 script = ExtResource("7_u3soe")
 texture = ExtResource("8_rfimq")
 hframes = 8
 vframes = 6
 frame = 4
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_cjkbv"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 11
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_m8jaw"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 9
 gossip_title = "start"
 conversation_title = "start"
 
@@ -90,6 +211,33 @@ texture = ExtResource("8_rfimq")
 hframes = 8
 vframes = 6
 frame = 11
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_k51ha"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 18
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_43pqi"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_04ffc"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
 gossip_title = "start"
 conversation_title = "start"
 
@@ -129,6 +277,15 @@ frame = 11
 gossip_title = "start"
 conversation_title = "start"
 
+[sub_resource type="Resource" id="Resource_o2vig"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 6
+gossip_title = "start"
+conversation_title = "start"
+
 [sub_resource type="Resource" id="Resource_2q4wd"]
 script = ExtResource("7_u3soe")
 texture = ExtResource("8_rfimq")
@@ -156,12 +313,93 @@ frame = 12
 gossip_title = "start"
 conversation_title = "start"
 
+[sub_resource type="Resource" id="Resource_ciu0d"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 11
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_68psm"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_fvukm"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 15
+gossip_title = "start"
+conversation_title = "start"
+
 [sub_resource type="Resource" id="Resource_yee8b"]
 script = ExtResource("7_u3soe")
 texture = ExtResource("8_rfimq")
 hframes = 8
 vframes = 6
-frame = 0
+frame = 20
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_dr7yh"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 21
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_5ohpc"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_ex5gv"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 18
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_6t74d"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 15
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_i1sas"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 20
+gossip_title = "start"
+conversation_title = "start"
+
+[sub_resource type="Resource" id="Resource_743w7"]
+script = ExtResource("7_u3soe")
+texture = ExtResource("8_rfimq")
+hframes = 8
+vframes = 6
+frame = 6
 gossip_title = "start"
 conversation_title = "start"
 
@@ -254,14 +492,12 @@ layer_5/y_sort_origin = 32
 layer_5/z_index = 1
 layer_5/tile_data = PackedInt32Array(-1376257, 917517, 65569, -1441792, 917517, 65569)
 
-[node name="Player" parent="." instance=ExtResource("2_u3thh")]
-
 [node name="Sidone" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-157, -71)
+position = Vector2(398, -662)
 npc_resource = ExtResource("4_4gahr")
 
 [node name="NPC_sidone_family_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1059, -513)
+position = Vector2(-903, -508)
 npc_resource = ExtResource("5_7cgcs")
 
 [node name="NPC_sidone_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
@@ -273,7 +509,7 @@ position = Vector2(-152, -531)
 npc_resource = ExtResource("7_rrgbm")
 
 [node name="NPC_sidone_general_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1306, -705)
+position = Vector2(409, -542)
 npc_resource = ExtResource("8_ebkt7")
 
 [node name="NPC_sidone_general_2" parent="." instance=ExtResource("3_kqhfg")]
@@ -285,43 +521,43 @@ position = Vector2(1220, -339)
 npc_resource = ExtResource("10_dqrh7")
 
 [node name="NPC_mathilde_family_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1351, -337)
+position = Vector2(1104, -648)
 npc_resource = ExtResource("10_ex1km")
 
 [node name="NPC_mathilde_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-712, -656)
+position = Vector2(-875, -625)
 npc_resource = ExtResource("9_2mjrg")
 
 [node name="NPC_mathilde_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1112, -623)
+position = Vector2(-1309, -294)
 npc_resource = ExtResource("8_upkgn")
 
 [node name="NPC_mathilde_general_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(69, -490)
+position = Vector2(47, -507)
 npc_resource = ExtResource("11_qpyax")
 
 [node name="NPC_mathilde_general_2" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-668, -268)
+position = Vector2(58, -296)
 npc_resource = ExtResource("12_c0x86")
 
 [node name="NPC_mathilde_general_3" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-893, -492)
+position = Vector2(148, -373)
 npc_resource = ExtResource("13_cei5y")
 
 [node name="NPC_helene_family_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(405, -457)
+position = Vector2(629, -594)
 npc_resource = ExtResource("11_wcmfw")
 
 [node name="NPC_helene_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(1124, -634)
+position = Vector2(-1300, -481)
 npc_resource = ExtResource("12_u6rxx")
 
 [node name="NPC_helene_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(655, -612)
+position = Vector2(-1078, -553)
 npc_resource = ExtResource("13_roj7a")
 
 [node name="NPC_helene_general_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-812, -547)
+position = Vector2(-884, -266)
 npc_resource = ExtResource("17_32287")
 
 [node name="NPC_helene_general_2" parent="." instance=ExtResource("3_kqhfg")]
@@ -329,19 +565,19 @@ position = Vector2(322, -324)
 npc_resource = ExtResource("18_0pfh4")
 
 [node name="NPC_helene_general_3" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-370, -613)
+position = Vector2(-390, 24)
 npc_resource = ExtResource("19_06e77")
 
 [node name="NPC_sidone_general_4" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(358, -656)
+position = Vector2(-1231, -663)
 npc_resource = ExtResource("23_vp6md")
 
 [node name="NPC_general_footprints_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-332, -350)
+position = Vector2(-179, -94)
 npc_resource = ExtResource("24_aim8j")
 
 [node name="NPC_key_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-81, -362)
+position = Vector2(-392, -627)
 npc_resource = ExtResource("28_q781q")
 
 [node name="NPC_key_2" parent="." instance=ExtResource("3_kqhfg")]
@@ -353,7 +589,7 @@ position = Vector2(-135, -229)
 npc_resource = ExtResource("26_4qmnl")
 
 [node name="NPC_general_2" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-656, -484)
+position = Vector2(-659, -473)
 npc_resource = ExtResource("28_ls0u2")
 
 [node name="NPC_general_3" parent="." instance=ExtResource("3_kqhfg")]
@@ -365,64 +601,76 @@ position = Vector2(218, -513)
 npc_resource = ExtResource("25_jxgs3")
 
 [node name="NPC_general_5" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1332, -480)
+position = Vector2(660, -489)
 npc_resource = ExtResource("7_f81xl")
 
 [node name="NPC" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1078, -477)
+position = Vector2(-922, -472)
 npc_resource = SubResource("Resource_2lh4c")
 
 [node name="NPC37" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-386, 22)
+position = Vector2(-709, -678)
+npc_resource = SubResource("Resource_x88vn")
 
 [node name="NPC38" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-351, 30)
+position = Vector2(-674, -670)
+npc_resource = SubResource("Resource_0o6nm")
 
 [node name="NPC39" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-925, -637)
-npc_resource = ExtResource("28_q781q")
+position = Vector2(-127, -371)
+npc_resource = SubResource("Resource_gudrd")
 
 [node name="NPC40" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-888, -648)
+position = Vector2(-90, -382)
+npc_resource = SubResource("Resource_xlc5h")
 
 [node name="NPC42" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-780, -544)
+position = Vector2(-852, -263)
 npc_resource = SubResource("Resource_mfh5s")
 
 [node name="NPC44" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-899, -614)
+position = Vector2(-101, -348)
+npc_resource = SubResource("Resource_jvxyo")
 
 [node name="NPC45" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-164, -221)
+npc_resource = SubResource("Resource_papsb")
 
 [node name="NPC46" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1329, -682)
+position = Vector2(386, -519)
+npc_resource = SubResource("Resource_58got")
 
 [node name="NPC49" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-308, -336)
+position = Vector2(-155, -80)
+npc_resource = SubResource("Resource_gi8ma")
 
 [node name="NPC51" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1326, -312)
+position = Vector2(1129, -623)
+npc_resource = SubResource("Resource_w3blc")
 
 [node name="NPC52" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1284, -675)
+position = Vector2(431, -512)
+npc_resource = SubResource("Resource_04tlq")
 
 [node name="NPC53" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(221, -546)
 npc_resource = SubResource("Resource_2akrq")
 
 [node name="NPC55" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(363, -475)
+position = Vector2(587, -612)
+npc_resource = SubResource("Resource_mjbt5")
 
 [node name="NPC58" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-340, -625)
+position = Vector2(-360, 12)
 npc_resource = SubResource("Resource_uv22l")
 
 [node name="NPC35" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(1093, -470)
+npc_resource = SubResource("Resource_cjkbv")
 
 [node name="NPC32" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1141, -631)
+position = Vector2(-1338, -302)
+npc_resource = SubResource("Resource_m8jaw")
 
 [node name="NPC31" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(181, -262)
@@ -433,13 +681,16 @@ position = Vector2(170, -215)
 npc_resource = SubResource("Resource_65gqc")
 
 [node name="NPC29" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-676, -523)
+position = Vector2(-679, -512)
+npc_resource = SubResource("Resource_k51ha")
 
 [node name="NPC27" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-700, -629)
+position = Vector2(-847, -605)
+npc_resource = SubResource("Resource_43pqi")
 
 [node name="NPC25" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-679, -654)
+position = Vector2(-837, -631)
+npc_resource = SubResource("Resource_04ffc")
 
 [node name="NPC8" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(-171, -507)
@@ -459,60 +710,70 @@ npc_resource = SubResource("Resource_gmjre")
 
 [node name="NPC12" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(304, -357)
+npc_resource = SubResource("Resource_o2vig")
 
 [node name="NPC15" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1307, -466)
+position = Vector2(685, -475)
 npc_resource = SubResource("Resource_2q4wd")
 
 [node name="NPC17" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-694, -257)
+position = Vector2(32, -285)
 npc_resource = SubResource("Resource_pslq2")
 
 [node name="NPC19" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(392, -647)
+position = Vector2(-1197, -654)
 npc_resource = SubResource("Resource_7tj0g")
 
 [node name="NPC20" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(365, -623)
+position = Vector2(-1224, -630)
+npc_resource = SubResource("Resource_ciu0d")
 
 [node name="NPC22" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(631, -588)
+position = Vector2(-1102, -529)
+npc_resource = SubResource("Resource_68psm")
 
 [node name="NPC23" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(664, -576)
+position = Vector2(-1069, -517)
+npc_resource = SubResource("Resource_fvukm")
 
 [node name="NPC59" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(690, -606)
+position = Vector2(-1043, -547)
 npc_resource = SubResource("Resource_yee8b")
 
 [node name="NPC61" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-929, -490)
+position = Vector2(120, -373)
+npc_resource = SubResource("Resource_dr7yh")
 
 [node name="NPC63" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-52, -353)
+position = Vector2(-363, -618)
+npc_resource = SubResource("Resource_5ohpc")
 
 [node name="NPC66" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(1098, -641)
+position = Vector2(-1306, -512)
+npc_resource = SubResource("Resource_ex5gv")
 
 [node name="NPC69" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(1211, -300)
+npc_resource = SubResource("Resource_6t74d")
 
 [node name="NPC65" parent="." instance=ExtResource("3_kqhfg")]
 position = Vector2(913, -514)
+npc_resource = SubResource("Resource_i1sas")
 
 [node name="NPC24" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(397, -490)
+position = Vector2(621, -627)
+npc_resource = SubResource("Resource_743w7")
 
 [node name="NPC6" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(72, -454)
+position = Vector2(50, -471)
 npc_resource = SubResource("Resource_jt6hd")
 
 [node name="NPC5" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(35, -477)
+position = Vector2(13, -494)
 npc_resource = SubResource("Resource_prwev")
 
 [node name="NPC2" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-1037, -488)
+position = Vector2(-881, -483)
 npc_resource = SubResource("Resource_xfugx")
 
 [node name="NPC3" parent="." instance=ExtResource("3_kqhfg")]
@@ -538,6 +799,37 @@ position = Vector2(43, -1105)
 item_resource = ExtResource("17_nnf1v")
 
 [node name="Letter" parent="." instance=ExtResource("5_servt")]
-z_index = 2
+z_index = 1
 position = Vector2(-910, -717)
 item_resource = ExtResource("18_vc4wb")
+
+[node name="Helene" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(-760, -552)
+npc_resource = ExtResource("39_35jai")
+
+[node name="Mathilde" parent="." instance=ExtResource("3_kqhfg")]
+position = Vector2(-361, -500)
+npc_resource = ExtResource("40_ys4yn")
+
+[node name="Footprint1" parent="." instance=ExtResource("5_servt")]
+z_index = 1
+position = Vector2(-98, -26)
+item_resource = ExtResource("41_3eu0w")
+
+[node name="Footprint3" parent="." instance=ExtResource("5_servt")]
+z_index = 1
+position = Vector2(-129, -26)
+item_resource = ExtResource("41_3eu0w")
+
+[node name="Footprint2" parent="." instance=ExtResource("5_servt")]
+z_index = 1
+position = Vector2(-113, -12)
+item_resource = ExtResource("42_xean8")
+
+[node name="Footprint4" parent="." instance=ExtResource("5_servt")]
+z_index = 1
+position = Vector2(-148, -12)
+item_resource = ExtResource("42_xean8")
+
+[node name="Player" parent="." instance=ExtResource("2_u3thh")]
+z_index = 2

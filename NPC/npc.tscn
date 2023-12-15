@@ -15,14 +15,6 @@ y_sort_enabled = true
 script = ExtResource("1_a7tok")
 npc_resource = ExtResource("2_taov3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-texture = ExtResource("3_cws64")
-hframes = 8
-vframes = 6
-frame = 8
-region_rect = Rect2(0, 64, 64, 64)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 21)
 shape = SubResource("RectangleShape2D_ffr5d")
@@ -30,3 +22,11 @@ shape = SubResource("RectangleShape2D_ffr5d")
 [node name="Gossip" parent="." instance=ExtResource("3_sahul")]
 
 [node name="Conversation" parent="." instance=ExtResource("4_t3jdk")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("3_cws64")
+hframes = 8
+vframes = 6
+frame = 1
+region_rect = Rect2(0, 64, 64, 64)
