@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 300
+@export var SPEED = 100
 @export var sus_decrease_rate_minor = 0
 @export var sus_decrease_rate_major = 20
 @onready var input_buffer = [Vector2.ZERO]
