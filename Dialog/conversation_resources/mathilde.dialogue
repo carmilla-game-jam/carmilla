@@ -36,6 +36,7 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
+	set state["convo"]["mathilde"]["fashion_topics"]["1"] = true
 - I couldn't help but notice the needlework on your handkerchief.
 	[center]Mlle Raven[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
 	[center]Carmilla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
@@ -43,10 +44,12 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
+	set state["convo"]["mathilde"]["fashion_topics"]["2"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mlle Raven[/center]: The raven... I still hold memories of what has been lost to me.
 	[center]Carmilla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
 	[center]Mlle Raven[/center]: Yes... yes I hope so as well.
+	set state["convo"]["mathilde"]["fashion_topics"]["3"] = true
 	=> bad_choice
 
 => END
@@ -57,6 +60,7 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mlle Raven[/center]: I believe that one's family name can carry them farther in life than you think.
 	[center]Carmilla[/center]: Is that from experience, Madame?
 	[center]Mlle Raven[/center]: I will not lie and say I had no stakes in the prestige.
+	set state["convo"]["mathilde"]["family_topics"]["1"] = true
 	=> bad_choice
 - I've heard that no family here is untouched by adversity.
 	[center]Mlle Raven[/center]: 'Tis true. Time can heal all, although I sometimes wish it would hurry a little faster.
@@ -64,12 +68,14 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mlle Raven[/center]: Maybe another time. I quite enjoy the view here.
 	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
 	set state["convo"]["mathilde"]["family_done"] = true
+	set state["convo"]["mathilde"]["family_topics"]["2"] = true
 - I am finding that everyone's curiosity is a bit overwhelming.
 	[center]Mlle Raven[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
 	[center]Carmilla[/center]: Oh my, you must tell me more.
 	[center]Mlle Raven[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
 	[center]Carmilla[/center]: (Her wisdom draws me closer...)
 	set state["convo"]["mathilde"]["family_done"] = true
+	set state["convo"]["mathilde"]["family_topics"]["3"] = true
 
 => END
 
@@ -81,10 +87,12 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mlle Raven[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
 	[center]Carmilla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
+	set state["convo"]["mathilde"]["gossip_topics"]["1"] = true
 - Has your dance card been filling up?
 	[center]Mlle Raven[/center]: Unfortunately there's been a minor miscommunication on my part.
 	[center]Carmilla[/center]: Shall I speak to the hostess to fix it?
 	[center]Mlle Raven[/center]: Very kind of you, but I shall ask myself.
+	set state["convo"]["mathilde"]["gossip_topics"]["2"] = true
 	=> bad_choice
 - Are you also new to these events?
 	[center]Mlle Raven[/center]: No, but it's been a while since I've been to such a party.
@@ -92,6 +100,7 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mlle Raven[/center]: How astute. Tell me... how have you been amusing yourself?
 	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
+	set state["convo"]["mathilde"]["gossip_topics"]["3"] = true
 
 => END
 

@@ -54,18 +54,63 @@ var state: Dictionary = {
 			"fashion_done": false,
 			"family_done": false,
 			"gossip_done": false,
+			"fashion_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"family_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"gossip_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
 		},
 		"mathilde": {
 			"met": false,
 			"fashion_done": false,
 			"family_done": false,
 			"gossip_done": false,
+			"fashion_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"family_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"gossip_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
 		},
 		"helene": {
 			"met": false,
 			"fashion_done": false,
 			"family_done": false,
 			"gossip_done": false,
+			"fashion_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"family_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
+			"gossip_topics": {
+				"1": false,
+				"2": false,
+				"3": false,
+			},
 		},
 	},
 	"items": {
