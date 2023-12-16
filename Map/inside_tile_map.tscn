@@ -504,7 +504,7 @@ position = Vector2(-760, -552)
 npc_resource = ExtResource("39_35jai")
 
 [node name="Mathilde" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-361, -500)
+position = Vector2(-516, -508)
 npc_resource = ExtResource("40_ys4yn")
 
 [node name="NPC_sidone_family_1" parent="." instance=ExtResource("3_kqhfg")]
@@ -588,7 +588,7 @@ position = Vector2(-179, -94)
 npc_resource = ExtResource("24_aim8j")
 
 [node name="NPC_key_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-392, -627)
+position = Vector2(-506, -632)
 npc_resource = ExtResource("28_q781q")
 
 [node name="NPC_key_2" parent="." instance=ExtResource("3_kqhfg")]
@@ -708,15 +708,15 @@ position = Vector2(-171, -507)
 npc_resource = SubResource("Resource_55f3g")
 
 [node name="NPC9" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-510, -507)
+position = Vector2(-383, -501)
 npc_resource = SubResource("Resource_obh1v")
 
 [node name="NPC10" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-475, -511)
+position = Vector2(-348, -505)
 npc_resource = SubResource("Resource_30jms")
 
 [node name="NPC11" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-492, -476)
+position = Vector2(-365, -470)
 npc_resource = SubResource("Resource_gmjre")
 
 [node name="NPC12" parent="." instance=ExtResource("3_kqhfg")]
@@ -756,7 +756,7 @@ position = Vector2(120, -373)
 npc_resource = SubResource("Resource_dr7yh")
 
 [node name="NPC63" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-363, -618)
+position = Vector2(-477, -623)
 npc_resource = SubResource("Resource_5ohpc")
 
 [node name="NPC66" parent="." instance=ExtResource("3_kqhfg")]
@@ -805,7 +805,6 @@ position = Vector2(0, -622)
 item_resource = ExtResource("7_oyl6r")
 
 [node name="Handkerchief" parent="." instance=ExtResource("5_servt")]
-z_index = 2
 position = Vector2(43, -1105)
 item_resource = ExtResource("17_nnf1v")
 
@@ -815,13 +814,11 @@ position = Vector2(-910, -717)
 item_resource = ExtResource("18_vc4wb")
 
 [node name="Footprint1" parent="." instance=ExtResource("5_servt")]
-z_index = 1
-position = Vector2(-98, -27)
+position = Vector2(-97, -21)
 item_resource = ExtResource("41_3eu0w")
 
 [node name="Footprint3" parent="." instance=ExtResource("5_servt")]
-z_index = 1
-position = Vector2(-129, -26)
+position = Vector2(-130, -20)
 item_resource = ExtResource("41_3eu0w")
 
 [node name="Footprint2" parent="." instance=ExtResource("5_servt")]

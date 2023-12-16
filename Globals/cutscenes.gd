@@ -24,6 +24,7 @@ var scenes: Dictionary = {
 	"sus_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
 		"bg": "res://assets/ui/titlescreen_bg.png",
+		"dialog_title": "sus_end",
 	},
 	"sidone_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
@@ -35,9 +36,9 @@ var scenes: Dictionary = {
 		"bg": "res://assets/ui/titlescreen_bg.png",
 		"dialog_title": "helene_end",
 	},
-	"mathile_end": {
+	"mathilde_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
 		"bg": "res://assets/ui/titlescreen_bg.png",
-		"dialog_title": "mathile_end",
+		"dialog_title": "mathilde_end",
 	},
 }
