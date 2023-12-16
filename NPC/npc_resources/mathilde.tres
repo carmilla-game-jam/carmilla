@@ -2,11 +2,11 @@
 
 [ext_resource type="Resource" uid="uid://cefhjx7kgx6ry" path="res://Dialog/conversation_resources/mathilde.dialogue" id="1_05yfv"]
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="2_gkmug"]
-[ext_resource type="Texture2D" uid="uid://bj710je6r4ave" path="res://assets/ui/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_jse0v"]
+[ext_resource type="Texture2D" uid="uid://bj710je6r4ave" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_sfguv"]
 
 [resource]
 script = ExtResource("2_gkmug")
-texture = ExtResource("3_jse0v")
+texture = ExtResource("3_sfguv")
 hframes = 8
 vframes = 6
 frame = 2

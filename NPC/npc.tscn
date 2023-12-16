@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://NPC/npc.gd" id="1_a7tok"]
 [ext_resource type="Resource" uid="uid://bp2ghe7c6gsqk" path="res://NPC/npc_resources/default_npc.tres" id="2_taov3"]
-[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_cws64"]
+[ext_resource type="Texture2D" uid="uid://bj710je6r4ave" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_cws64"]
 [ext_resource type="PackedScene" uid="uid://dw0faioh0f52p" path="res://Dialog/gossip_bubble/gossip.tscn" id="3_sahul"]
 [ext_resource type="PackedScene" uid="uid://bxncquun040l2" path="res://Dialog/conversation_bubble/conversation.tscn" id="4_t3jdk"]
 

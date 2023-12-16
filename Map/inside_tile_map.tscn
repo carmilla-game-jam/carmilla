@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://48qx826tr52l" path="res://NPC/npc_resources/npc_sidone_gossip_1.tres" id="7_rrgbm"]
 [ext_resource type="Script" path="res://NPC/npc_resource.gd" id="7_u3soe"]
 [ext_resource type="Resource" uid="uid://d3sobdqxi7j1q" path="res://NPC/npc_resources/npc_sidone_general_1.tres" id="8_ebkt7"]
-[ext_resource type="Texture2D" uid="uid://dr118neoocda0" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="8_rfimq"]
+[ext_resource type="Texture2D" uid="uid://bj710je6r4ave" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="8_rfimq"]
 [ext_resource type="Resource" uid="uid://dnkp7mihv7pw8" path="res://NPC/npc_resources/npc_mathilde_gossip_1.tres" id="8_upkgn"]
 [ext_resource type="Resource" uid="uid://dvoui7b52tn3x" path="res://NPC/npc_resources/npc_mathilde_fashion_1.tres" id="9_2mjrg"]
 [ext_resource type="Resource" uid="uid://j1yjjwaihacq" path="res://NPC/npc_resources/npc_sidone_general_2.tres" id="9_sskq6"]
