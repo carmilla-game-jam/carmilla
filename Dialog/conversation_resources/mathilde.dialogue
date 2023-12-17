@@ -4,16 +4,26 @@ if state["convo"]["mathilde"]["met"]:
 	[center]Mlle Raven[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
 else:
 	[center]Mlle Raven[/center]: (She sees you approach and is curious to hear how you start the conversation...)
-- Introduce yourself
+- Introduce yourself ✓ [if state["convo"]["mathilde"]["met"]]
 	=> introduction
-- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"]]
+- Introduce yourself [if !state["convo"]["mathilde"]["met"]]
+	=> introduction
+- Gossip ✓ [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"] and state["convo"]["mathilde"]["gossip_done"]]
 	=> gossip
-- Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["mathilde"]["met"]]
+- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["mathilde"]["met"] and !state["convo"]["mathilde"]["gossip_done"]]
+	=> gossip
+- Fashion ✓ [if is_convo_category_unlocked("fashion") and state["convo"]["mathilde"]["met"] and state["convo"]["mathilde"]["fashion_done"]]
 	=> fashion
-- Family [if is_convo_category_unlocked("family") and state["convo"]["mathilde"]["met"]]
+- Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["mathilde"]["met"] and !state["convo"]["mathilde"]["fashion_done"]]
+	=> fashion
+- Family ✓ [if is_convo_category_unlocked("family") and state["convo"]["mathilde"]["met"] and state["convo"]["mathilde"]["family_done"]]
+	=> family
+- Family [if is_convo_category_unlocked("family") and state["convo"]["mathilde"]["met"] and !state["convo"]["mathilde"]["family_done"]]
 	=> family
 - Invite (ends the masquerade) [if is_all_convos_finished("mathilde") and state["convo"]["mathilde"]["met"]]
 	=> invite
+- Leave conversation
+	=> END
 => END
 
 ~ introduction
@@ -51,6 +61,8 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Mlle Raven[/center]: Yes... yes I hope so as well.
 	set state["convo"]["mathilde"]["fashion_topics"]["3"] = true
 	=> bad_choice
+- Leave conversation
+	=> END
 
 => END
 
@@ -76,6 +88,8 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: (Her wisdom draws me closer...)
 	set state["convo"]["mathilde"]["family_done"] = true
 	set state["convo"]["mathilde"]["family_topics"]["3"] = true
+- Leave conversation
+	=> END
 
 => END
 
@@ -101,6 +115,8 @@ set state["convo"]["mathilde"]["met"] = true
 	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
 	set state["convo"]["mathilde"]["gossip_topics"]["3"] = true
+- Leave conversation
+	=> END
 
 => END
 

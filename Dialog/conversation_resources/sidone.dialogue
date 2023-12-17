@@ -4,16 +4,26 @@ if state["convo"]["sidone"]["met"]:
 	[center]Mlle Deer[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
 else:
 	[center]Mlle Deer[/center]: (She sees you approach and is curious to hear how you start the conversation...)
-- Introduce yourself
+- Introduce yourself ✓ [if state["convo"]["sidone"]["met"]]
 	=> introduction
-- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["sidone"]["met"]]
+- Introduce yourself [if !state["convo"]["sidone"]["met"]]
+	=> introduction
+- Gossip ✓ [if is_convo_category_unlocked("gossip") and state["convo"]["sidone"]["met"] and state["convo"]["sidone"]["gossip_done"]]
 	=> gossip
-- Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["sidone"]["met"]]
+- Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["sidone"]["met"] and !state["convo"]["sidone"]["gossip_done"]]
+	=> gossip
+- Fashion ✓ [if is_convo_category_unlocked("fashion") and state["convo"]["sidone"]["met"] and state["convo"]["sidone"]["fashion_done"]]
 	=> fashion
-- Family [if is_convo_category_unlocked("family") and state["convo"]["sidone"]["met"]]
+- Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["sidone"]["met"] and !state["convo"]["sidone"]["fashion_done"]]
+	=> fashion
+- Family ✓ [if is_convo_category_unlocked("family") and state["convo"]["sidone"]["met"] and state["convo"]["sidone"]["family_done"]]
+	=> family
+- Family [if is_convo_category_unlocked("family") and state["convo"]["sidone"]["met"] and !state["convo"]["sidone"]["family_done"]]
 	=> family
 - Invite (ends the masquerade) [if is_all_convos_finished("sidone") and state["convo"]["sidone"]["met"]]
 	=> invite
+- Leave conversation
+	=> END
 => END
 
 ~ introduction
@@ -48,6 +58,8 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Mlle Deer[/center]: I would be delighted to accompany you.
 	set state["convo"]["sidone"]["fashion_done"] = true
+- Leave conversation
+	=> END
 
 => END
 
@@ -70,6 +82,8 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Mlle Deer[/center]: That's true. Frankly, I've been finding it quite titillating.
 	[center]Carmilla[/center]: (I must admit that she piques my interest.)
 	set state["convo"]["sidone"]["family_done"] = true
+- Leave conversation
+	=> END
 
 => END
 
@@ -92,6 +106,8 @@ set state["convo"]["sidone"]["met"] = true
 	[center]Mlle Deer[/center]: There’s been a nice lad here or there, but nothing too serious.
 	[center]Carmilla[/center]: (Hah, a lad! I'll be happy to show you a time a lad could never...)
 	set state["convo"]["sidone"]["gossip_done"] = true
+- Leave conversation
+	=> END
 
 => END
 
