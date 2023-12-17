@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlpf6ypavua5d"
-path="res://.godot/imported/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png-1eae9dde430331b424d5b9cd9ee4c4ae.ctex"
+uid="uid://dxompioh1dy5o"
+path="res://.godot/imported/helene.png-d73ce390a2ab34af4ece64ced98b3119.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png"
-dest_files=["res://.godot/imported/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png-1eae9dde430331b424d5b9cd9ee4c4ae.ctex"]
+source_file="res://assets/portraits/helene.png"
+dest_files=["res://.godot/imported/helene.png-d73ce390a2ab34af4ece64ced98b3119.ctex"]
 
 [params]
 

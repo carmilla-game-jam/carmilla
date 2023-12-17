@@ -44,7 +44,7 @@ set state["convo"]["sidone"]["met"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mlle Deer[/center]: It’s nothing much, but I do enjoy old roman myths of the roman goddess Diana. 
 	[center]Carmilla[/center]: Oh! I hear there’s a most marvelous statuette of the goddess in the garden.
-	[center]Mlle Deer[/center]: I see, I haven't been to the gardens yet.
+	[center]Mlle Deer[/center]: Is there? I haven't made my way to the gardens yet.
 	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Mlle Deer[/center]: I would be delighted to accompany you.
 	set state["convo"]["sidone"]["fashion_done"] = true
@@ -96,8 +96,8 @@ set state["convo"]["sidone"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night.
-[center]Mlle Deer[/center]: Yes, I've not been able to open my heart to another in some time.
+[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
+[center]Mlle Deer[/center]: It was lovely to speak my mind tonight without remorse, and I would be remiss of we didn't continue.
 [center]Carmilla[/center]: Do you care to be whisked away?
 [center]Mlle Deer[/center]: Then we must walk to a secret location, hand in hand.
 do SceneTransition.change_scene("sidone_end")

@@ -12,7 +12,7 @@ var scenes: Dictionary = {
 	},
 	"opening": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
-		"bg": "res://assets/ui/titlescreen_bg.png",
+		"bg": "res://assets/cutscenes/intro.png",
 		"dialog_title": "opening",
 		"next_scene": {
 			"name": "main",
