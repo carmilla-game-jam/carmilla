@@ -40,6 +40,8 @@ var dialogue_line: DialogueLine:
 		responses_menu.set_responses(dialogue_line.responses)
 
 		# Show our balloon
+		balloon.focus_mode = Control.FOCUS_ALL
+		balloon.grab_focus()
 		balloon.show()
 		will_hide_balloon = false
 
@@ -107,7 +109,10 @@ func _on_mutated(_mutation: Dictionary) -> void:
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
 	# If the user clicks on the balloon while it's typing then skip typing
-	if dialogue_label.is_typing and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+	if dialogue_label.is_typing \
+		and (event.is_action_pressed("interact") and get_viewport().gui_get_focus_owner() == balloon) \
+		or (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()):
+
 		get_viewport().set_input_as_handled()
 		dialogue_label.skip_typing()
 		return
@@ -118,7 +123,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	# When there are no response options the balloon itself is the clickable thing
 	get_viewport().set_input_as_handled()
 
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		next(dialogue_line.next_id)
 	elif event.is_action_pressed("interact") and get_viewport().gui_get_focus_owner() == balloon:
 		next(dialogue_line.next_id)

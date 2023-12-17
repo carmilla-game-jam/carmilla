@@ -1,9 +1,9 @@
 ~ opening
 
-[center]Carmilla[/center]: I am Mircalla Karnstein. Last surviving member of the Karnstein household and I've been cursed by a yearning to consume blood for the past ███ years.
-[center]Carmilla[/center]: I have awoken from the most wondrous dream in which an alluring maiden was stitching hauntingly beautiful design into her handkerchief.
+[center]Carmilla[/center]: I am Mircalla Karnstein. Last surviving member of the Karnstein household and cursed by a yearning to consume blood for the past ███ years.
+[center]Carmilla[/center]: I have awoken from the most wondrous dream, in which an alluring maiden stitched a hauntingly beautiful design onto her handkerchief.
 [center]Carmilla[/center]: I knew this woman is for me.  I want her- no I will have her. My next prize.
-[center]Carmilla[/center]: My thralls went to work and they tell of three women that fit the description who will grace tonight's masquerade. I must do all in my power to sway her to my side.
+[center]Carmilla[/center]: My thralls went to work, returning with information on three women who would be gracing tonight's masquerade. I must do all in my power to sway her to my side.
 
 => END
 
@@ -17,17 +17,20 @@
 ~ sidone_end
 
 [center]Carmilla[/center]: Yes, very—a cruel love—a strange love. Love will have its sacrifices...
+[center]Carmilla[/center]: (Neutral end)
 
 => END
 
 ~ helene_end
 
 [center]Carmilla[/center]: I see... It was not meant to be...
+[center]Carmilla[/center]: (Bad end)
 
 => END
 
 ~ mathilde_end
 
 [center]Carmilla[/center]: “You are mine, you shall be mine, you and I are one forever.”
+[center]Carmilla[/center]: (True end)
 
 => END

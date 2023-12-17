@@ -29,9 +29,9 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme = ExtResource("3_ux31u")
 bbcode_enabled = true
-text = "	Mistress Mircalla, We’ve been faithful to your cause, having sought long and hard, only to be led to this very schloss. We believe the mademoiselle from your dreams is in attendance tonight at this masquerade. Please don on the mask we’ve prepared for you and begin your hunt.
+text = "Mistress Mircalla,
 
-	I have written a letter of introduction to the hostess of the masquerade by the name Cirmalla. However, rousing suspicion is unwise. 
+	We’ve been faithful to your cause, having sought long and hard, only to be led to this very schloss. We believe the mademoiselle from your dreams is in attendance tonight at this masquerade. I have written a letter of introduction to the hostess of the masquerade. Please don the mask we’ve prepared for you and begin your hunt. However, rousing suspicion is unwise.
 
 The instructions are as follows:
 ╔ —————————————————— ╗
@@ -40,8 +40,7 @@ The instructions are as follows:
  	[color=#FF0000]z[/color] to switch to cat form
  	[color=#FF0000]TAB[/color] to reread instructions
 ╚ —————————————————— ╝
-	Remember, your [color=#FF0000]cat form[/color], although monstrous, would allow you to [color=#FF0000]overhear selective societal whispers[/color]. Listen to these pieces of gossip to [color=#FF0000]learn more about these women[/color] and [color=#FF0000]engage them on new conversation topics[/color] based on what you have overheard.
-Hopefully through conversation, you will have more luck finding the woman in your dreams.
+	Remember, your [color=#FF0000]cat form[/color], although monstrous, would allow you to [color=#FF0000]overhear selective societal whispers[/color]. Listen to these pieces of gossip to [color=#FF0000]learn more about these women[/color] and [color=#FF0000]engage them on new conversation topics[/color] based on what you have overheard. Hopefully through conversation, you will have more luck finding the woman in your dreams.
 
 	An indicator shall appear on the right side of the screen to represent your goodwill at this party. However, should you tax the patience of the guests at this party with suspicious activity such as [color=#FF0000]appearing too close to them in cat form[/color], or [color=#FF0000]selecting an offensive topic of conversation[/color] with the women, this indicator shall decrease. When the bar runs out, we will no longer be able to hide your misdeeds and you shall be removed from the premise of tonight’s events.
 
