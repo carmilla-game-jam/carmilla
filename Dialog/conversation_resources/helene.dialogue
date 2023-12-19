@@ -4,19 +4,19 @@ if state["convo"]["helene"]["met"]:
 	[center]Mlle Rabbit[/center]: (She sees you approach and with bated breath, waits to hear how you start the conversation...)
 else:
 	[center]Mlle Rabbit[/center]: (She sees you approach and is curious to hear how you start the conversation...)
-- Introduce yourself ✓ [if state["convo"]["helene"]["met"]]
+- Introduce yourself (completed) [if state["convo"]["helene"]["met"]]
 	=> introduction
 - Introduce yourself [if !state["convo"]["helene"]["met"]]
 	=> introduction
-- Gossip ✓ [if is_convo_category_unlocked("gossip") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["gossip_done"]]
+- Gossip (completed) [if is_convo_category_unlocked("gossip") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["gossip_done"]]
 	=> gossip
 - Gossip [if is_convo_category_unlocked("gossip") and state["convo"]["helene"]["met"] and !state["convo"]["helene"]["gossip_done"]]
 	=> gossip
-- Fashion ✓ [if is_convo_category_unlocked("fashion") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["fashion_done"]]
+- Fashion (completed) [if is_convo_category_unlocked("fashion") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["fashion_done"]]
 	=> fashion
 - Fashion [if is_convo_category_unlocked("fashion") and state["convo"]["helene"]["met"] and !state["convo"]["helene"]["fashion_done"]]
 	=> fashion
-- Family ✓ [if is_convo_category_unlocked("family") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["family_done"]]
+- Family (completed) [if is_convo_category_unlocked("family") and state["convo"]["helene"]["met"] and state["convo"]["helene"]["family_done"]]
 	=> family
 - Family [if is_convo_category_unlocked("family") and state["convo"]["helene"]["met"] and !state["convo"]["helene"]["family_done"]]
 	=> family

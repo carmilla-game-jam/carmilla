@@ -450,6 +450,7 @@ conversation_title = "start"
 
 [node name="InsideTileMap" type="TileMap"]
 y_sort_enabled = true
+position = Vector2(-26, 8)
 tile_set = ExtResource("1_gvtac")
 cell_quadrant_size = 32
 format = 2
@@ -504,7 +505,7 @@ position = Vector2(-760, -552)
 npc_resource = ExtResource("39_35jai")
 
 [node name="Mathilde" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(-516, -508)
+position = Vector2(-494, -500)
 npc_resource = ExtResource("40_ys4yn")
 
 [node name="NPC_sidone_family_1" parent="." instance=ExtResource("3_kqhfg")]
@@ -512,7 +513,7 @@ position = Vector2(-903, -508)
 npc_resource = ExtResource("5_7cgcs")
 
 [node name="NPC_sidone_fashion_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(340, 21)
+position = Vector2(702, -258)
 npc_resource = ExtResource("6_bvx6k")
 
 [node name="NPC_sidone_gossip_1" parent="." instance=ExtResource("3_kqhfg")]
@@ -544,15 +545,15 @@ position = Vector2(-1309, -294)
 npc_resource = ExtResource("8_upkgn")
 
 [node name="NPC_mathilde_general_1" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(47, -507)
+position = Vector2(62, -528)
 npc_resource = ExtResource("11_qpyax")
 
 [node name="NPC_mathilde_general_2" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(58, -296)
+position = Vector2(153, 17)
 npc_resource = ExtResource("12_c0x86")
 
 [node name="NPC_mathilde_general_3" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(148, -373)
+position = Vector2(71, -337)
 npc_resource = ExtResource("13_cei5y")
 
 [node name="NPC_helene_family_1" parent="." instance=ExtResource("3_kqhfg")]
@@ -728,7 +729,7 @@ position = Vector2(685, -475)
 npc_resource = SubResource("Resource_2q4wd")
 
 [node name="NPC17" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(32, -285)
+position = Vector2(127, 28)
 npc_resource = SubResource("Resource_pslq2")
 
 [node name="NPC19" parent="." instance=ExtResource("3_kqhfg")]
@@ -752,7 +753,7 @@ position = Vector2(-1043, -547)
 npc_resource = SubResource("Resource_yee8b")
 
 [node name="NPC61" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(120, -373)
+position = Vector2(43, -337)
 npc_resource = SubResource("Resource_dr7yh")
 
 [node name="NPC63" parent="." instance=ExtResource("3_kqhfg")]
@@ -776,11 +777,11 @@ position = Vector2(621, -627)
 npc_resource = SubResource("Resource_743w7")
 
 [node name="NPC6" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(50, -471)
+position = Vector2(65, -492)
 npc_resource = SubResource("Resource_jt6hd")
 
 [node name="NPC5" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(13, -494)
+position = Vector2(28, -515)
 npc_resource = SubResource("Resource_prwev")
 
 [node name="NPC2" parent="." instance=ExtResource("3_kqhfg")]
@@ -792,7 +793,7 @@ position = Vector2(-182, -539)
 npc_resource = SubResource("Resource_q2lui")
 
 [node name="NPC4" parent="." instance=ExtResource("3_kqhfg")]
-position = Vector2(369, 6)
+position = Vector2(732, -261)
 npc_resource = SubResource("Resource_vn17o")
 
 [node name="Key" parent="." instance=ExtResource("5_servt")]

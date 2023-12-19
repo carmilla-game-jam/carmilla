@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0fd2x405qx6k"]
+
+[ext_resource type="Texture2D" uid="uid://dnlvcl6whxla3" path="res://assets/ui/Speech_Emotes (16 x 16).png" id="1_5cj83"]
+
+[sub_resource type="Animation" id="Animation_ppkcq"]
+resource_name = "Float"
+length = 0.6
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -28), Vector2(0, -29), Vector2(0, -29)]
+}
+
+[sub_resource type="Animation" id="Animation_uwfth"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -28)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6ysc"]
+_data = {
+"Float": SubResource("Animation_ppkcq"),
+"RESET": SubResource("Animation_uwfth")
+}
+
+[node name="ConversationEmote" type="Sprite2D"]
+position = Vector2(0, -28)
+texture = ExtResource("1_5cj83")
+hframes = 9
+region_rect = Rect2(0, 0, 144, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Float"
+libraries = {
+"": SubResource("AnimationLibrary_j6ysc")
+}

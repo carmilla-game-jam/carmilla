@@ -10,6 +10,7 @@ func _ready() -> void:
 	if npc_resource.conversation_resource:
 		$Conversation.set("dialog_resource", npc_resource.conversation_resource)
 		$Conversation.set("dialog_title", npc_resource.conversation_title)
+		$ConversationSprite.visible = true
 		if npc_resource.portrait:
 			$Conversation.set("dialog_portrait", npc_resource.portrait)
 	$Sprite2D.texture = npc_resource.texture

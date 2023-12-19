@@ -23,6 +23,7 @@ Balloons="*res://Globals/balloons.gd"
 Camera="*res://Globals/camera_2d.tscn"
 SceneTransition="*res://Globals/scene_transition.tscn"
 Cutscenes="*res://Globals/cutscenes.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 
 [dialogue_manager]
 
@@ -43,7 +44,7 @@ project/assembly_name="Carmilla"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
 
 [input]
 

@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var SPEED = 100
+@export var DEFAULT_SPEED = 100
+@export var CAT_SPEED = 200
 @export var sus_decrease_rate_minor = 0
 @export var sus_decrease_rate_major = 20
 @onready var input_buffer = [Vector2.ZERO]
@@ -89,6 +91,7 @@ func toggle_cat_mode() -> void:
 		$SusArea2D/CollisionShape2D.disabled = false
 		$SusArea2D/Sprite2D.visible = true
 		sus_area_buffer_major.append_array($SusArea2D.get_overlapping_areas())
+		SPEED = CAT_SPEED
 		State.enable_cat_mode()
 		
 	else:
@@ -102,6 +105,7 @@ func toggle_cat_mode() -> void:
 		$SusArea2D/CollisionShape2D.disabled = true
 		$SusArea2D/Sprite2D.visible = false
 		sus_area_buffer_major.clear()
+		SPEED = DEFAULT_SPEED
 		State.disable_cat_mode()
 
 

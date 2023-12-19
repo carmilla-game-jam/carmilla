@@ -28,17 +28,17 @@ var scenes: Dictionary = {
 	},
 	"sidone_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
-		"bg": "res://assets/ui/titlescreen_bg.png",
+		"bg": "res://assets/cutscenes/Carmilla_Ending_Cutscene_Sidone.png",
 		"dialog_title": "sidone_end",
 	},
 	"helene_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
-		"bg": "res://assets/ui/titlescreen_bg.png",
+		"bg": "res://assets/cutscenes/Carmilla_Ending_Cutscene_Helene.png",
 		"dialog_title": "helene_end",
 	},
 	"mathilde_end": {
 		"scene_path": "res://UI/cutscenes/cutscene.tscn",
-		"bg": "res://assets/ui/titlescreen_bg.png",
+		"bg": "res://assets/cutscenes/Carmilla_Ending_Cutscene_Mathilde.png",
 		"dialog_title": "mathilde_end",
 	},
 }

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3vvbaes1jchw"]
+[gd_scene load_steps=8 format=3 uid="uid://d3vvbaes1jchw"]
 
 [ext_resource type="Script" path="res://NPC/npc.gd" id="1_a7tok"]
 [ext_resource type="Resource" uid="uid://bp2ghe7c6gsqk" path="res://NPC/npc_resources/default_npc.tres" id="2_taov3"]
 [ext_resource type="Texture2D" uid="uid://dlpf6ypavua5d" path="res://assets/spritesheets/Vampire_at_the_Masquerade_NPC_Spritesheet_DRAFT.png" id="3_cws64"]
 [ext_resource type="PackedScene" uid="uid://dw0faioh0f52p" path="res://Dialog/gossip_bubble/gossip.tscn" id="3_sahul"]
 [ext_resource type="PackedScene" uid="uid://bxncquun040l2" path="res://Dialog/conversation_bubble/conversation.tscn" id="4_t3jdk"]
+[ext_resource type="PackedScene" uid="uid://d0fd2x405qx6k" path="res://NPC/conversation_emote/conversation_emote.tscn" id="6_6pr1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffr5d"]
 size = Vector2(21, 20)
@@ -30,3 +31,6 @@ hframes = 8
 vframes = 6
 frame = 1
 region_rect = Rect2(0, 64, 64, 64)
+
+[node name="ConversationSprite" parent="." instance=ExtResource("6_6pr1m")]
+visible = false
