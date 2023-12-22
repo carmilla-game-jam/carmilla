@@ -68,8 +68,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
 		if actionables.size() > 0:
-			if actionables[0].get_parent().has_method("open_dialog_box"):
-				actionables[0].get_parent().open_dialog_box()
+			# Cannot speak to NPCs when in cat modeß
+			if !State.state["sus"]["enabled"] \
+				and actionables[0].get_parent().has_method("action"):
+					actionables[0].get_parent().action()
 			return
 
 func _physics_process(delta) -> void:

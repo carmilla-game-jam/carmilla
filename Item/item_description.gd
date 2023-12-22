@@ -6,6 +6,9 @@ var dialog_portrait: Texture2D
 
 var balloon_node
 
+func action() -> void:
+	open_dialog_box()
+
 func open_dialog_box() -> void:
 	# Check if we have a dialog file
 	if dialog_resource:

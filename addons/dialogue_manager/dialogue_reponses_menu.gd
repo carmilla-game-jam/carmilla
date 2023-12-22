@@ -120,5 +120,5 @@ func _on_response_gui_input(event: InputEvent, item: Control, item_index: int) -
 
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
 		response_selected.emit(_responses[item_index])
-	elif event.is_action_pressed("ui_accept") and item in get_menu_items():
+	elif event.is_action_pressed("interact") and item in get_menu_items():
 		response_selected.emit(_responses[item_index])
