@@ -68,7 +68,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		var actionables = $DirectionMarker2D/ActionableArea2D.get_overlapping_areas()
 		if actionables.size() > 0:
-			actionables[0].get_parent().open_dialog_box()
+			if actionables[0].get_parent().has_method("open_dialog_box"):
+				actionables[0].get_parent().open_dialog_box()
 			return
 
 func _physics_process(delta) -> void:
@@ -84,7 +85,6 @@ func toggle_cat_mode() -> void:
 		$HearingArea2D.monitorable = true
 		$HearingArea2D/CollisionShape2D.disabled = false
 		$HearingArea2D/Sprite2D.visible = true
-		# TODO: bug. appending empty arrays
 		sus_area_buffer_minor.append_array($HearingArea2D.get_overlapping_areas())
 		$SusArea2D.monitoring = true
 		$SusArea2D.monitorable = true
@@ -110,18 +110,21 @@ func toggle_cat_mode() -> void:
 
 
 func _on_hearing_area_2d_area_entered(area) -> void:
-	area.get_parent().open_dialog_box()
-	sus_area_buffer_minor.append(area)
+	if area.get_parent().has_method("area_entered"):
+		area.get_parent().area_entered()
+		sus_area_buffer_minor.append(area)
 
 
 func _on_hearing_area_2d_area_exited(area) -> void:
-	area.get_parent().close_dialog_box()
-	sus_area_buffer_minor.erase(area)
+	if area.get_parent().has_method("area_exited"):
+		area.get_parent().area_exited()
+		sus_area_buffer_minor.erase(area)
 
 
 func _on_sus_area_2d_area_entered(area) -> void:
-	area.get_parent().close_dialog_box()
-	sus_area_buffer_major.append(area)
+	if area.get_parent().has_method("close_dialog_box"):
+		area.get_parent().close_dialog_box()
+		sus_area_buffer_major.append(area)
 
 
 func _on_sus_area_2d_area_exited(area) -> void:

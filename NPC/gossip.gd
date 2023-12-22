@@ -5,6 +5,12 @@ var dialog_title: String
 
 var balloon_node
 
+func area_entered() -> void:
+	open_dialog_box()
+
+func area_exited() -> void:
+	close_dialog_box()
+
 func open_dialog_box() -> void:
 	# Check if we have a dialog file
 	if dialog_resource:

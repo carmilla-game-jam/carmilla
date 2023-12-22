@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccmxmi2xn83hm"]
+[gd_scene load_steps=8 format=3 uid="uid://ccmxmi2xn83hm"]
 
 [ext_resource type="Script" path="res://Item/item.gd" id="1_durgf"]
 [ext_resource type="Texture2D" uid="uid://djvfco8htfy4k" path="res://assets/spritesheets/key_items.png" id="1_k7paq"]
 [ext_resource type="Script" path="res://Item/item_description.gd" id="3_2bs3l"]
+[ext_resource type="Script" path="res://Item/SusDetect.gd" id="4_uii4f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il7da"]
 size = Vector2(14, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jef3t"]
-size = Vector2(14.5, 14.5)
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4og5c"]
+size = Vector2(14, 14)
 
 [node name="Item" type="StaticBody2D"]
 script = ExtResource("1_durgf")
@@ -25,7 +29,7 @@ offset_left = -19.0
 offset_top = -19.0
 offset_right = 21.0
 offset_bottom = 21.0
-color = Color(0.635294, 0.517647, 0, 0.639216)
+color = Color(0.988235, 0.827451, 0, 0.639216)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_il7da")
@@ -38,5 +42,14 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable/ActionableArea"]
-position = Vector2(-0.25, -0.25)
 shape = SubResource("RectangleShape2D_jef3t")
+
+[node name="CatDetect" type="Node2D" parent="."]
+script = ExtResource("4_uii4f")
+
+[node name="CatDetectCollision" type="Area2D" parent="CatDetect"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatDetect/CatDetectCollision"]
+shape = SubResource("RectangleShape2D_4og5c")

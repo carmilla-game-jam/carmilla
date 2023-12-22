@@ -34,3 +34,4 @@ region_rect = Rect2(0, 64, 64, 64)
 
 [node name="ConversationSprite" parent="." instance=ExtResource("6_6pr1m")]
 visible = false
+z_index = 2

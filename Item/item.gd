@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-signal item_destroyed
-
 @export var item_resource: ItemResource
 
 var id: int
@@ -25,8 +23,16 @@ func _ready() -> void:
 	$Sprite2D.frame = item_resource.frame
 	
 	State.item_destroyed.connect(destroy)
+	$CatDetect.hearing_collision_entered.connect(turn_sprite_glow_on)
+	$CatDetect.hearing_collision_exited.connect(turn_sprite_glow_off)
 
 func destroy(item_id: int):
 	if item_id == id:
 		print("destroyed")
 		self.queue_free()
+
+func turn_sprite_glow_on():
+	$Sprite2D/GlowRect.visible = true
+
+func turn_sprite_glow_off():
+	$Sprite2D/GlowRect.visible = false
