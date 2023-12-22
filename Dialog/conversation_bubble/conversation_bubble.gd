@@ -32,6 +32,17 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		
+		# Only show Mircalla portrait if she has a convo partner with a portrait
+		if $Portrait.texture and $Portrait.visible == true:
+			$MircallaPortrait.visible = true
+			# Darken Mircalla's portrait if she's not speaking and vice versa for her convo partner
+			if dialogue_line.character == "[center]Mircalla[/center]":
+				$Portrait/DarkenRect.visible = true
+				$MircallaPortrait/DarkenRect.visible = false
+			else:
+				$Portrait/DarkenRect.visible = false
+				$MircallaPortrait/DarkenRect.visible = true
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

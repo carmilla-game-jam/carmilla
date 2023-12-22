@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://diy1aop2pwocd"]
+[gd_scene load_steps=9 format=3 uid="uid://diy1aop2pwocd"]
 
 [ext_resource type="Script" path="res://Dialog/conversation_bubble/conversation_bubble.gd" id="1_k26hx"]
 [ext_resource type="Theme" uid="uid://dlt3y63frliks" path="res://Dialog/conversation_bubble/conversation_bubble_theme.tres" id="2_rg2vd"]
+[ext_resource type="Texture2D" uid="uid://cyklqg8fkjkc3" path="res://assets/dummy/dummy_portrait.webp" id="2_rpr48"]
 [ext_resource type="Texture2D" uid="uid://b0qucbd18oal6" path="res://assets/ui/dialog_bubble2.png" id="3_t0hul"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="4_y7lci"]
 [ext_resource type="Texture2D" uid="uid://bu1rfo6fmj8aa" path="res://assets/ui/dialog_speaker.png" id="5_51voh"]
@@ -15,7 +16,30 @@ layer = 100
 script = ExtResource("1_k26hx")
 
 [node name="Portrait" type="Sprite2D" parent="."]
+clip_children = 2
 position = Vector2(487, 168)
+
+[node name="DarkenRect" type="ColorRect" parent="Portrait"]
+visible = false
+offset_left = -160.0
+offset_top = -154.0
+offset_right = 148.0
+offset_bottom = 182.0
+color = Color(0, 0, 0, 0.552941)
+
+[node name="MircallaPortrait" type="Sprite2D" parent="."]
+visible = false
+clip_children = 2
+position = Vector2(147, 168)
+texture = ExtResource("2_rpr48")
+
+[node name="DarkenRect" type="ColorRect" parent="MircallaPortrait"]
+visible = false
+offset_left = -142.0
+offset_top = -168.0
+offset_right = 155.0
+offset_bottom = 182.0
+color = Color(0, 0, 0, 0.552941)
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true

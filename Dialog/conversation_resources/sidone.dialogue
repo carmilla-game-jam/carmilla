@@ -29,9 +29,9 @@ else:
 ~ introduction
 
 [center]Mlle Deer[/center]: Greetings fair stranger.
-[center]Carmilla[/center]: Lovely to meet you. In the spirit of a masquerade, I shall introduce myself as Mademoiselle Cat.
+[center]Mircalla[/center]: Lovely to meet you. In the spirit of a masquerade, I shall introduce myself as Mademoiselle Cat.
 [center]Mlle Deer[/center]: Then I shall introduce myself as Mademoiselle Doe.
-[center]Carmilla[/center]: Quite a pair we’d make, a cat and a deer.
+[center]Mircalla[/center]: Quite a pair we’d make, a cat and a deer.
 [center]Mlle Deer[/center]: Only to be found at a party such as this!
 set state["convo"]["sidone"]["met"] = true
 
@@ -41,21 +41,21 @@ set state["convo"]["sidone"]["met"] = true
 [center]Mlle Deer[/center]: Pleased to see you again, Mademoiselle Cat!
 - I admire your dress. Which shop did you patronize?
 	[center]Mlle Deer[/center]: Unfortunately, that is not a thing I can say.
-	[center]Carmilla[/center]: Oh, a lady must have some secrets to keep.
+	[center]Mircalla[/center]: Oh, a lady must have some secrets to keep.
 	[center]Mlle Deer[/center]: Of course, something like that...
 	=> bad_choice
 - I couldn't help but notice the needlework on your handkerchief.
 	[center]Mlle Deer[/center]: You have quite the sharp eye, this specific floral pattern is quite dear to me.
-	[center]Carmilla[/center]: Would you care to show me other pieces?
+	[center]Mircalla[/center]: Would you care to show me other pieces?
 	[center]Mlle Deer[/center]: Of course, not many here would express such interest!
-	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
+	[center]Mircalla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Mlle Deer[/center]: I would be delighted to accompany you.
 	set state["convo"]["sidone"]["fashion_done"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mlle Deer[/center]: It’s nothing much, but I do enjoy old roman myths of the roman goddess Diana. 
-	[center]Carmilla[/center]: Oh! I hear there’s a most marvelous statuette of the goddess in the garden.
+	[center]Mircalla[/center]: Oh! I hear there’s a most marvelous statuette of the goddess in the garden.
 	[center]Mlle Deer[/center]: Is there? I haven't made my way to the gardens yet.
-	[center]Carmilla[/center]: What say we take a private tour of the gardens when you're free?
+	[center]Mircalla[/center]: What say we take a private tour of the gardens when you're free?
 	[center]Mlle Deer[/center]: I would be delighted to accompany you.
 	set state["convo"]["sidone"]["fashion_done"] = true
 - Leave conversation
@@ -67,20 +67,20 @@ set state["convo"]["sidone"]["met"] = true
 [center]Mlle Deer[/center]: Pleased to see you again, Mademoiselle Cat!
 - Here's a philosophical quandry; is there more to life than a family name?
 	[center]Mlle Deer[/center]: I would have to agree. One's character is far more important.
-	[center]Carmilla[/center]: Indeed, a person's character is how I decide to stray away or lean closer...
+	[center]Mircalla[/center]: Indeed, a person's character is how I decide to stray away or lean closer...
 	[center]Mlle Deer[/center]: Oh, how do you judge my character then?
-	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
+	[center]Mircalla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
 	set state["convo"]["sidone"]["family_done"] = true
 - I've heard that no family here is untouched by adversity.
 	[center]Mlle Deer[/center]: Yes, but I've persevered through it all. Do not bring up the past.
-	[center]Carmilla[/center]: O-oh I thought... *ahem* Please ignore what I've said, my love.
+	[center]Mircalla[/center]: O-oh I thought... *ahem* Please ignore what I've said, my love.
 	[center]Mlle Deer[/center]: You may have come by the wrong impression of me.
 	=> bad_choice
 - I am finding that everyone's curiosity is a bit overwhelming.
 	[center]Mlle Deer[/center]: Oh, I suppose. I haven't paid attention much.
-	[center]Carmilla[/center]: I've been quite nosy myself. I suppose it's natural for a masquerade.
+	[center]Mircalla[/center]: I've been quite nosy myself. I suppose it's natural for a masquerade.
 	[center]Mlle Deer[/center]: That's true. Frankly, I've been finding it quite titillating.
-	[center]Carmilla[/center]: (I must admit that she piques my interest.)
+	[center]Mircalla[/center]: (I must admit that she piques my interest.)
 	set state["convo"]["sidone"]["family_done"] = true
 - Leave conversation
 	=> END
@@ -91,20 +91,20 @@ set state["convo"]["sidone"]["met"] = true
 [center]Mlle Deer[/center]: Pleased to see you again, Mademoiselle Cat!
 - I hear you're the talk of the town.
 	[center]Mlle Deer[/center]: I didn't think you were the type to listen to idle gossip.
-	[center]Carmilla[/center]: Listening in can teach you a lot about people, my dear.
+	[center]Mircalla[/center]: Listening in can teach you a lot about people, my dear.
 	[center]Mlle Deer[/center]: You're likely to glean more lies than truths.
 	=> bad_choice
 - Has your dance card been filling up?
 	[center]Mlle Deer[/center]: Gradually, yes. It's all rather new to me.
-	[center]Carmilla[/center]: I'm happy to teach you more about it, but I'd rather get to know you better, Mademoiselle Doe.
+	[center]Mircalla[/center]: I'm happy to teach you more about it, but I'd rather get to know you better, Mademoiselle Doe.
 	[center]Mlle Deer[/center]: Hehe. How very coquettish of you, Mademoiselle Cat.
-	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
+	[center]Mircalla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["sidone"]["gossip_done"] = true
 - Are you also new to these events?
 	[center]Mlle Deer[/center]: I am, but I'm quite enjoying how it's been going so far.
-	[center]Carmilla[/center]: Have you met anyone that has caught your fancy yet?
+	[center]Mircalla[/center]: Have you met anyone that has caught your fancy yet?
 	[center]Mlle Deer[/center]: There’s been a nice lad here or there, but nothing too serious.
-	[center]Carmilla[/center]: (Hah, a lad! I'll be happy to show you a time a lad could never...)
+	[center]Mircalla[/center]: (Hah, a lad! I'll be happy to show you a time a lad could never...)
 	set state["convo"]["sidone"]["gossip_done"] = true
 - Leave conversation
 	=> END
@@ -112,14 +112,14 @@ set state["convo"]["sidone"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
+[center]Mircalla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
 [center]Mlle Deer[/center]: It was lovely to speak my mind tonight without remorse, and I would be remiss of we didn't continue.
-[center]Carmilla[/center]: Do you care to be whisked away?
+[center]Mircalla[/center]: Do you care to be whisked away?
 [center]Mlle Deer[/center]: Then we must walk to a secret location, hand in hand.
 do SceneTransition.change_scene("sidone_end")
 => END
 
 ~ bad_choice
-[center]Carmilla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
+[center]Mircalla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
 do decrease_sus_bar(state["sus"]["convo_fail_loss_rate"])
 => END

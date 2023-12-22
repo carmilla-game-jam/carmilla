@@ -29,9 +29,9 @@ else:
 ~ introduction
 
 [center]Mlle Rabbit[/center]: Very happy to make your acquaintance.
-[center]Carmilla[/center]: Of course Mademoiselle, for this evening, you may refer to me as Mademoiselle Cat.
+[center]Mircalla[/center]: Of course Mademoiselle, for this evening, you may refer to me as Mademoiselle Cat.
 [center]Mlle Rabbit[/center]: Oh! Your mask reminds me quite fondly of my family's dearest kitten, Mieze.
-[center]Carmilla[/center]: Is that so? I’d love to call upon your house to see the charming Mieze with my own eyes.
+[center]Mircalla[/center]: Is that so? I’d love to call upon your house to see the charming Mieze with my own eyes.
 [center]Mlle Rabbit[/center]: Of course, I'll ensure a calling card is passed to your sponsor before the night is over.
 set state["convo"]["helene"]["met"] = true
 
@@ -41,21 +41,21 @@ set state["convo"]["helene"]["met"] = true
 [center]Mlle Rabbit[/center]: I hope this night finds you well.
 - I admire your dress. Which shop did you patronize?
 	[center]Mlle Rabbit[/center]: This? A gift from my brother, though I wouldn't be able to ask from where.
-	[center]Carmilla[/center]: He must have an exceptionally good eye for fabrics.
+	[center]Mircalla[/center]: He must have an exceptionally good eye for fabrics.
 	[center]Mlle Rabbit[/center]: Yes... yes he did.
-	[center]Carmilla[/center]: No use reminiscing! Let's talk about the now.
+	[center]Mircalla[/center]: No use reminiscing! Let's talk about the now.
 	[center]Mlle Rabbit[/center]: That would be splendid!
 	set state["convo"]["helene"]["fashion_done"] = true
 - I couldn't help but notice the needlework on your handkerchief.
 	[center]Mlle Rabbit[/center]: Ah... I’ve unfortunately not had the time to practice.
-	[center]Carmilla[/center]: Of course, I hear you’ve been quite busy this season.
+	[center]Mircalla[/center]: Of course, I hear you’ve been quite busy this season.
 	[center]Mlle Rabbit[/center]: Yes, but I’m sure my governess will find it best to fit practice into my schedule.
 	=> bad_choice
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mlle Rabbit[/center]: This? Simply a fondness for rabbits.
-	[center]Carmilla[/center]: Another family pet? Or something for the dinner table?
+	[center]Mircalla[/center]: Another family pet? Or something for the dinner table?
 	[center]Mlle Rabbit[/center]: I can clearly remember the most scucculent rabbit ragu last thursday.
-	[center]Carmilla[/center]: No use reminiscing! Let's talk about the now.
+	[center]Mircalla[/center]: No use reminiscing! Let's talk about the now.
 	[center]Mlle Rabbit[/center]: That would be splendid!
 	set state["convo"]["helene"]["fashion_done"] = true
 - Leave conversation
@@ -67,20 +67,20 @@ set state["convo"]["helene"]["met"] = true
 [center]Mlle Rabbit[/center]: I hope this night finds you well.
 - Here's a philosophical quandry; is there more to life than a family name?
 	[center]Mlle Rabbit[/center]: That's a rather boring subject, in my opinion.
-	[center]Carmilla[/center]: But I find myself curious all the same.
+	[center]Mircalla[/center]: But I find myself curious all the same.
 	[center]Mlle Rabbit[/center]: You will then have to stay curious about that topic.
 	=> bad_choice
 - I've heard that no family here is untouched by adversity.
 	[center]Mlle Rabbit[/center]: Adversity can be overcome easily, with training and diligence.
-	[center]Carmilla[/center]: You seem to have your adversaries well sorted.
+	[center]Mircalla[/center]: You seem to have your adversaries well sorted.
 	[center]Mlle Rabbit[/center]: It's a work in progress. I hope to learn more information this very fortnight.
-	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
+	[center]Mircalla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
 	set state["convo"]["helene"]["family_done"] = true
 - I am finding that everyone's curiosity is a bit overwhelming.
 	[center]Mlle Rabbit[/center]: I had thought the purpose of a masquerade is to maintain the mystery and not to nose about.
-	[center]Carmilla[/center]: And have you figured anyone out?
+	[center]Mircalla[/center]: And have you figured anyone out?
 	[center]Mlle Rabbit[/center]: A few, not because I'm prying, but General Wilhems has quite an obvious gait!
-	[center]Carmilla[/center]: (She is surprisingly observant...)
+	[center]Mircalla[/center]: (She is surprisingly observant...)
 	set state["convo"]["helene"]["family_done"] = true
 - Leave conversation
 	=> END
@@ -91,20 +91,20 @@ set state["convo"]["helene"]["met"] = true
 [center]Mlle Rabbit[/center]: I hope this night finds you well.
 - I hear you're the talk of the town.
 	[center]Mlle Rabbit[/center]: It's nice to be the center of attention, even for a while!
-	[center]Carmilla[/center]: You seem to know your way around the crowd tonight.
+	[center]Mircalla[/center]: You seem to know your way around the crowd tonight.
 	[center]Mlle Rabbit[/center]: Naturally, the studies are paying off. Now if only I remembered all the dance etiquette...
-	[center]Carmilla[/center]: (I will ensure you dance right into my arms tonight.)
+	[center]Mircalla[/center]: (I will ensure you dance right into my arms tonight.)
 	set state["convo"]["helene"]["gossip_done"] = true
 - Has your dance card been filling up?
 	[center]Mlle Rabbit[/center]: Maybe a little too fast, I can barely remember everyone I must dance with.
-	[center]Carmilla[/center]: It looks like someone is looking for you now...
+	[center]Mircalla[/center]: It looks like someone is looking for you now...
 	[center]Mlle Rabbit[/center]: Farewell for now, duty calls.
 	=> bad_choice
 - Are you also new to these events?
 	[center]Mlle Rabbit[/center]: Yes, I couldn't sleep a wink last night in excitement!
-	[center]Carmilla[/center]: A kindred spirit, I too had a light slumber.
+	[center]Mircalla[/center]: A kindred spirit, I too had a light slumber.
 	[center]Mlle Rabbit[/center]: How delightful! We must walk around together when I am free.
-	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
+	[center]Mircalla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["helene"]["gossip_done"] = true
 - Leave conversation
 	=> END
@@ -112,14 +112,14 @@ set state["convo"]["helene"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
+[center]Mircalla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
 [center]Mlle Rabbit[/center]: Naturally, it's quite rare for me to meet someone else so eloquent.
-[center]Carmilla[/center]: Do you care to be whisked away?
+[center]Mircalla[/center]: Do you care to be whisked away?
 [center]Mlle Rabbit[/center]: You lead the way then. Where shall we depart to?
 do SceneTransition.change_scene("helene_end")
 => END
 
 ~ bad_choice
-[center]Carmilla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
+[center]Mircalla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
 do decrease_sus_bar(state["sus"]["convo_fail_loss_rate"])
 => END

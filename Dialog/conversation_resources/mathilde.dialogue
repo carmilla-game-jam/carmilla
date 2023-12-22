@@ -29,9 +29,9 @@ else:
 ~ introduction
 
 [center]Mlle Raven[/center]: I bid you a pleasant evening.
-[center]Carmilla[/center]: I don’t believe we’ve been introduced.
+[center]Mircalla[/center]: I don’t believe we’ve been introduced.
 [center]Mlle Raven[/center]: No? But you seem to know me.
-[center]Carmilla[/center]: As you seem familiar with me.
+[center]Mircalla[/center]: As you seem familiar with me.
 [center]Mlle Raven[/center]: When we’re all confidants of the hostess, are we not soon to be friends?
 set state["convo"]["mathilde"]["met"] = true
 
@@ -41,23 +41,23 @@ set state["convo"]["mathilde"]["met"] = true
 [center]Mlle Raven[/center]: Lovely evening, friend.
 - I admire your dress. Which shop did you patronize?
 	[center]Mlle Raven[/center]: This? A family friend had imported the silks and I had the family seamstress put together the pieces.
-	[center]Carmilla[/center]: Still, your eye in this is quite sublime!
+	[center]Mircalla[/center]: Still, your eye in this is quite sublime!
 	[center]Mlle Raven[/center]: It helps to dabble in the avantgarde.
-	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
+	[center]Mircalla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
 	set state["convo"]["mathilde"]["fashion_topics"]["1"] = true
 - I couldn't help but notice the needlework on your handkerchief.
 	[center]Mlle Raven[/center]: It’s quite a nostalgic pattern. I haven’t had the energy for needlework in quite a while.
-	[center]Carmilla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
+	[center]Mircalla[/center]: Maybe more events such as this will bring new spirits to the body and soul.
 	[center]Mlle Raven[/center]: Only if you indulge me so.
-	[center]Carmilla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
+	[center]Mircalla[/center]: I would love to continue our conversation another time. Perhaps a calling card is in question?
 	[center]Mlle Raven[/center]: Of course. I've been waiting for you to ask...
 	set state["convo"]["mathilde"]["fashion_done"] = true
 	set state["convo"]["mathilde"]["fashion_topics"]["2"] = true
 - Your mask seems to hold a story, would you indulge me?
 	[center]Mlle Raven[/center]: The raven... I still hold memories of what has been lost to me.
-	[center]Carmilla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
+	[center]Mircalla[/center]: I didn’t mean to bring up a sore subject. May your memory still be a blessing.
 	[center]Mlle Raven[/center]: Yes... yes I hope so as well.
 	set state["convo"]["mathilde"]["fashion_topics"]["3"] = true
 	=> bad_choice
@@ -70,22 +70,22 @@ set state["convo"]["mathilde"]["met"] = true
 [center]Mlle Raven[/center]: Lovely evening, friend.
 - Here's a philosophical quandry; is there more to life than a family name?
 	[center]Mlle Raven[/center]: I believe that one's family name can carry them farther in life than you think.
-	[center]Carmilla[/center]: Is that from experience, Madame?
+	[center]Mircalla[/center]: Is that from experience, Madame?
 	[center]Mlle Raven[/center]: I will not lie and say I had no stakes in the prestige.
 	set state["convo"]["mathilde"]["family_topics"]["1"] = true
 	=> bad_choice
 - I've heard that no family here is untouched by adversity.
 	[center]Mlle Raven[/center]: 'Tis true. Time can heal all, although I sometimes wish it would hurry a little faster.
-	[center]Carmilla[/center]: Maybe a walk with me can ease the pain?
+	[center]Mircalla[/center]: Maybe a walk with me can ease the pain?
 	[center]Mlle Raven[/center]: Maybe another time. I quite enjoy the view here.
-	[center]Carmilla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
+	[center]Mircalla[/center]: (I must'nt let them sense my ever increasing pangs of hunger.)
 	set state["convo"]["mathilde"]["family_done"] = true
 	set state["convo"]["mathilde"]["family_topics"]["2"] = true
 - I am finding that everyone's curiosity is a bit overwhelming.
 	[center]Mlle Raven[/center]: You would not have enjoyed events of years past. Feuds started in the span of a night!
-	[center]Carmilla[/center]: Oh my, you must tell me more.
+	[center]Mircalla[/center]: Oh my, you must tell me more.
 	[center]Mlle Raven[/center]: Our family took no part, but I do have a story to tell you about the Wilhems family quarrels...
-	[center]Carmilla[/center]: (Her wisdom draws me closer...)
+	[center]Mircalla[/center]: (Her wisdom draws me closer...)
 	set state["convo"]["mathilde"]["family_done"] = true
 	set state["convo"]["mathilde"]["family_topics"]["3"] = true
 - Leave conversation
@@ -97,22 +97,22 @@ set state["convo"]["mathilde"]["met"] = true
 [center]Mlle Raven[/center]: Lovely evening, friend.
 - I hear you're the talk of the town.
 	[center]Mlle Raven[/center]: Idle mouths run idle thoughts, but they do have a reason to chatter.
-	[center]Carmilla[/center]: You seem quite well humored about this whole enterprise.
+	[center]Mircalla[/center]: You seem quite well humored about this whole enterprise.
 	[center]Mlle Raven[/center]: If gossip is all we have to entertain ourselves, then we should babble away.
-	[center]Carmilla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
+	[center]Mircalla[/center]: (This one seems to have more to her than meets the eye... I am intrigued.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
 	set state["convo"]["mathilde"]["gossip_topics"]["1"] = true
 - Has your dance card been filling up?
 	[center]Mlle Raven[/center]: Unfortunately there's been a minor miscommunication on my part.
-	[center]Carmilla[/center]: Shall I speak to the hostess to fix it?
+	[center]Mircalla[/center]: Shall I speak to the hostess to fix it?
 	[center]Mlle Raven[/center]: Very kind of you, but I shall ask myself.
 	set state["convo"]["mathilde"]["gossip_topics"]["2"] = true
 	=> bad_choice
 - Are you also new to these events?
 	[center]Mlle Raven[/center]: No, but it's been a while since I've been to such a party.
-	[center]Carmilla[/center]: Then, we must make up for all the fun you've missed.
+	[center]Mircalla[/center]: Then, we must make up for all the fun you've missed.
 	[center]Mlle Raven[/center]: How astute. Tell me... how have you been amusing yourself?
-	[center]Carmilla[/center]: (Seems I'm on the right track to my dinner.)
+	[center]Mircalla[/center]: (Seems I'm on the right track to my dinner.)
 	set state["convo"]["mathilde"]["gossip_done"] = true
 	set state["convo"]["mathilde"]["gossip_topics"]["3"] = true
 - Leave conversation
@@ -121,14 +121,14 @@ set state["convo"]["mathilde"]["met"] = true
 => END
 
 ~ invite
-[center]Carmilla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
+[center]Mircalla[/center]: Our conversations have been the moon and the stars on a clear night. I'm eager to delve into a deeper understanding of who you are.
 [center]Mlle Raven[/center]: Yes, I've not been able to open my heart to another in some time.
-[center]Carmilla[/center]: Do you care to be whisked away?
+[center]Mircalla[/center]: Do you care to be whisked away?
 [center]Mlle Raven[/center]: I would not have it any other way.
 do SceneTransition.change_scene("mathilde_end")
 => END
 
 ~ bad_choice
-[center]Carmilla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
+[center]Mircalla[/center]: (Hm... I don't think she liked my answer. Maybe another answer will be the key.)
 do decrease_sus_bar(state["sus"]["convo_fail_loss_rate"])
 => END
